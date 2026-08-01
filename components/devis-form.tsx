@@ -5,8 +5,8 @@ import { useFormStatus } from "react-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { submitDevis, type DevisFormState } from "@/lib/devis-action";
-import { whatsappLink } from "@/lib/site-config";
-import { CheckIcon, WhatsAppIcon } from "./icons";
+import { siteConfig, whatsappLink } from "@/lib/site-config";
+import { CheckIcon, PhoneIcon, WhatsAppIcon } from "./icons";
 
 const initialState: DevisFormState = { status: "idle" };
 
@@ -200,10 +200,36 @@ export function DevisForm() {
               className="absolute left-[-9999px] h-0 w-0 opacity-0"
             />
 
+            {/* Gönderim başarısızsa müşteriyi kaybetme: doğrudan arama ve
+                WhatsApp seçeneklerini öne çıkar. */}
             {state.status === "error" && !errors && (
-              <p role="alert" className="mt-5 text-sm text-accent">
-                {t("errorGeneric")}
-              </p>
+              <div
+                role="alert"
+                aria-live="polite"
+                className="mt-6 rounded-2xl border border-accent/25 bg-accent-soft/50 p-5"
+              >
+                <p className="text-sm leading-relaxed text-ink">
+                  {t("errorGeneric")}
+                </p>
+                <div className="mt-4 flex flex-wrap gap-3">
+                  <a
+                    href={siteConfig.phoneHref}
+                    className="inline-flex items-center gap-2 rounded-full bg-ink px-5 py-2.5 text-sm font-medium text-white transition-all duration-300 hover:bg-black active:scale-[0.98]"
+                  >
+                    <PhoneIcon className="h-4 w-4" />
+                    {siteConfig.phoneDisplay}
+                  </a>
+                  <a
+                    href={whatsappLink(tc("whatsappPrefill"))}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full bg-whatsapp px-5 py-2.5 text-sm font-medium text-white transition-all duration-300 hover:brightness-95 active:scale-[0.98]"
+                  >
+                    <WhatsAppIcon className="h-4 w-4" />
+                    {tc("whatsappCta")}
+                  </a>
+                </div>
+              </div>
             )}
 
             <div className="mt-7 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between">
