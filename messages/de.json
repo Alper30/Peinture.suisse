@@ -374,7 +374,15 @@
       "subtitle": "Ihre Projektleitung antwortet Ihnen direkt.",
       "cta": "Schreiben Sie uns"
     },
-    "nav": "Kundenbereich"
+    "nav": "Kundenbereich",
+    "promo": {
+      "eyebrow": "Kundenbereich",
+      "title": "Verfolgen Sie Ihre Baustelle — von der Offerte bis zum letzten Anstrich",
+      "subtitle": "Erstellen Sie Ihren Bereich in Sekunden: Offerte, Zeitplan, Fortschrittsfotos und Rechnungen an einem Ort, jederzeit abrufbar.",
+      "ctaCreate": "Bereich erstellen",
+      "ctaLogin": "Ich habe bereits ein Konto",
+      "note": "Kostenlos und unverbindlich — für unsere Kundinnen und Kunden sowie alle, die eine Offerte angefragt haben."
+    }
   },
   "faq": {
     "eyebrow": "Häufige Fragen",

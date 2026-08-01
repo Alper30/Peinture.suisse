@@ -9,6 +9,7 @@ export async function SiteFooter() {
   const t = await getTranslations("footer");
   const tn = await getTranslations("nav");
   const ts = await getTranslations("services.items");
+  const tca = await getTranslations("clientArea");
 
   const year = new Date().getFullYear();
 
@@ -66,6 +67,15 @@ export async function SiteFooter() {
                   </Link>
                 </li>
               ))}
+              {/* Müşteri alanı: kimlik bağlantısının aranacağı ikinci yer */}
+              <li>
+                <Link
+                  href="/connexion"
+                  className="text-ink/80 transition-colors hover:text-accent"
+                >
+                  {tca("nav")}
+                </Link>
+              </li>
             </ul>
           </nav>
 

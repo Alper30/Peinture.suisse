@@ -12,6 +12,7 @@ import { TrustBand } from "@/components/home/trust-band";
 import { IntroCurtain } from "@/components/intro-curtain";
 import { ParallaxDuo } from "@/components/parallax-duo";
 import { Faq, FaqJsonLd } from "@/components/faq";
+import { ClientAreaPromo } from "@/components/home/client-area-promo";
 import { Marquee } from "@/components/marquee";
 import { ImageBand } from "@/components/image-band";
 import { ArrowRightIcon } from "@/components/icons";
@@ -156,6 +157,8 @@ export default async function HomePage({
           </Reveal>
         </div>
       </section>
+
+      <ClientAreaPromo />
 
       <Faq />
       <FaqJsonLd />
