@@ -44,3 +44,6 @@ next-env.d.ts
 /.serena
 /.agents
 /.claude/skills
+
+# şablon dosyası kasıtlı olarak paylaşılır (gerçek değer içermez)
+!.env.example
