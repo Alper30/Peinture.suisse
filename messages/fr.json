@@ -1,0 +1,371 @@
+{
+  "meta": {
+    "siteName": "Peinture Suisse",
+    "home": {
+      "title": "Peintre à Lausanne — Peinture, crépi & plâtrerie",
+      "description": "Entreprise de peinture à Lausanne, active dans toute la Suisse romande : peinture intérieure et extérieure, crépi, plâtrerie et rénovation. Devis gratuit sous 24 h, travail soigné."
+    },
+    "services": {
+      "title": "Nos services de peinture & plâtrerie",
+      "description": "Peinture intérieure, crépi & façades, plâtrerie et rénovation complète à Lausanne et en Suisse romande. Découvrez nos prestations et demandez votre devis gratuit."
+    },
+    "realisations": {
+      "title": "Nos réalisations",
+      "description": "Découvrez nos chantiers de peinture, crépi et rénovation à Lausanne : photos avant/après et projets récents."
+    },
+    "about": {
+      "title": "À propos de nous",
+      "description": "Peinture Suisse est une entreprise de peinture basée à Lausanne. Savoir-faire artisanal, matériaux de qualité et respect des délais."
+    },
+    "contact": {
+      "title": "Contact & devis gratuit",
+      "description": "Demandez votre devis gratuit : peinture, crépi, plâtrerie ou rénovation à Lausanne et en Suisse romande. Réponse sous 24 h."
+    },
+    "blog": {
+      "title": "Conseils & actualités",
+      "description": "Conseils de pro sur la peinture, les couleurs et la rénovation en Suisse romande."
+    }
+  },
+  "common": {
+    "brand": "Peinture Suisse",
+    "devisCta": "Devis gratuit",
+    "callCta": "Appelez-nous",
+    "whatsappCta": "WhatsApp",
+    "whatsappAria": "Écrivez-nous sur WhatsApp",
+    "whatsappPrefill": "Bonjour, je souhaite un devis pour des travaux de peinture.",
+    "skipToContent": "Aller au contenu",
+    "readMore": "En savoir plus",
+    "seeAllRealisations": "Voir toutes nos réalisations",
+    "photoPlaceholder": "Photo à venir"
+  },
+  "nav": {
+    "home": "Accueil",
+    "services": "Services",
+    "realisations": "Réalisations",
+    "about": "À propos",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "header": {
+    "menuOpen": "Ouvrir le menu",
+    "menuClose": "Fermer le menu",
+    "localeSwitcherLabel": "Changer de langue"
+  },
+  "footer": {
+    "tagline": "Entreprise de peinture, crépi et plâtrerie à Lausanne. Un travail soigné, des délais tenus.",
+    "navTitle": "Navigation",
+    "servicesTitle": "Services",
+    "contactTitle": "Contact",
+    "areasTitle": "Zone d'intervention",
+    "areasText": "Lausanne et toute la Suisse romande",
+    "followUs": "Suivez nos chantiers",
+    "copyright": "© {year} Peinture Suisse — Lausanne. Tous droits réservés."
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Peintre en bâtiment · Lausanne & Suisse romande",
+      "titleLine1": "Des espaces transformés,",
+      "titleLine2": "une finition impeccable.",
+      "subtitle": "Peinture, crépi et plâtrerie à Lausanne. Un travail artisanal soigné, des délais tenus et un devis gratuit sous 24 heures.",
+      "trust1": "Réponse sous 24 h",
+      "trust2": "Prix clairs et détaillés",
+      "trust3": "Chantier propre, délais tenus",
+      "scrollCue": "Défiler"
+    },
+    "services": {
+      "eyebrow": "Nos services",
+      "title": "Un savoir-faire complet, du sol au plafond",
+      "subtitle": "De la retouche d'une pièce à la rénovation complète, nous accompagnons particuliers, régies et entreprises."
+    },
+    "gallery": {
+      "eyebrow": "Réalisations",
+      "title": "Nos chantiers parlent pour nous",
+      "subtitle": "Avant / après, finitions et détails : découvrez la qualité de notre travail."
+    },
+    "trustBand": {
+      "t1": "Réponse sous 24 h",
+      "t2": "Devis écrit et détaillé",
+      "t3": "Prix fixe, sans surprises",
+      "t4": "Chantier propre chaque soir"
+    },
+    "standard": {
+      "eyebrow": "Notre standard",
+      "title": "Le travail bien fait, du premier coup.",
+      "body1": "Trop de chantiers de peinture tournent au bras de fer : prix d'appel bas, suppléments en cours de route, délais qui glissent. Nous avons construit Peinture Suisse sur le principe inverse — un devis juste dès le départ, une exécution soignée et un seul interlocuteur du début à la fin.",
+      "body2": "Chaque surface est préparée avec le même sérieux, qu'il s'agisse d'un studio ou d'une villa. C'est ce qui fait la différence entre un mur repeint et un travail dont on est fier."
+    },
+    "imageBand": {
+      "quote": "Chaque mur raconte le soin qu'on lui a donné."
+    },
+    "carousel": {
+      "prev": "Service précédent",
+      "next": "Service suivant",
+      "goTo": "Aller au service {n}"
+    },
+    "beforeAfter": {
+      "eyebrow": "Avant / Après",
+      "title": "Faites glisser pour voir la différence",
+      "subtitle": "Un coup de rouleau change tout : comparez un mur fatigué et sa finition fraîche.",
+      "hint": "Glissez",
+      "sliderLabel": "Comparer avant et après",
+      "note": "Visualisation d'illustration — les photos de nos chantiers arrivent bientôt."
+    },
+    "process": {
+      "eyebrow": "Comment ça marche",
+      "title": "Simple, clair, sans surprise",
+      "step1Title": "Contact & visite",
+      "step1Text": "Vous nous décrivez votre projet par téléphone, WhatsApp ou via le formulaire. Nous visitons le chantier gratuitement.",
+      "step2Title": "Devis détaillé",
+      "step2Text": "Vous recevez un devis clair et détaillé sous 24 h : prestations, matériaux, délais. Pas de frais cachés.",
+      "step3Title": "Exécution soignée",
+      "step3Text": "Nous protégeons vos espaces, travaillons proprement et livrons dans les délais convenus. Vous validez le résultat."
+    },
+    "areas": {
+      "eyebrow": "Zone d'intervention",
+      "title": "De Lausanne à toute la Suisse romande",
+      "subtitle": "Basés à Lausanne, nous nous déplaçons dans toute la Suisse romande : Vaud, Genève, Fribourg, Neuchâtel et Valais."
+    },
+    "social": {
+      "eyebrow": "Sur les réseaux",
+      "title": "Suivez nos chantiers en direct",
+      "subtitle": "Photos avant/après, coulisses et conseils : retrouvez-nous sur Instagram et TikTok.",
+      "instagramCta": "Instagram",
+      "tiktokCta": "TikTok"
+    },
+    "finalCta": {
+      "title": "Un projet de peinture ou de rénovation ?",
+      "subtitle": "Parlons-en. Devis gratuit et sans engagement, réponse sous 24 heures.",
+      "primary": "Demander mon devis gratuit",
+      "secondary": "Discuter sur WhatsApp"
+    }
+  },
+  "services": {
+    "indexIntro": "Quatre métiers, une même exigence : des surfaces impeccables et durables. Chaque prestation commence par un devis gratuit et détaillé.",
+    "ctaBand": {
+      "title": "Vous hésitez sur la prestation qu'il vous faut ?",
+      "subtitle": "Décrivez-nous simplement votre projet — nous vous conseillons gratuitement.",
+      "cta": "Demander conseil"
+    },
+    "included": "Ce qui est toujours inclus",
+    "includedItems": {
+      "item1": "Visite et devis gratuits",
+      "item2": "Protection complète des sols et meubles",
+      "item3": "Matériaux de qualité professionnelle",
+      "item4": "Nettoyage du chantier en fin de travaux"
+    },
+    "otherServices": "Nos autres services",
+    "requestQuote": "Demander un devis pour ce service",
+    "items": {
+      "peintureInterieure": {
+        "title": "Peinture intérieure",
+        "short": "Murs, plafonds et boiseries : des finitions nettes et durables pour vos espaces de vie et de travail.",
+        "intro": "Une peinture intérieure réussie, c'est 80 % de préparation. Nous rebouchons, poncions et apprêtons chaque surface avant d'appliquer des peintures de qualité professionnelle, pour un résultat net qui dure.",
+        "features": {
+          "f1": "Murs, plafonds et boiseries",
+          "f2": "Préparation complète des supports",
+          "f3": "Finitions mate, satinée ou brillante",
+          "f4": "Conseil couleurs personnalisé",
+          "f5": "Peintures à faible odeur, adaptées aux pièces habitées",
+          "f6": "Appartements, maisons, bureaux et commerces"
+        },
+        "body1": "Que ce soit pour rafraîchir une pièce, préparer un appartement à la location ou repenser entièrement votre intérieur, nous adaptons notre intervention à votre rythme de vie : horaires convenus ensemble, espaces protégés, chantier propre chaque soir.",
+        "body2": "Nous vous conseillons sur les teintes et les finitions en fonction de la lumière de vos pièces, et nous utilisons des peintures professionnelles reconnues pour leur tenue dans le temps."
+      },
+      "crepisFacades": {
+        "title": "Crépi & façades",
+        "short": "Crépi intérieur et extérieur, rénovation de façades : protégez et embellissez votre bâtiment.",
+        "intro": "La façade est la première impression de votre bâtiment — et sa première protection contre les intempéries. Nous réalisons crépis et rénovations de façades avec des systèmes adaptés au climat suisse.",
+        "features": {
+          "f1": "Crépi extérieur et ravalement de façades",
+          "f2": "Crépi décoratif intérieur",
+          "f3": "Réparation de fissures et d'éclats",
+          "f4": "Traitement anti-humidité",
+          "f5": "Large choix de grains et de teintes",
+          "f6": "Villas, immeubles et bâtiments commerciaux"
+        },
+        "body1": "Nous diagnostiquons l'état de vos façades avant toute intervention : fissures, humidité, décollements. Vous recevez un devis précis avec la solution adaptée — simple rafraîchissement ou rénovation complète.",
+        "body2": "À l'intérieur, le crépi décoratif apporte du relief et du caractère à vos murs : nous maîtrisons les différentes techniques d'application pour un rendu régulier et élégant."
+      },
+      "platrerie": {
+        "title": "Plâtrerie",
+        "short": "Cloisons, faux plafonds, enduits et lissage : des surfaces parfaitement planes, prêtes à peindre.",
+        "intro": "Une belle peinture commence par un support parfait. Notre équipe de plâtrerie réalise cloisons, faux plafonds et enduits de lissage pour des surfaces impeccables.",
+        "features": {
+          "f1": "Cloisons et doublages en placoplâtre",
+          "f2": "Faux plafonds et soffites",
+          "f3": "Enduits de lissage et ratissage complet",
+          "f4": "Réparation de fissures et trous",
+          "f5": "Isolation phonique et thermique",
+          "f6": "Rénovation après dégât des eaux"
+        },
+        "body1": "De la création d'une nouvelle pièce à la réparation d'un plafond abîmé, nous intervenons proprement et rapidement. Le duo plâtrerie + peinture réalisé par la même équipe vous garantit un résultat homogène — et un seul interlocuteur.",
+        "body2": "Nous travaillons aussi bien sur des projets neufs que sur des bâtiments anciens, en respectant les particularités de chaque construction."
+      },
+      "renovation": {
+        "title": "Rénovation intérieure & extérieure",
+        "short": "Un seul interlocuteur pour rafraîchir, transformer ou valoriser votre bien, de A à Z.",
+        "intro": "Vous préparez une vente, un changement de locataire ou simplement une nouvelle étape de vie ? Nous coordonnons l'ensemble des travaux de rénovation de vos surfaces, à l'intérieur comme à l'extérieur.",
+        "features": {
+          "f1": "Rénovation complète d'appartements et maisons",
+          "f2": "Remise en état avant vente ou location",
+          "f3": "Peinture, crépi et plâtrerie coordonnés",
+          "f4": "Rafraîchissement de cages d'escalier et parties communes",
+          "f5": "Balcons, volets et boiseries extérieures",
+          "f6": "Planning clair et respect des délais"
+        },
+        "body1": "Un seul devis, un seul planning, un seul responsable : nous orchestrons les différentes étapes pour que votre chantier avance vite et bien. Idéal pour les régies, propriétaires et gérances qui veulent un résultat impeccable sans multiplier les intervenants.",
+        "body2": "Nous vous tenons informés à chaque étape et nous nous engageons sur les délais annoncés dans le devis."
+      }
+    }
+  },
+  "realisations": {
+    "eyebrow": "Réalisations",
+    "title": "Avant / après : la différence est visible",
+    "subtitle": "Une sélection de nos chantiers récents à Lausanne et en Suisse romande. Retrouvez tous nos projets en direct sur Instagram et TikTok.",
+    "labelBefore": "Avant",
+    "labelAfter": "Après",
+    "placeholderNote": "Les photos de nos chantiers arrivent bientôt. En attendant, découvrez nos réalisations sur les réseaux :",
+    "items": {
+      "item1": { "title": "Appartement — Lausanne", "tag": "Peinture intérieure" },
+      "item2": { "title": "Façade de villa — Région lémanique", "tag": "Crépi & façades" },
+      "item3": { "title": "Bureaux — Lausanne", "tag": "Peinture intérieure" },
+      "item4": { "title": "Cage d'escalier — Renens", "tag": "Rénovation" },
+      "item5": { "title": "Plafonds & cloisons — Pully", "tag": "Plâtrerie" },
+      "item6": { "title": "Studio — Morges", "tag": "Rénovation complète" }
+    },
+    "cta": {
+      "title": "Votre projet pourrait être le prochain",
+      "subtitle": "Envoyez-nous quelques photos de vos espaces — nous revenons vers vous avec une estimation.",
+      "primary": "Demander mon devis"
+    }
+  },
+  "about": {
+    "eyebrow": "À propos",
+    "title": "L'exigence artisanale, l'esprit suisse",
+    "intro": "Peinture Suisse est une entreprise de peinture et plâtrerie basée à Lausanne. Notre conviction est simple : un chantier réussi, c'est un client qui nous recommande.",
+    "body1": "Chaque projet commence par une écoute attentive : vos envies, vos contraintes, votre budget. Nous vous conseillons ensuite avec honnêteté — y compris quand la solution la plus simple est la meilleure.",
+    "body2": "Sur le chantier, notre méthode ne change jamais : préparation minutieuse des supports, matériaux de qualité professionnelle, protection systématique de vos espaces et nettoyage complet en fin de journée.",
+    "values": {
+      "eyebrow": "Nos engagements",
+      "title": "Ce que nous vous garantissons",
+      "v1Title": "Transparence",
+      "v1Text": "Un devis détaillé ligne par ligne, un prix annoncé et respecté. Pas de suppléments surprises.",
+      "v2Title": "Soin du détail",
+      "v2Text": "Des angles nets, des finitions régulières, des raccords invisibles. C'est notre signature.",
+      "v3Title": "Fiabilité",
+      "v3Text": "Nous tenons les délais annoncés et nous restons joignables pendant toute la durée du chantier.",
+      "v4Title": "Propreté",
+      "v4Text": "Sols et meubles protégés, chantier rangé chaque soir, nettoyage complet à la fin des travaux."
+    },
+    "cta": {
+      "title": "Faisons connaissance autour de votre projet",
+      "primary": "Demander un devis gratuit"
+    }
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Parlez-nous de votre projet",
+    "subtitle": "Remplissez le formulaire ou contactez-nous directement — nous vous répondons sous 24 heures avec un devis gratuit et sans engagement.",
+    "infoTitle": "Contact direct",
+    "infoPhone": "Téléphone",
+    "infoEmail": "E-mail",
+    "infoWhatsapp": "WhatsApp",
+    "infoWhatsappText": "Réponse rapide, photos bienvenues",
+    "areasTitle": "Zone d'intervention",
+    "form": {
+      "name": "Nom et prénom",
+      "namePlaceholder": "Votre nom",
+      "phone": "Téléphone",
+      "phonePlaceholder": "+41 76 …",
+      "email": "E-mail",
+      "emailPlaceholder": "vous@exemple.ch",
+      "city": "Localité",
+      "cityPlaceholder": "Lausanne, Renens…",
+      "service": "Type de travaux",
+      "servicePlaceholder": "Choisissez une prestation",
+      "serviceOptions": {
+        "peintureInterieure": "Peinture intérieure",
+        "crepisFacades": "Crépi & façades",
+        "platrerie": "Plâtrerie",
+        "renovation": "Rénovation complète",
+        "autre": "Autre / je ne sais pas encore"
+      },
+      "message": "Votre projet",
+      "messagePlaceholder": "Décrivez brièvement les travaux : pièces concernées, surfaces approximatives, délais souhaités…",
+      "submit": "Demander mon devis gratuit",
+      "submitting": "Envoi en cours…",
+      "privacy": "Vos données ne sont utilisées que pour répondre à votre demande. Jamais de publicité.",
+      "successTitle": "Merci, votre demande est bien partie !",
+      "successText": "Nous revenons vers vous sous 24 heures. Pour une réponse encore plus rapide, écrivez-nous sur WhatsApp.",
+      "errorGeneric": "Une erreur est survenue. Réessayez ou contactez-nous directement par téléphone ou WhatsApp.",
+      "errors": {
+        "nameRequired": "Merci d'indiquer votre nom.",
+        "contactRequired": "Indiquez au moins un téléphone ou un e-mail.",
+        "emailInvalid": "Cette adresse e-mail ne semble pas valide.",
+        "messageRequired": "Décrivez brièvement votre projet."
+      }
+    }
+  },
+  "blog": {
+    "eyebrow": "Blog",
+    "title": "Conseils & actualités",
+    "subtitle": "Couleurs, entretien, budget : nos conseils de professionnels pour vos projets de peinture et de rénovation.",
+    "readArticle": "Lire l'article",
+    "publishedOn": "Publié le {date}",
+    "backToBlog": "← Tous les articles",
+    "emptyState": "Les premiers articles arrivent bientôt.",
+    "readingTime": "{min} min de lecture",
+    "featured": "À la une",
+    "allArticles": "Tous les articles",
+    "previousArticle": "Article précédent",
+    "nextArticle": "Article suivant",
+    "relatedTitle": "À lire aussi",
+    "categories": {
+      "prix": "Prix & devis",
+      "conseils": "Conseils",
+      "chantier": "Chantier",
+      "facade": "Façades"
+    },
+    "ctaBand": {
+      "title": "Une question sur votre projet ?",
+      "subtitle": "Nous y répondons gratuitement, sans jargon et sans engagement.",
+      "cta": "Poser ma question"
+    }
+  },
+  "faq": {
+    "eyebrow": "Questions fréquentes",
+    "title": "Ce que nos clients demandent avant de se lancer",
+    "subtitle": "Les réponses aux questions qui reviennent le plus souvent. Une question qui n'est pas ici ? Écrivez-nous, nous répondons volontiers.",
+    "items": {
+      "q1": {
+        "q": "Le devis est-il vraiment gratuit ?",
+        "a": "Oui, sans condition. Nous nous déplaçons chez vous, mesurons les surfaces, écoutons vos attentes et vous envoyons un devis écrit et détaillé — sans frais et sans engagement de votre part."
+      },
+      "q2": {
+        "q": "Combien coûtent des travaux de peinture ?",
+        "a": "Cela dépend surtout de l'état des supports, de la hauteur sous plafond et des finitions choisies. À titre indicatif, comptez environ 25 à 45 CHF par m² pour une peinture intérieure, préparation comprise. Le devis fixe le prix définitif : pas de suppléments en cours de chantier."
+      },
+      "q3": {
+        "q": "Combien de temps dure un chantier ?",
+        "a": "Une pièce se traite généralement en 1 à 3 jours, un appartement complet en 1 à 2 semaines selon la surface et les travaux de préparation. Vous recevez un planning précis avec le devis, et nous nous y tenons."
+      },
+      "q4": {
+        "q": "Puis-je rester chez moi pendant les travaux ?",
+        "a": "Dans la plupart des cas, oui. Nous travaillons par zones, protégeons vos sols et vos meubles, utilisons des peintures à faible odeur et rangeons le chantier chaque soir. Pour une rénovation lourde, nous en discutons ensemble à l'avance."
+      },
+      "q5": {
+        "q": "Quelles peintures utilisez-vous ?",
+        "a": "Des peintures professionnelles reconnues pour leur tenue dans le temps et leur pouvoir couvrant. Pour les pièces habitées, nous privilégions des produits à faible émission. Le détail des produits figure sur votre devis."
+      },
+      "q6": {
+        "q": "Intervenez-vous en dehors de Lausanne ?",
+        "a": "Oui. Nous sommes basés à Lausanne et nous nous déplaçons dans toute la Suisse romande : Vaud, Genève, Fribourg, Neuchâtel et Valais. Le déplacement est intégré au devis, sans surprise."
+      }
+    }
+  },
+  "notFound": {
+    "title": "Page introuvable",
+    "text": "Cette page n'existe pas ou a été déplacée.",
+    "backHome": "Retour à l'accueil"
+  }
+}

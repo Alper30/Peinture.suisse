@@ -1,0 +1,371 @@
+{
+  "meta": {
+    "siteName": "Peinture Suisse",
+    "home": {
+      "title": "Painter in Lausanne — Painting, rendering & plastering",
+      "description": "Painting company in Lausanne, serving all of French-speaking Switzerland: interior and exterior painting, rendering, plastering and renovation. Free quote within 24 hours."
+    },
+    "services": {
+      "title": "Our painting & plastering services",
+      "description": "Interior painting, rendering & façades, plastering and full renovation in Lausanne and French-speaking Switzerland. Discover our services and request your free quote."
+    },
+    "realisations": {
+      "title": "Our work",
+      "description": "Discover our painting, rendering and renovation projects in Lausanne: before/after photos and recent work."
+    },
+    "about": {
+      "title": "About us",
+      "description": "Peinture Suisse is a painting company based in Lausanne. Craftsmanship, quality materials and deadlines you can rely on."
+    },
+    "contact": {
+      "title": "Contact & free quote",
+      "description": "Request your free quote: painting, rendering, plastering or renovation in Lausanne and across French-speaking Switzerland. Reply within 24 hours."
+    },
+    "blog": {
+      "title": "Tips & news",
+      "description": "Professional advice on paint, colours and renovation in French-speaking Switzerland."
+    }
+  },
+  "common": {
+    "brand": "Peinture Suisse",
+    "devisCta": "Free quote",
+    "callCta": "Call us",
+    "whatsappCta": "WhatsApp",
+    "whatsappAria": "Message us on WhatsApp",
+    "whatsappPrefill": "Hello, I would like a quote for painting work.",
+    "skipToContent": "Skip to content",
+    "readMore": "Learn more",
+    "seeAllRealisations": "See all our work",
+    "photoPlaceholder": "Photo coming soon"
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "realisations": "Our work",
+    "about": "About",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "header": {
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu",
+    "localeSwitcherLabel": "Change language"
+  },
+  "footer": {
+    "tagline": "Painting, rendering and plastering company in Lausanne. Meticulous work, deadlines kept.",
+    "navTitle": "Navigation",
+    "servicesTitle": "Services",
+    "contactTitle": "Contact",
+    "areasTitle": "Service area",
+    "areasText": "Lausanne and all of French-speaking Switzerland",
+    "followUs": "Follow our job sites",
+    "copyright": "© {year} Peinture Suisse — Lausanne. All rights reserved."
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "House painters · Lausanne & French-speaking Switzerland",
+      "titleLine1": "Spaces transformed,",
+      "titleLine2": "flawlessly finished.",
+      "subtitle": "Painting, rendering and plastering in Lausanne. Careful craftsmanship, reliable deadlines and a free quote within 24 hours.",
+      "trust1": "Reply within 24 hours",
+      "trust2": "Clear, detailed pricing",
+      "trust3": "Clean job site, deadlines kept",
+      "scrollCue": "Scroll"
+    },
+    "services": {
+      "eyebrow": "Our services",
+      "title": "Complete craftsmanship, floor to ceiling",
+      "subtitle": "From refreshing a single room to a full renovation, we work with homeowners, property managers and businesses."
+    },
+    "gallery": {
+      "eyebrow": "Our work",
+      "title": "Our job sites speak for themselves",
+      "subtitle": "Before / after, finishes and details: see the quality of our work for yourself."
+    },
+    "trustBand": {
+      "t1": "Reply within 24 hours",
+      "t2": "Written, itemised quote",
+      "t3": "Fixed price, no surprises",
+      "t4": "A clean site, every evening"
+    },
+    "standard": {
+      "eyebrow": "Our standard",
+      "title": "Work done right, the first time.",
+      "body1": "Too many painting projects turn into a tug of war: teaser prices, extras along the way, slipping deadlines. We built Peinture Suisse on the opposite principle — a fair quote from the start, careful execution and a single point of contact from beginning to end.",
+      "body2": "Every surface gets the same careful preparation, whether it's a studio or a villa. That's the difference between a repainted wall and work you're proud of."
+    },
+    "imageBand": {
+      "quote": "Every wall tells the story of the care it was given."
+    },
+    "carousel": {
+      "prev": "Previous service",
+      "next": "Next service",
+      "goTo": "Go to service {n}"
+    },
+    "beforeAfter": {
+      "eyebrow": "Before / After",
+      "title": "Drag to see the difference",
+      "subtitle": "A coat of paint changes everything: compare a tired wall with its fresh finish.",
+      "hint": "Drag",
+      "sliderLabel": "Compare before and after",
+      "note": "Illustrative visualisation — real job-site photos are coming soon."
+    },
+    "process": {
+      "eyebrow": "How it works",
+      "title": "Simple, clear, no surprises",
+      "step1Title": "Contact & visit",
+      "step1Text": "Describe your project by phone, WhatsApp or the form. We visit your site free of charge.",
+      "step2Title": "Detailed quote",
+      "step2Text": "You receive a clear, itemised quote within 24 hours: services, materials, timeline. No hidden fees.",
+      "step3Title": "Careful execution",
+      "step3Text": "We protect your spaces, work cleanly and deliver on the agreed schedule. You sign off on the result."
+    },
+    "areas": {
+      "eyebrow": "Service area",
+      "title": "From Lausanne to all of French-speaking Switzerland",
+      "subtitle": "Based in Lausanne, we travel across French-speaking Switzerland: Vaud, Geneva, Fribourg, Neuchâtel and Valais."
+    },
+    "social": {
+      "eyebrow": "On social media",
+      "title": "Follow our job sites live",
+      "subtitle": "Before/after photos, behind the scenes and tips: find us on Instagram and TikTok.",
+      "instagramCta": "Instagram",
+      "tiktokCta": "TikTok"
+    },
+    "finalCta": {
+      "title": "A painting or renovation project?",
+      "subtitle": "Let's talk. Free, no-obligation quote — reply within 24 hours.",
+      "primary": "Request my free quote",
+      "secondary": "Chat on WhatsApp"
+    }
+  },
+  "services": {
+    "indexIntro": "Four trades, one standard: flawless, long-lasting surfaces. Every service starts with a free, itemised quote.",
+    "ctaBand": {
+      "title": "Not sure which service you need?",
+      "subtitle": "Simply describe your project — we'll advise you free of charge.",
+      "cta": "Ask for advice"
+    },
+    "included": "Always included",
+    "includedItems": {
+      "item1": "Free site visit and quote",
+      "item2": "Full protection of floors and furniture",
+      "item3": "Professional-grade materials",
+      "item4": "Complete clean-up when the work is done"
+    },
+    "otherServices": "Our other services",
+    "requestQuote": "Request a quote for this service",
+    "items": {
+      "peintureInterieure": {
+        "title": "Interior painting",
+        "short": "Walls, ceilings and woodwork: crisp, durable finishes for your living and working spaces.",
+        "intro": "A successful interior paint job is 80% preparation. We fill, sand and prime every surface before applying professional-grade paints, for a clean result that lasts.",
+        "features": {
+          "f1": "Walls, ceilings and woodwork",
+          "f2": "Complete surface preparation",
+          "f3": "Matte, satin or gloss finishes",
+          "f4": "Personalised colour advice",
+          "f5": "Low-odour paints, suitable for occupied homes",
+          "f6": "Flats, houses, offices and shops"
+        },
+        "body1": "Whether you're refreshing a room, preparing a flat for rental or rethinking your whole interior, we adapt to your daily life: agreed working hours, protected spaces, and a tidy site every evening.",
+        "body2": "We advise you on shades and finishes based on the light in your rooms, and we use professional paints known for standing the test of time."
+      },
+      "crepisFacades": {
+        "title": "Rendering & façades",
+        "short": "Interior and exterior rendering, façade renovation: protect and enhance your building.",
+        "intro": "Your façade is your building's first impression — and its first line of defence against the weather. We apply renders and renovate façades with systems suited to the Swiss climate.",
+        "features": {
+          "f1": "Exterior render and façade restoration",
+          "f2": "Decorative interior render",
+          "f3": "Repair of cracks and chips",
+          "f4": "Damp treatment",
+          "f5": "Wide choice of grains and shades",
+          "f6": "Villas, apartment buildings and commercial premises"
+        },
+        "body1": "We assess the condition of your façades before any work: cracks, damp, delamination. You receive a precise quote with the right solution — a simple refresh or a complete renovation.",
+        "body2": "Indoors, decorative render brings relief and character to your walls: we master the different application techniques for an even, elegant result."
+      },
+      "platrerie": {
+        "title": "Plastering",
+        "short": "Partitions, suspended ceilings, skim coats and smoothing: perfectly flat surfaces, ready to paint.",
+        "intro": "A beautiful paint job starts with a perfect surface. Our plastering team builds partitions and suspended ceilings and applies smoothing coats for impeccable results.",
+        "features": {
+          "f1": "Plasterboard partitions and linings",
+          "f2": "Suspended ceilings and bulkheads",
+          "f3": "Skim coating and full smoothing",
+          "f4": "Repair of cracks and holes",
+          "f5": "Sound and thermal insulation",
+          "f6": "Restoration after water damage"
+        },
+        "body1": "From creating a new room to repairing a damaged ceiling, we work cleanly and quickly. Plastering and painting done by the same team guarantees a consistent result — and a single point of contact.",
+        "body2": "We work on new builds as well as older buildings, respecting the specific character of each construction."
+      },
+      "renovation": {
+        "title": "Interior & exterior renovation",
+        "short": "One point of contact to refresh, transform or add value to your property, from A to Z.",
+        "intro": "Preparing a sale, a change of tenant, or simply a new chapter? We coordinate all the surface renovation work on your property, inside and out.",
+        "features": {
+          "f1": "Full renovation of flats and houses",
+          "f2": "Restoration before sale or rental",
+          "f3": "Painting, rendering and plastering, coordinated",
+          "f4": "Refreshing stairwells and common areas",
+          "f5": "Balconies, shutters and exterior woodwork",
+          "f6": "Clear planning and deadlines kept"
+        },
+        "body1": "One quote, one schedule, one person in charge: we orchestrate every stage so your project moves fast and finishes well. Ideal for property managers and owners who want an impeccable result without juggling contractors.",
+        "body2": "We keep you informed at every stage and we stand by the deadlines stated in the quote."
+      }
+    }
+  },
+  "realisations": {
+    "eyebrow": "Our work",
+    "title": "Before / after: the difference is visible",
+    "subtitle": "A selection of our recent projects in Lausanne and across French-speaking Switzerland. Follow all our work live on Instagram and TikTok.",
+    "labelBefore": "Before",
+    "labelAfter": "After",
+    "placeholderNote": "Photos of our job sites are coming soon. In the meantime, see our work on:",
+    "items": {
+      "item1": { "title": "Flat — Lausanne", "tag": "Interior painting" },
+      "item2": { "title": "Villa façade — Lake Geneva region", "tag": "Rendering & façades" },
+      "item3": { "title": "Offices — Lausanne", "tag": "Interior painting" },
+      "item4": { "title": "Stairwell — Renens", "tag": "Renovation" },
+      "item5": { "title": "Ceilings & partitions — Pully", "tag": "Plastering" },
+      "item6": { "title": "Studio — Morges", "tag": "Full renovation" }
+    },
+    "cta": {
+      "title": "Your project could be next",
+      "subtitle": "Send us a few photos of your spaces — we'll come back to you with an estimate.",
+      "primary": "Request my quote"
+    }
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "Artisan standards, Swiss spirit",
+    "intro": "Peinture Suisse is a painting and plastering company based in Lausanne. Our belief is simple: a successful project is a client who recommends us.",
+    "body1": "Every project starts with careful listening: your wishes, your constraints, your budget. Then we advise you honestly — including when the simplest solution is the best one.",
+    "body2": "On site, our method never changes: meticulous surface preparation, professional-grade materials, systematic protection of your spaces and a full clean-up at the end of each day.",
+    "values": {
+      "eyebrow": "Our commitments",
+      "title": "What we guarantee you",
+      "v1Title": "Transparency",
+      "v1Text": "An itemised quote, line by line — the price we announce is the price you pay. No surprise extras.",
+      "v2Title": "Attention to detail",
+      "v2Text": "Crisp edges, even finishes, invisible joins. That's our signature.",
+      "v3Title": "Reliability",
+      "v3Text": "We keep the deadlines we announce and stay reachable throughout the project.",
+      "v4Title": "Cleanliness",
+      "v4Text": "Floors and furniture protected, site tidied every evening, full clean-up when the work is done."
+    },
+    "cta": {
+      "title": "Let's talk about your project",
+      "primary": "Request a free quote"
+    }
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Tell us about your project",
+    "subtitle": "Fill in the form or contact us directly — we reply within 24 hours with a free, no-obligation quote.",
+    "infoTitle": "Direct contact",
+    "infoPhone": "Phone",
+    "infoEmail": "E-mail",
+    "infoWhatsapp": "WhatsApp",
+    "infoWhatsappText": "Fast replies, photos welcome",
+    "areasTitle": "Service area",
+    "form": {
+      "name": "Full name",
+      "namePlaceholder": "Your name",
+      "phone": "Phone",
+      "phonePlaceholder": "+41 76 …",
+      "email": "E-mail",
+      "emailPlaceholder": "you@example.ch",
+      "city": "Town",
+      "cityPlaceholder": "Lausanne, Renens…",
+      "service": "Type of work",
+      "servicePlaceholder": "Choose a service",
+      "serviceOptions": {
+        "peintureInterieure": "Interior painting",
+        "crepisFacades": "Rendering & façades",
+        "platrerie": "Plastering",
+        "renovation": "Full renovation",
+        "autre": "Other / not sure yet"
+      },
+      "message": "Your project",
+      "messagePlaceholder": "Briefly describe the work: rooms involved, approximate surfaces, desired timeline…",
+      "submit": "Request my free quote",
+      "submitting": "Sending…",
+      "privacy": "Your details are only used to reply to your request. Never for advertising.",
+      "successTitle": "Thank you, your request is on its way!",
+      "successText": "We'll come back to you within 24 hours. For an even faster reply, message us on WhatsApp.",
+      "errorGeneric": "Something went wrong. Please try again or contact us directly by phone or WhatsApp.",
+      "errors": {
+        "nameRequired": "Please enter your name.",
+        "contactRequired": "Please provide at least a phone number or an e-mail.",
+        "emailInvalid": "This e-mail address doesn't look valid.",
+        "messageRequired": "Please briefly describe your project."
+      }
+    }
+  },
+  "blog": {
+    "eyebrow": "Blog",
+    "title": "Tips & news",
+    "subtitle": "Colours, upkeep, budget: our professional advice for your painting and renovation projects.",
+    "readArticle": "Read the article",
+    "publishedOn": "Published on {date}",
+    "backToBlog": "← All articles",
+    "emptyState": "The first articles are coming soon.",
+    "readingTime": "{min} min read",
+    "featured": "Featured",
+    "allArticles": "All articles",
+    "previousArticle": "Previous article",
+    "nextArticle": "Next article",
+    "relatedTitle": "Also worth reading",
+    "categories": {
+      "prix": "Pricing & quotes",
+      "conseils": "Advice",
+      "chantier": "On site",
+      "facade": "Façades"
+    },
+    "ctaBand": {
+      "title": "A question about your project?",
+      "subtitle": "We'll answer it free of charge — no jargon, no obligation.",
+      "cta": "Ask my question"
+    }
+  },
+  "faq": {
+    "eyebrow": "Frequently asked",
+    "title": "What clients ask before getting started",
+    "subtitle": "Answers to the questions we hear most often. Yours isn't here? Write to us — we're happy to answer.",
+    "items": {
+      "q1": {
+        "q": "Is the quote really free?",
+        "a": "Yes, no strings attached. We come to you, measure the surfaces, listen to what you want and send you a written, itemised quote — free of charge and with no obligation."
+      },
+      "q2": {
+        "q": "How much does painting work cost?",
+        "a": "It depends mainly on the condition of the surfaces, ceiling height and the finishes you choose. As a guide, expect roughly 25 to 45 CHF per m² for interior painting, preparation included. The quote sets the final price: no extras appearing mid-project."
+      },
+      "q3": {
+        "q": "How long does a project take?",
+        "a": "A single room usually takes 1 to 3 days, a whole flat 1 to 2 weeks depending on the surface area and preparation needed. You receive a precise schedule with your quote, and we stick to it."
+      },
+      "q4": {
+        "q": "Can I stay at home during the work?",
+        "a": "In most cases, yes. We work zone by zone, protect your floors and furniture, use low-odour paints and tidy the site every evening. For a major renovation, we discuss it together in advance."
+      },
+      "q5": {
+        "q": "Which paints do you use?",
+        "a": "Professional paints known for their durability and coverage. In occupied rooms we favour low-emission products. The exact products are listed in your quote."
+      },
+      "q6": {
+        "q": "Do you work outside Lausanne?",
+        "a": "Yes. We're based in Lausanne and travel across French-speaking Switzerland: Vaud, Geneva, Fribourg, Neuchâtel and Valais. Travel is included in the quote — no surprises."
+      }
+    }
+  },
+  "notFound": {
+    "title": "Page not found",
+    "text": "This page doesn't exist or has been moved.",
+    "backHome": "Back to home"
+  }
+}

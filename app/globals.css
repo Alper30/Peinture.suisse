@@ -1,26 +1,310 @@
 @import "tailwindcss";
 
+@theme {
+  /* Palet: logo gelene kadar "İsviçre atölyesi" kimliği —
+     sıcak kağıt beyazı, mürekkep siyahı, tek kırmızı vurgu */
+  --color-paper: #f7f5f0;
+  --color-surface: #ffffff;
+  --color-ink: #1c1b18;
+  --color-muted: #6b6860;
+  --color-line: #e7e3da;
+  --color-accent: #c03428;
+  --color-accent-deep: #a62a20;
+  --color-accent-soft: #f6e9e6;
+  --color-whatsapp: #25d366;
+
+  --font-sans: var(--font-instrument-sans), ui-sans-serif, system-ui,
+    sans-serif;
+  --font-display: var(--font-instrument-serif), Georgia, serif;
+
+  /* Katmanlı, yumuşak gölgeler — tek sert gölge yerine üç kademe:
+     yakın temas + orta ayrım + geniş ortam gölgesi (premium derinlik hissi) */
+  --shadow-card: 0 1px 2px rgb(28 27 24 / 0.04), 0 4px 12px rgb(28 27 24 / 0.05),
+    0 12px 32px rgb(28 27 24 / 0.04);
+  --shadow-lift: 0 2px 4px rgb(28 27 24 / 0.05), 0 10px 24px rgb(28 27 24 / 0.07),
+    0 28px 64px rgb(28 27 24 / 0.09);
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: light;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+/* Klavye ile gezinenler için görünür odak halkası */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* --- Tipografik incelikler --- */
+
+/* Başlıklar dengeli sarılsın: son satırda tek kelime kalmasın */
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+/* Uzun paragraflarda yetim satır oluşmasın */
+p {
+  text-wrap: pretty;
+}
+
+/* Sayı sütunları (fiyat, ölçü) hizalı dursun */
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Bölüm bağlantılarına atlarken başlık header'ın altında kalmasın */
+:target {
+  scroll-margin-top: 6rem;
+}
+
+/* --- Dokunma ve etkileşim --- */
+
+a,
+button,
+[role="button"],
+input,
+select,
+textarea {
+  touch-action: manipulation;
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* İçeriğe atla — klavye kullanıcıları menüyü her sayfada geçmek zorunda kalmasın */
+.skip-link {
+  position: fixed;
+  top: 0.75rem;
+  left: 50%;
+  z-index: 100;
+  translate: -50% -150%;
+  border-radius: 9999px;
+  background: var(--color-ink);
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #fff;
+  transition: translate 0.2s ease-out;
+}
+
+.skip-link:focus-visible {
+  translate: -50% 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* İnce film greni — yalnızca masaüstü (mobil GPU'da pahalı), blend'siz */
+@media (min-width: 1024px) {
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 90;
+    pointer-events: none;
+    opacity: 0.04;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 160px 160px;
+  }
+}
+
+/* Ken Burns: görsele yavaş sinematik zoom — yalnızca md+ (mobilde sürekli GPU işi) */
+@keyframes kenburns {
+  from {
+    transform: scale(1) translateY(0);
+  }
+  to {
+    transform: scale(1.12) translateY(-1.5%);
+  }
+}
+
+@media (min-width: 768px) {
+  .animate-kenburns {
+    animation: kenburns 22s ease-in-out infinite alternate;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-kenburns {
+    animation: none;
+  }
+}
+
+/* Sayfa geçişi (app/[locale]/template.tsx) */
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.page-enter {
+  animation: pageEnter 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Sabit WhatsApp butonu: gecikmeli giriş + hover/tap tepkisi */
+@keyframes fabIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.wa-fab {
+  animation: fabIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 1.2s both;
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.wa-fab:hover {
+  transform: scale(1.08);
+}
+
+.wa-fab:active {
+  transform: scale(0.94);
+}
+
+/* Mobil menü öğelerinin sıralı girişi (components/site-header.tsx) */
+@keyframes menuItemIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.menu-item-in {
+  animation: menuItemIn 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* SSS akordiyonu (components/faq.tsx) — native <details>, sıfır JS */
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item[open] .faq-panel {
+  animation: faqIn 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes faqIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Artı işareti açıldığında eksiye döner */
+.faq-icon-bar {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.faq-item[open] .faq-icon-bar {
+  transform: rotate(90deg);
+}
+
+.faq-item[open] .faq-icon {
+  border-color: color-mix(in srgb, var(--color-accent) 40%, transparent);
+  background: var(--color-accent-soft);
+}
+
+/* 3D tilt kartı (components/ui/tilt-card.tsx) */
+.tilt-card {
+  --tilt-rx: 0deg;
+  --tilt-ry: 0deg;
+  --tilt-gx: 50%;
+  --tilt-gy: 50%;
+  transform: perspective(900px) rotateX(var(--tilt-rx)) rotateY(var(--tilt-ry));
+  transform-style: preserve-3d;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.tilt-glare {
+  background: radial-gradient(
+    340px circle at var(--tilt-gx) var(--tilt-gy),
+    rgb(255 255 255 / 0.16),
+    transparent 70%
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-enter,
+  .wa-fab,
+  .menu-item-in,
+  .faq-item[open] .faq-panel {
+    animation: none;
+  }
+
+  .faq-icon-bar {
+    transition: none;
+  }
+
+  .tilt-card {
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Sonsuz kayan şerit (marquee) */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 38s linear infinite;
+}
+
+.marquee:hover .animate-marquee {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
+  }
 }

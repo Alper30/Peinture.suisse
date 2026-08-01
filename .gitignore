@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# yerel araç önbellekleri (proje kodu değil)
+/.serena
+/.agents
+/.claude/skills

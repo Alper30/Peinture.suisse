@@ -1,0 +1,371 @@
+{
+  "meta": {
+    "siteName": "Peinture Suisse",
+    "home": {
+      "title": "Maler in Lausanne — Malerarbeiten, Verputz & Gipserarbeiten",
+      "description": "Malerbetrieb in Lausanne, tätig in der ganzen Westschweiz: Innen- und Aussenanstriche, Verputz, Gipserarbeiten und Renovationen. Kostenlose Offerte innert 24 h."
+    },
+    "services": {
+      "title": "Unsere Maler- & Gipserarbeiten",
+      "description": "Innenanstriche, Verputz & Fassaden, Gipserarbeiten und Komplettrenovationen in Lausanne und der Romandie. Entdecken Sie unsere Leistungen und holen Sie Ihre kostenlose Offerte ein."
+    },
+    "realisations": {
+      "title": "Unsere Referenzen",
+      "description": "Entdecken Sie unsere Maler-, Verputz- und Renovationsprojekte in Lausanne: Vorher-Nachher-Fotos und aktuelle Arbeiten."
+    },
+    "about": {
+      "title": "Über uns",
+      "description": "Peinture Suisse ist ein Malerbetrieb in Lausanne. Handwerkliches Können, hochwertige Materialien und Termintreue."
+    },
+    "contact": {
+      "title": "Kontakt & kostenlose Offerte",
+      "description": "Holen Sie Ihre kostenlose Offerte ein: Malerarbeiten, Verputz, Gipserarbeiten oder Renovation in Lausanne und der ganzen Westschweiz. Antwort innert 24 h."
+    },
+    "blog": {
+      "title": "Tipps & Aktuelles",
+      "description": "Profi-Tipps zu Farben, Malerarbeiten und Renovationen in der Westschweiz."
+    }
+  },
+  "common": {
+    "brand": "Peinture Suisse",
+    "devisCta": "Kostenlose Offerte",
+    "callCta": "Rufen Sie uns an",
+    "whatsappCta": "WhatsApp",
+    "whatsappAria": "Schreiben Sie uns auf WhatsApp",
+    "whatsappPrefill": "Guten Tag, ich wünsche eine Offerte für Malerarbeiten.",
+    "skipToContent": "Zum Inhalt springen",
+    "readMore": "Mehr erfahren",
+    "seeAllRealisations": "Alle Referenzen ansehen",
+    "photoPlaceholder": "Foto folgt"
+  },
+  "nav": {
+    "home": "Startseite",
+    "services": "Leistungen",
+    "realisations": "Referenzen",
+    "about": "Über uns",
+    "blog": "Blog",
+    "contact": "Kontakt"
+  },
+  "header": {
+    "menuOpen": "Menü öffnen",
+    "menuClose": "Menü schliessen",
+    "localeSwitcherLabel": "Sprache wechseln"
+  },
+  "footer": {
+    "tagline": "Malerbetrieb für Anstriche, Verputz und Gipserarbeiten in Lausanne. Saubere Arbeit, verlässliche Termine.",
+    "navTitle": "Navigation",
+    "servicesTitle": "Leistungen",
+    "contactTitle": "Kontakt",
+    "areasTitle": "Einsatzgebiet",
+    "areasText": "Lausanne und die ganze Westschweiz",
+    "followUs": "Unsere Baustellen verfolgen",
+    "copyright": "© {year} Peinture Suisse — Lausanne. Alle Rechte vorbehalten."
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Malerbetrieb · Lausanne & Romandie",
+      "titleLine1": "Verwandelte Räume,",
+      "titleLine2": "makellose Oberflächen.",
+      "subtitle": "Malerarbeiten, Verputz und Gipserarbeiten in Lausanne. Sorgfältiges Handwerk, verlässliche Termine und eine kostenlose Offerte innert 24 Stunden.",
+      "trust1": "Antwort innert 24 h",
+      "trust2": "Klare, detaillierte Preise",
+      "trust3": "Saubere Baustelle, pünktliche Übergabe",
+      "scrollCue": "Scrollen"
+    },
+    "services": {
+      "eyebrow": "Unsere Leistungen",
+      "title": "Komplettes Handwerk, vom Boden bis zur Decke",
+      "subtitle": "Vom Auffrischen eines Zimmers bis zur Komplettrenovation — für Private, Verwaltungen und Unternehmen."
+    },
+    "gallery": {
+      "eyebrow": "Referenzen",
+      "title": "Unsere Baustellen sprechen für uns",
+      "subtitle": "Vorher / nachher, Oberflächen und Details: Überzeugen Sie sich von der Qualität unserer Arbeit."
+    },
+    "trustBand": {
+      "t1": "Antwort innert 24 h",
+      "t2": "Schriftliche, detaillierte Offerte",
+      "t3": "Fixpreis, ohne Überraschungen",
+      "t4": "Saubere Baustelle, jeden Abend"
+    },
+    "standard": {
+      "eyebrow": "Unser Standard",
+      "title": "Gute Arbeit — beim ersten Mal.",
+      "body1": "Zu viele Malerprojekte werden zum Kräftemessen: Lockpreise, Nachträge unterwegs, rutschende Termine. Wir haben Peinture Suisse auf dem Gegenteil aufgebaut — eine faire Offerte von Anfang an, sorgfältige Ausführung und ein einziger Ansprechpartner von A bis Z.",
+      "body2": "Jede Fläche wird mit derselben Sorgfalt vorbereitet, ob Studio oder Villa. Genau das unterscheidet eine gestrichene Wand von Arbeit, auf die man stolz ist."
+    },
+    "imageBand": {
+      "quote": "Jede Wand erzählt von der Sorgfalt, die man ihr geschenkt hat."
+    },
+    "carousel": {
+      "prev": "Vorherige Leistung",
+      "next": "Nächste Leistung",
+      "goTo": "Zur Leistung {n}"
+    },
+    "beforeAfter": {
+      "eyebrow": "Vorher / Nachher",
+      "title": "Ziehen Sie den Regler — sehen Sie den Unterschied",
+      "subtitle": "Ein Anstrich verändert alles: Vergleichen Sie eine müde Wand mit ihrer frischen Oberfläche.",
+      "hint": "Ziehen",
+      "sliderLabel": "Vorher und nachher vergleichen",
+      "note": "Illustrative Visualisierung — echte Baustellenfotos folgen in Kürze."
+    },
+    "process": {
+      "eyebrow": "So funktioniert es",
+      "title": "Einfach, klar, ohne Überraschungen",
+      "step1Title": "Kontakt & Besichtigung",
+      "step1Text": "Sie beschreiben uns Ihr Projekt per Telefon, WhatsApp oder Formular. Wir besichtigen die Baustelle kostenlos.",
+      "step2Title": "Detaillierte Offerte",
+      "step2Text": "Sie erhalten innert 24 h eine klare, detaillierte Offerte: Leistungen, Materialien, Termine. Keine versteckten Kosten.",
+      "step3Title": "Saubere Ausführung",
+      "step3Text": "Wir schützen Ihre Räume, arbeiten sauber und liefern termingerecht. Sie nehmen das Ergebnis ab."
+    },
+    "areas": {
+      "eyebrow": "Einsatzgebiet",
+      "title": "Von Lausanne in die ganze Westschweiz",
+      "subtitle": "Mit Sitz in Lausanne sind wir in der ganzen Westschweiz für Sie unterwegs: Waadt, Genf, Freiburg, Neuenburg und Wallis."
+    },
+    "social": {
+      "eyebrow": "Soziale Medien",
+      "title": "Verfolgen Sie unsere Baustellen live",
+      "subtitle": "Vorher-Nachher-Fotos, Einblicke und Tipps: Folgen Sie uns auf Instagram und TikTok.",
+      "instagramCta": "Instagram",
+      "tiktokCta": "TikTok"
+    },
+    "finalCta": {
+      "title": "Ein Maler- oder Renovationsprojekt?",
+      "subtitle": "Sprechen wir darüber. Kostenlose, unverbindliche Offerte — Antwort innert 24 Stunden.",
+      "primary": "Kostenlose Offerte anfordern",
+      "secondary": "Auf WhatsApp schreiben"
+    }
+  },
+  "services": {
+    "indexIntro": "Vier Gewerke, ein Anspruch: makellose, langlebige Oberflächen. Jede Leistung beginnt mit einer kostenlosen, detaillierten Offerte.",
+    "ctaBand": {
+      "title": "Unsicher, welche Leistung Sie brauchen?",
+      "subtitle": "Beschreiben Sie uns einfach Ihr Projekt — wir beraten Sie kostenlos.",
+      "cta": "Beratung anfordern"
+    },
+    "included": "Immer inbegriffen",
+    "includedItems": {
+      "item1": "Kostenlose Besichtigung und Offerte",
+      "item2": "Vollständiger Schutz von Böden und Möbeln",
+      "item3": "Materialien in Profiqualität",
+      "item4": "Endreinigung der Baustelle"
+    },
+    "otherServices": "Weitere Leistungen",
+    "requestQuote": "Offerte für diese Leistung anfordern",
+    "items": {
+      "peintureInterieure": {
+        "title": "Innenanstriche",
+        "short": "Wände, Decken und Holzwerk: saubere, langlebige Oberflächen für Ihre Wohn- und Arbeitsräume.",
+        "intro": "Ein gelungener Innenanstrich besteht zu 80 % aus Vorbereitung. Wir spachteln, schleifen und grundieren jede Fläche, bevor wir Profi-Farben auftragen — für ein sauberes, dauerhaftes Ergebnis.",
+        "features": {
+          "f1": "Wände, Decken und Holzwerk",
+          "f2": "Vollständige Untergrundvorbereitung",
+          "f3": "Matte, seidenmatte oder glänzende Oberflächen",
+          "f4": "Persönliche Farbberatung",
+          "f5": "Geruchsarme Farben für bewohnte Räume",
+          "f6": "Wohnungen, Häuser, Büros und Geschäfte"
+        },
+        "body1": "Ob Sie ein Zimmer auffrischen, eine Wohnung für die Vermietung vorbereiten oder Ihr Zuhause neu gestalten möchten: Wir passen uns Ihrem Alltag an — abgesprochene Arbeitszeiten, geschützte Räume, aufgeräumte Baustelle an jedem Abend.",
+        "body2": "Wir beraten Sie zu Farbtönen und Oberflächen passend zum Licht Ihrer Räume und verwenden professionelle Farben, die für ihre Langlebigkeit bekannt sind."
+      },
+      "crepisFacades": {
+        "title": "Verputz & Fassaden",
+        "short": "Innen- und Aussenputz, Fassadenrenovation: Schützen und verschönern Sie Ihr Gebäude.",
+        "intro": "Die Fassade ist der erste Eindruck Ihres Gebäudes — und sein wichtigster Schutz vor der Witterung. Wir realisieren Verputze und Fassadenrenovationen mit Systemen, die für das Schweizer Klima ausgelegt sind.",
+        "features": {
+          "f1": "Aussenputz und Fassadenrenovation",
+          "f2": "Dekorativer Innenputz",
+          "f3": "Reparatur von Rissen und Abplatzungen",
+          "f4": "Behandlung gegen Feuchtigkeit",
+          "f5": "Grosse Auswahl an Körnungen und Farbtönen",
+          "f6": "Villen, Mehrfamilien- und Geschäftshäuser"
+        },
+        "body1": "Vor jedem Eingriff analysieren wir den Zustand Ihrer Fassade: Risse, Feuchtigkeit, Ablösungen. Sie erhalten eine präzise Offerte mit der passenden Lösung — von der einfachen Auffrischung bis zur Komplettrenovation.",
+        "body2": "Im Innenbereich verleiht dekorativer Putz Ihren Wänden Struktur und Charakter: Wir beherrschen die verschiedenen Auftragstechniken für ein gleichmässiges, elegantes Ergebnis."
+      },
+      "platrerie": {
+        "title": "Gipserarbeiten",
+        "short": "Trennwände, abgehängte Decken, Glätten und Spachteln: perfekt ebene, streichfertige Flächen.",
+        "intro": "Ein schöner Anstrich beginnt mit einem perfekten Untergrund. Unser Gipserteam erstellt Trennwände, abgehängte Decken und Glättspachtelungen für makellose Oberflächen.",
+        "features": {
+          "f1": "Trennwände und Vorsatzschalen in Gipskarton",
+          "f2": "Abgehängte Decken und Vouten",
+          "f3": "Glättspachtelung und vollflächiges Abziehen",
+          "f4": "Reparatur von Rissen und Löchern",
+          "f5": "Schall- und Wärmedämmung",
+          "f6": "Instandsetzung nach Wasserschäden"
+        },
+        "body1": "Vom neuen Raum bis zur Reparatur einer beschädigten Decke: Wir arbeiten sauber und zügig. Gipser- und Malerarbeiten aus einer Hand garantieren ein einheitliches Ergebnis — mit nur einem Ansprechpartner.",
+        "body2": "Wir arbeiten an Neubauten ebenso wie an Altbauten und respektieren die Eigenheiten jedes Gebäudes."
+      },
+      "renovation": {
+        "title": "Renovation innen & aussen",
+        "short": "Ein Ansprechpartner, um Ihre Immobilie aufzufrischen, umzugestalten oder aufzuwerten — von A bis Z.",
+        "intro": "Sie bereiten einen Verkauf, einen Mieterwechsel oder einfach einen neuen Lebensabschnitt vor? Wir koordinieren sämtliche Renovationsarbeiten an Ihren Oberflächen, innen wie aussen.",
+        "features": {
+          "f1": "Komplettrenovation von Wohnungen und Häusern",
+          "f2": "Instandstellung vor Verkauf oder Vermietung",
+          "f3": "Maler-, Verputz- und Gipserarbeiten koordiniert",
+          "f4": "Auffrischen von Treppenhäusern und Gemeinschaftsräumen",
+          "f5": "Balkone, Fensterläden und Aussenholzwerk",
+          "f6": "Klare Planung und Termintreue"
+        },
+        "body1": "Eine Offerte, ein Zeitplan, ein Verantwortlicher: Wir orchestrieren die einzelnen Etappen, damit Ihre Baustelle schnell und sauber vorankommt. Ideal für Verwaltungen und Eigentümer, die ein tadelloses Ergebnis ohne viele Ansprechpartner wollen.",
+        "body2": "Wir halten Sie über jeden Schritt auf dem Laufenden und stehen zu den in der Offerte genannten Terminen."
+      }
+    }
+  },
+  "realisations": {
+    "eyebrow": "Referenzen",
+    "title": "Vorher / nachher: Der Unterschied ist sichtbar",
+    "subtitle": "Eine Auswahl unserer aktuellen Baustellen in Lausanne und der ganzen Westschweiz. Alle Projekte finden Sie live auf Instagram und TikTok.",
+    "labelBefore": "Vorher",
+    "labelAfter": "Nachher",
+    "placeholderNote": "Die Fotos unserer Baustellen folgen in Kürze. Entdecken Sie unsere Arbeiten in der Zwischenzeit auf:",
+    "items": {
+      "item1": { "title": "Wohnung — Lausanne", "tag": "Innenanstrich" },
+      "item2": { "title": "Villenfassade — Genferseeregion", "tag": "Verputz & Fassaden" },
+      "item3": { "title": "Büros — Lausanne", "tag": "Innenanstrich" },
+      "item4": { "title": "Treppenhaus — Renens", "tag": "Renovation" },
+      "item5": { "title": "Decken & Trennwände — Pully", "tag": "Gipserarbeiten" },
+      "item6": { "title": "Studio — Morges", "tag": "Komplettrenovation" }
+    },
+    "cta": {
+      "title": "Ihr Projekt könnte das nächste sein",
+      "subtitle": "Senden Sie uns ein paar Fotos Ihrer Räume — wir melden uns mit einer Einschätzung.",
+      "primary": "Offerte anfordern"
+    }
+  },
+  "about": {
+    "eyebrow": "Über uns",
+    "title": "Handwerkliche Präzision, Schweizer Anspruch",
+    "intro": "Peinture Suisse ist ein Maler- und Gipserbetrieb mit Sitz in Lausanne. Unsere Überzeugung ist einfach: Eine gelungene Baustelle ist ein Kunde, der uns weiterempfiehlt.",
+    "body1": "Jedes Projekt beginnt mit gutem Zuhören: Ihre Wünsche, Ihre Rahmenbedingungen, Ihr Budget. Danach beraten wir Sie ehrlich — auch dann, wenn die einfachste Lösung die beste ist.",
+    "body2": "Auf der Baustelle bleibt unsere Methode immer gleich: sorgfältige Untergrundvorbereitung, Materialien in Profiqualität, konsequenter Schutz Ihrer Räume und vollständige Reinigung am Ende jedes Arbeitstages.",
+    "values": {
+      "eyebrow": "Unsere Versprechen",
+      "title": "Das garantieren wir Ihnen",
+      "v1Title": "Transparenz",
+      "v1Text": "Eine Offerte, detailliert Zeile für Zeile — der genannte Preis gilt. Keine überraschenden Zuschläge.",
+      "v2Title": "Liebe zum Detail",
+      "v2Text": "Saubere Kanten, gleichmässige Oberflächen, unsichtbare Übergänge. Das ist unsere Handschrift.",
+      "v3Title": "Verlässlichkeit",
+      "v3Text": "Wir halten die vereinbarten Termine ein und bleiben während der gesamten Bauzeit erreichbar.",
+      "v4Title": "Sauberkeit",
+      "v4Text": "Geschützte Böden und Möbel, aufgeräumte Baustelle an jedem Abend, Endreinigung nach Abschluss."
+    },
+    "cta": {
+      "title": "Lernen wir uns bei Ihrem Projekt kennen",
+      "primary": "Kostenlose Offerte anfordern"
+    }
+  },
+  "contact": {
+    "eyebrow": "Kontakt",
+    "title": "Erzählen Sie uns von Ihrem Projekt",
+    "subtitle": "Füllen Sie das Formular aus oder kontaktieren Sie uns direkt — wir antworten innert 24 Stunden mit einer kostenlosen, unverbindlichen Offerte.",
+    "infoTitle": "Direktkontakt",
+    "infoPhone": "Telefon",
+    "infoEmail": "E-Mail",
+    "infoWhatsapp": "WhatsApp",
+    "infoWhatsappText": "Schnelle Antwort, Fotos willkommen",
+    "areasTitle": "Einsatzgebiet",
+    "form": {
+      "name": "Name und Vorname",
+      "namePlaceholder": "Ihr Name",
+      "phone": "Telefon",
+      "phonePlaceholder": "+41 76 …",
+      "email": "E-Mail",
+      "emailPlaceholder": "sie@beispiel.ch",
+      "city": "Ort",
+      "cityPlaceholder": "Lausanne, Renens…",
+      "service": "Art der Arbeiten",
+      "servicePlaceholder": "Leistung auswählen",
+      "serviceOptions": {
+        "peintureInterieure": "Innenanstriche",
+        "crepisFacades": "Verputz & Fassaden",
+        "platrerie": "Gipserarbeiten",
+        "renovation": "Komplettrenovation",
+        "autre": "Anderes / weiss ich noch nicht"
+      },
+      "message": "Ihr Projekt",
+      "messagePlaceholder": "Beschreiben Sie kurz die Arbeiten: betroffene Räume, ungefähre Flächen, gewünschter Zeitrahmen…",
+      "submit": "Kostenlose Offerte anfordern",
+      "submitting": "Wird gesendet…",
+      "privacy": "Ihre Daten werden nur zur Beantwortung Ihrer Anfrage verwendet. Niemals für Werbung.",
+      "successTitle": "Danke, Ihre Anfrage ist unterwegs!",
+      "successText": "Wir melden uns innert 24 Stunden. Für eine noch schnellere Antwort schreiben Sie uns auf WhatsApp.",
+      "errorGeneric": "Ein Fehler ist aufgetreten. Versuchen Sie es erneut oder kontaktieren Sie uns direkt per Telefon oder WhatsApp.",
+      "errors": {
+        "nameRequired": "Bitte geben Sie Ihren Namen an.",
+        "contactRequired": "Geben Sie mindestens Telefon oder E-Mail an.",
+        "emailInvalid": "Diese E-Mail-Adresse scheint ungültig zu sein.",
+        "messageRequired": "Beschreiben Sie kurz Ihr Projekt."
+      }
+    }
+  },
+  "blog": {
+    "eyebrow": "Blog",
+    "title": "Tipps & Aktuelles",
+    "subtitle": "Farben, Unterhalt, Budget: unsere Profi-Tipps für Ihre Maler- und Renovationsprojekte.",
+    "readArticle": "Artikel lesen",
+    "publishedOn": "Veröffentlicht am {date}",
+    "backToBlog": "← Alle Artikel",
+    "emptyState": "Die ersten Artikel folgen in Kürze.",
+    "readingTime": "{min} Min. Lesezeit",
+    "featured": "Empfohlen",
+    "allArticles": "Alle Artikel",
+    "previousArticle": "Vorheriger Artikel",
+    "nextArticle": "Nächster Artikel",
+    "relatedTitle": "Ebenfalls lesenswert",
+    "categories": {
+      "prix": "Preise & Offerten",
+      "conseils": "Tipps",
+      "chantier": "Baustelle",
+      "facade": "Fassaden"
+    },
+    "ctaBand": {
+      "title": "Eine Frage zu Ihrem Projekt?",
+      "subtitle": "Wir beantworten sie kostenlos — ohne Fachjargon und unverbindlich.",
+      "cta": "Frage stellen"
+    }
+  },
+  "faq": {
+    "eyebrow": "Häufige Fragen",
+    "title": "Was unsere Kunden fragen, bevor es losgeht",
+    "subtitle": "Antworten auf die Fragen, die am häufigsten kommen. Ihre Frage ist nicht dabei? Schreiben Sie uns — wir antworten gerne.",
+    "items": {
+      "q1": {
+        "q": "Ist die Offerte wirklich kostenlos?",
+        "a": "Ja, ohne Bedingungen. Wir kommen zu Ihnen, messen die Flächen, hören uns Ihre Wünsche an und senden Ihnen eine schriftliche, detaillierte Offerte — kostenlos und unverbindlich."
+      },
+      "q2": {
+        "q": "Was kosten Malerarbeiten?",
+        "a": "Das hängt vor allem vom Zustand der Untergründe, der Raumhöhe und den gewünschten Oberflächen ab. Als Richtwert: etwa 25 bis 45 CHF pro m² für einen Innenanstrich, Vorbereitung inbegriffen. Die Offerte legt den Endpreis fest — keine Nachträge während der Arbeiten."
+      },
+      "q3": {
+        "q": "Wie lange dauert eine Baustelle?",
+        "a": "Ein Zimmer ist meist in 1 bis 3 Tagen fertig, eine ganze Wohnung in 1 bis 2 Wochen — je nach Fläche und Vorbereitungsaufwand. Sie erhalten mit der Offerte einen genauen Zeitplan, an den wir uns halten."
+      },
+      "q4": {
+        "q": "Kann ich während der Arbeiten zu Hause bleiben?",
+        "a": "In den meisten Fällen ja. Wir arbeiten zonenweise, schützen Böden und Möbel, verwenden geruchsarme Farben und räumen die Baustelle jeden Abend auf. Bei einer umfassenden Renovation besprechen wir das vorab gemeinsam."
+      },
+      "q5": {
+        "q": "Welche Farben verwenden Sie?",
+        "a": "Professionelle Farben, die für ihre Langlebigkeit und Deckkraft bekannt sind. In bewohnten Räumen bevorzugen wir emissionsarme Produkte. Die verwendeten Produkte sind in Ihrer Offerte aufgeführt."
+      },
+      "q6": {
+        "q": "Arbeiten Sie auch ausserhalb von Lausanne?",
+        "a": "Ja. Wir haben unseren Sitz in Lausanne und sind in der ganzen Westschweiz unterwegs: Waadt, Genf, Freiburg, Neuenburg und Wallis. Die Anfahrt ist in der Offerte enthalten — ohne Überraschungen."
+      }
+    }
+  },
+  "notFound": {
+    "title": "Seite nicht gefunden",
+    "text": "Diese Seite existiert nicht oder wurde verschoben.",
+    "backHome": "Zurück zur Startseite"
+  }
+}
