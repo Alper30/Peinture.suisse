@@ -297,7 +297,7 @@
       "privacy": "Your details are only used to reply to your request. Never for advertising.",
       "successTitle": "Thank you, your request is on its way!",
       "successText": "We'll come back to you within 24 hours. For an even faster reply, message us on WhatsApp.",
-      "errorGeneric": "Something went wrong. Please try again or contact us directly by phone or WhatsApp.",
+      "errorGeneric": "Form submission is temporarily unavailable. Message us on WhatsApp or give us a call — we reply right away.",
       "errors": {
         "nameRequired": "Please enter your name.",
         "contactRequired": "Please provide at least a phone number or an e-mail.",
