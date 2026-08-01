@@ -332,6 +332,50 @@
       "cta": "Ask my question"
     }
   },
+  "auth": {
+    "promise": "Your project, followed from start to finish.",
+    "benefit1": "Find your quote and documents whenever you need them",
+    "benefit2": "Follow progress and photos from your job site",
+    "benefit3": "Talk directly with your project manager",
+    "signIn": {
+      "title": "Welcome back",
+      "subtitle": "Sign in to reach your client area.",
+      "switchLabel": "No account yet?",
+      "switchCta": "Create an account"
+    },
+    "signUp": {
+      "title": "Create your client area",
+      "subtitle": "Follow your quote and your project in one place.",
+      "switchLabel": "Already have an account?",
+      "switchCta": "Sign in"
+    }
+  },
+  "clientArea": {
+    "eyebrow": "Client area",
+    "greeting": "Hello {name}",
+    "subtitle": "Everything about your project, in one place.",
+    "signOut": "Sign out",
+    "cards": {
+      "quote": {
+        "title": "Your quote",
+        "empty": "No quote yet. Once we've visited your site, your itemised quote will appear here."
+      },
+      "project": {
+        "title": "Your project",
+        "empty": "The schedule and progress photos will appear here once work begins."
+      },
+      "documents": {
+        "title": "Your documents",
+        "empty": "Invoices and guarantees will be available here, downloadable at any time."
+      }
+    },
+    "help": {
+      "title": "A question about your project?",
+      "subtitle": "Your project manager replies to you directly.",
+      "cta": "Write to us"
+    },
+    "nav": "Client area"
+  },
   "faq": {
     "eyebrow": "Frequently asked",
     "title": "What clients ask before getting started",

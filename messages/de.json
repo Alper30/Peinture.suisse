@@ -332,6 +332,50 @@
       "cta": "Frage stellen"
     }
   },
+  "auth": {
+    "promise": "Ihre Baustelle, von Anfang bis Ende begleitet.",
+    "benefit1": "Offerte und Dokumente jederzeit griffbereit",
+    "benefit2": "Fortschritt und Fotos Ihrer Baustelle verfolgen",
+    "benefit3": "Direkter Austausch mit Ihrer Projektleitung",
+    "signIn": {
+      "title": "Willkommen zurück",
+      "subtitle": "Melden Sie sich an, um zu Ihrem Kundenbereich zu gelangen.",
+      "switchLabel": "Noch kein Konto?",
+      "switchCta": "Konto erstellen"
+    },
+    "signUp": {
+      "title": "Ihren Kundenbereich erstellen",
+      "subtitle": "Offerte und Baustelle an einem Ort verfolgen.",
+      "switchLabel": "Sie haben bereits ein Konto?",
+      "switchCta": "Anmelden"
+    }
+  },
+  "clientArea": {
+    "eyebrow": "Kundenbereich",
+    "greeting": "Guten Tag {name}",
+    "subtitle": "Hier finden Sie alles zu Ihrem Projekt.",
+    "signOut": "Abmelden",
+    "cards": {
+      "quote": {
+        "title": "Ihre Offerte",
+        "empty": "Noch keine Offerte. Sobald wir Ihre Baustelle besichtigt haben, erscheint hier Ihre detaillierte Offerte."
+      },
+      "project": {
+        "title": "Ihre Baustelle",
+        "empty": "Zeitplan und Fortschrittsfotos erscheinen hier, sobald die Arbeiten beginnen."
+      },
+      "documents": {
+        "title": "Ihre Dokumente",
+        "empty": "Rechnungen und Garantien stehen hier jederzeit zum Download bereit."
+      }
+    },
+    "help": {
+      "title": "Eine Frage zu Ihrem Projekt?",
+      "subtitle": "Ihre Projektleitung antwortet Ihnen direkt.",
+      "cta": "Schreiben Sie uns"
+    },
+    "nav": "Kundenbereich"
+  },
   "faq": {
     "eyebrow": "Häufige Fragen",
     "title": "Was unsere Kunden fragen, bevor es losgeht",

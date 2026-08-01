@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
+import { UserButton, useAuth } from "@clerk/nextjs";
 import { Link, usePathname } from "@/i18n/navigation";
 import { Wordmark } from "./wordmark";
 import { LocaleSwitcher } from "./locale-switcher";
@@ -24,6 +25,10 @@ export function SiteHeader() {
   const t = useTranslations("nav");
   const tc = useTranslations("common");
   const th = useTranslations("header");
+  const ta = useTranslations("clientArea");
+  // Clerk v7: SignedIn/SignedOut bileşenleri kaldırıldı, useAuth kullanılır.
+  // Bağlantı her zaman görünür (yer değiştirme olmasın), yalnızca hedefi değişir.
+  const { isSignedIn } = useAuth();
   const pathname = usePathname();
   const barRef = useRef<HTMLDivElement>(null);
   const [scrolled, setScrolled] = useState(false);
@@ -122,6 +127,19 @@ export function SiteHeader() {
           </nav>
 
           <div className="hidden items-center gap-3 lg:flex">
+            <Link
+              href={isSignedIn ? "/espace-client" : "/connexion"}
+              className={`text-sm tracking-wide transition-colors duration-200 ${
+                onDark
+                  ? "text-white/70 hover:text-white"
+                  : "text-muted hover:text-ink"
+              }`}
+            >
+              {ta("nav")}
+            </Link>
+            {isSignedIn && (
+              <UserButton appearance={{ elements: { avatarBox: "h-8 w-8" } }} />
+            )}
             <LocaleSwitcher tone={onDark ? "light" : "dark"} />
             <Link
               href="/contact"
@@ -190,6 +208,13 @@ export function SiteHeader() {
           className={`mt-auto flex flex-col gap-4 pt-10 ${open ? "menu-item-in" : ""}`}
           style={open ? { animationDelay: "0.4s" } : undefined}
         >
+          <Link
+            href={isSignedIn ? "/espace-client" : "/connexion"}
+            tabIndex={open ? 0 : -1}
+            className="text-sm font-medium text-muted"
+          >
+            {ta("nav")}
+          </Link>
           <LocaleSwitcher className="self-start" />
           <Link
             href="/contact"

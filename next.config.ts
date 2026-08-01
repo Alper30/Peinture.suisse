@@ -6,29 +6,11 @@ const withNextIntl = createNextIntlPlugin();
 /**
  * Güvenlik başlıkları — tüm yollara uygulanır.
  *
- * Not: script-src'de 'unsafe-inline'/'unsafe-eval' bulunuyor çünkü Next.js
- * hidrasyon betiklerini satır içi yazar. Yine de saldırganın DIŞ bir alan
- * adından betik yüklemesini engeller. Nonce tabanlı katı CSP'ye geçmek
- * proxy.ts'de nonce üretimi gerektirir — ileride yapılabilir.
+ * Content-Security-Policy burada DEĞİL, proxy.ts içinde Clerk tarafından
+ * üretilir: Clerk kendi alan adlarını (FAPI, bot koruması, avatar CDN)
+ * otomatik ekler. İki yerde tanımlamak çakışan başlıklara yol açar.
  */
-const csp = [
-  "default-src 'self'",
-  "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
-  "style-src 'self' 'unsafe-inline'",
-  "img-src 'self' data: blob:",
-  "font-src 'self' data:",
-  "connect-src 'self'",
-  // Siteyi başka bir sayfaya iframe ile gömüp tıklama kaçırmayı engeller
-  "frame-ancestors 'none'",
-  // Formlar yalnızca kendi sunucumuza gönderilebilir
-  "form-action 'self'",
-  "base-uri 'self'",
-  "object-src 'none'",
-  "upgrade-insecure-requests",
-].join("; ");
-
 const securityHeaders = [
-  { key: "Content-Security-Policy", value: csp },
   // MIME türü tahminini kapatır (yüklenen dosyanın betik gibi çalışmasını önler)
   { key: "X-Content-Type-Options", value: "nosniff" },
   { key: "X-Frame-Options", value: "DENY" },

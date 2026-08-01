@@ -4,6 +4,9 @@ import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
+import { ClerkProvider } from "@clerk/nextjs";
+import { deDE, enUS, frFR } from "@clerk/localizations";
+import { clerkAppearance } from "@/lib/clerk-appearance";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { WhatsAppButton } from "@/components/whatsapp-button";
@@ -26,6 +29,13 @@ const instrumentSerif = Instrument_Serif({
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
+
+/** Clerk arayüzü kullanıcının diliyle görünsün */
+const clerkLocalizations: Record<string, typeof frFR> = {
+  fr: frFR,
+  de: deDE,
+  en: enUS,
+};
 
 export async function generateMetadata({
   params,
@@ -71,17 +81,23 @@ export default async function LocaleLayout({
     >
       <body className="flex min-h-full flex-col">
         <JsonLd locale={locale} />
-        <NextIntlClientProvider>
-          <a href="#contenu" className="skip-link">
-            {t("skipToContent")}
-          </a>
-          <SiteHeader />
-          <main id="contenu" className="flex-1">
-            {children}
-          </main>
-          <SiteFooter />
-          <WhatsAppButton />
-        </NextIntlClientProvider>
+        {/* ClerkProvider <body> içinde: Next 16 cache components ile uyum için */}
+        <ClerkProvider
+          localization={clerkLocalizations[locale] ?? frFR}
+          appearance={clerkAppearance}
+        >
+          <NextIntlClientProvider>
+            <a href="#contenu" className="skip-link">
+              {t("skipToContent")}
+            </a>
+            <SiteHeader />
+            <main id="contenu" className="flex-1">
+              {children}
+            </main>
+            <SiteFooter />
+            <WhatsAppButton />
+          </NextIntlClientProvider>
+        </ClerkProvider>
       </body>
     </html>
   );

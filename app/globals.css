@@ -212,6 +212,20 @@ button {
   animation: menuItemIn 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
+/* Kimlik sayfaları (giriş/kayıt): tam ekran, dikkat dağıtan site kabuğu olmadan.
+   :has() ile sayfa içeriğine bakıp üst/alt bileşenleri gizliyoruz — böylece
+   tüm sayfaları bir rota grubuna taşımak gerekmiyor. */
+body:has(.auth-screen) > header,
+body:has(.auth-screen) > footer,
+body:has(.auth-screen) > .wa-fab {
+  display: none;
+}
+
+body:has(.auth-screen) > main {
+  /* Sabit başlık kalktığı için üst boşluğa gerek yok */
+  padding-top: 0;
+}
+
 /* SSS akordiyonu (components/faq.tsx) — native <details>, sıfır JS */
 .faq-item summary::-webkit-details-marker {
   display: none;

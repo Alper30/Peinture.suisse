@@ -332,6 +332,50 @@
       "cta": "Poser ma question"
     }
   },
+  "auth": {
+    "promise": "Votre chantier, suivi de bout en bout.",
+    "benefit1": "Retrouvez votre devis et vos documents à tout moment",
+    "benefit2": "Suivez l'avancement et les photos de votre chantier",
+    "benefit3": "Échangez directement avec votre responsable de projet",
+    "signIn": {
+      "title": "Bon retour parmi nous",
+      "subtitle": "Connectez-vous pour accéder à votre espace client.",
+      "switchLabel": "Pas encore de compte ?",
+      "switchCta": "Créer un compte"
+    },
+    "signUp": {
+      "title": "Créer votre espace client",
+      "subtitle": "Suivez votre devis et votre chantier en un seul endroit.",
+      "switchLabel": "Vous avez déjà un compte ?",
+      "switchCta": "Se connecter"
+    }
+  },
+  "clientArea": {
+    "eyebrow": "Espace client",
+    "greeting": "Bonjour {name}",
+    "subtitle": "Retrouvez ici tout ce qui concerne votre projet.",
+    "signOut": "Se déconnecter",
+    "cards": {
+      "quote": {
+        "title": "Votre devis",
+        "empty": "Aucun devis pour le moment. Dès que nous aurons visité votre chantier, votre devis détaillé apparaîtra ici."
+      },
+      "project": {
+        "title": "Votre chantier",
+        "empty": "Le planning et les photos d'avancement s'afficheront ici une fois les travaux lancés."
+      },
+      "documents": {
+        "title": "Vos documents",
+        "empty": "Factures et garanties seront disponibles ici, téléchargeables à tout moment."
+      }
+    },
+    "help": {
+      "title": "Une question sur votre projet ?",
+      "subtitle": "Votre responsable de projet vous répond directement.",
+      "cta": "Nous écrire"
+    },
+    "nav": "Espace client"
+  },
   "faq": {
     "eyebrow": "Questions fréquentes",
     "title": "Ce que nos clients demandent avant de se lancer",
