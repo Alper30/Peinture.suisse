@@ -150,18 +150,22 @@ const ScrollExpandMedia = ({
     };
   }, [reduce, progress]);
 
-  // Tüm ölçüler motionValue türevleri — render tetiklemez
-  const mediaWidth = useTransform(
-    progress,
-    (p) => 300 + p * (isMobile ? 650 : 1250)
+  /**
+   * Tüm ölçüler motionValue türevleri — render tetiklemez.
+   * Mobilde başlangıç boyutu kasıtlı olarak küçük: kart 95vw ile sınırlı
+   * olduğu için 300px'ten başlayınca genişleyecek yer kalmıyordu (efekt
+   * görünmez oluyordu) ve başlık tamamen fotoğrafın üstüne düşüyordu.
+   */
+  const mediaWidth = useTransform(progress, (p) =>
+    isMobile ? 190 + p * 520 : 300 + p * 1250
   );
-  const mediaHeight = useTransform(
-    progress,
-    (p) => 400 + p * (isMobile ? 200 : 400)
+  const mediaHeight = useTransform(progress, (p) =>
+    isMobile ? 260 + p * 540 : 400 + p * 400
   );
   const textX = useTransform(progress, (p) => p * (isMobile ? 180 : 150));
   const bgOpacity = useTransform(progress, (p) => 1 - p * 0.85);
-  const mediaOverlay = useTransform(progress, (p) => 0.42 - p * 0.42);
+  // Durgun halde koyu: başlık fotoğrafın üstünde de okunur kalsın
+  const mediaOverlay = useTransform(progress, (p) => 0.62 - p * 0.62);
   const hintOpacity = useTransform(progress, [0, 0.45], [1, 0]);
 
   const textLeft = useMotionTemplate`translateX(${useTransform(textX, (v) => -v)}vw)`;
@@ -221,14 +225,19 @@ const ScrollExpandMedia = ({
             <div className="pointer-events-none relative z-10 flex w-full flex-col items-center justify-center gap-1 px-4 text-center">
               {eyebrow && (
                 <motion.p
-                  className="mb-3 flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-white/85"
+                  /* max-w + wrap: uzun eyebrow dar ekranda taşıyordu.
+                     Vurgu çizgisi yalnızca tek satıra sığdığı boyutlarda. */
+                  className="mb-3 flex max-w-[92vw] flex-wrap items-center justify-center gap-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/85 sm:text-[11px] sm:tracking-[0.24em]"
                   style={{ transform: textLeft }}
                 >
-                  <span className="inline-block h-px w-6 bg-accent" aria-hidden />
+                  <span
+                    className="hidden h-px w-6 bg-accent sm:inline-block"
+                    aria-hidden
+                  />
                   {eyebrow}
                 </motion.p>
               )}
-              <h1 className="font-display text-5xl leading-[1.04] tracking-tight text-white sm:text-6xl md:text-7xl lg:text-8xl">
+              <h1 className="font-display text-4xl leading-[1.04] tracking-tight text-white sm:text-6xl md:text-7xl lg:text-8xl">
                 <motion.span className="block" style={{ transform: textLeft }}>
                   {titleLine1}
                 </motion.span>

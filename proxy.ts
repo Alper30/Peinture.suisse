@@ -34,35 +34,18 @@ export default clerkMiddleware(
     }
 
     return handleI18n(req);
-  },
-  {
-    /**
-     * CSP'yi Clerk üretir: kendi alan adlarını (FAPI, bot koruması, avatar CDN)
-     * kendisi ekler — elle yazılan liste sürüm değişiminde sessizce bozulur.
-     * Aşağıdaki direktifler bizim eklediklerimiz, Clerk'inkilerle BİRLEŞTİRİLİR.
-     * Not: next.config.ts'de CSP tanımlanmaz, çift başlık çakışması olmasın.
-     */
-    contentSecurityPolicy: {
-      /**
-       * Katı mod: her istek için benzersiz nonce üretir ve `strict-dynamic`
-       * uygular. Varsayılan mod `script-src`'ye `https: http:` eklediği için
-       * neredeyse her kaynağa izin verirdi — bu, korumayı anlamsızlaştırır.
-       */
-      strict: true,
-      directives: {
-        "default-src": ["'self'"],
-        "img-src": ["'self'", "data:", "blob:"],
-        "font-src": ["'self'", "data:"],
-        // Siteyi iframe'e gömüp tıklama kaçırmayı engeller
-        "frame-ancestors": ["'none'"],
-        // Form verisi yalnızca kendi sunucumuza gidebilir
-        "form-action": ["'self'"],
-        "base-uri": ["'self'"],
-        "object-src": ["'none'"],
-        "upgrade-insecure-requests": [],
-      },
-    },
   }
+  /**
+   * CSP burada ÜRETİLMEZ — next.config.ts'de statik olarak tanımlıdır.
+   *
+   * Clerk'in `contentSecurityPolicy` seçeneği katı modda her istekte yeni bir
+   * nonce üretir. Nonce ise Next.js'te YALNIZCA dinamik render edilen
+   * sayfalarda script etiketlerine işlenebilir (bkz. Next 16 dokümanı,
+   * 01-app/02-guides/content-security-policy.md). Bu site statik üretiliyor,
+   * dolayısıyla HTML'e nonce girmiyor; `strict-dynamic` da `'self'` ve
+   * `'unsafe-inline'` izinlerini geçersiz kıldığı için TÜM script'ler
+   * bloklanıyordu — site JavaScript'siz kalıyordu.
+   */
 );
 
 export const config = {
