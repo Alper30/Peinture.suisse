@@ -1,20 +1,156 @@
 "use client";
 
-import { useActionState } from "react";
+import { useActionState, type ReactNode } from "react";
 import { useFormStatus } from "react-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { submitDevis, type DevisFormState } from "@/lib/devis-action";
 import { siteConfig, whatsappLink } from "@/lib/site-config";
 import { CheckIcon, PhoneIcon, WhatsAppIcon } from "./icons";
 
 const initialState: DevisFormState = { status: "idle" };
 
-const inputClass =
-  "w-full rounded-xl border border-line bg-surface px-4 py-3 text-sm text-ink placeholder:text-muted/60 outline-none transition-all duration-200 focus:border-accent focus:ring-2 focus:ring-accent/15";
+/**
+ * Yüzen etiket (floating label) tamamen CSS ile:
+ * `peer-placeholder-shown` alan boşken etiketi ortaya indirir, `peer-focus`
+ * yeniden yukarı kaldırır. JS yok, layout shift yok.
+ *
+ * Placeholder metni odaklanana kadar saydam — böylece etiket ile placeholder
+ * üst üste binmez ama `:placeholder-shown` seçicisi çalışmaya devam eder.
+ */
+const fieldBase =
+  "peer w-full rounded-xl border bg-paper px-4 text-sm text-ink outline-none transition-all duration-200 placeholder:text-transparent focus:border-accent focus:bg-surface focus:ring-4 focus:ring-accent/10 focus:placeholder:text-muted/50";
 
-const labelClass =
-  "mb-1.5 block text-xs font-semibold uppercase tracking-wider text-muted";
+/**
+ * Etiketin iki durumu piksel değerleriyle tanımlı — `top-1/2` + `-translate-y-1/2`
+ * ikilisi yerine düz `top-[…]`: kesirli ve negatif yardımcı sınıfları varyant
+ * altında zincirlemek gereksiz yere kırılgan, tek özellik animasyonu yeterli.
+ *
+ * Temel durum = yukarı kalkmış etiket. `peer-placeholder-shown` (alan boş) onu
+ * ortaya indirir, `peer-focus` yeniden kaldırır — sıralama önemli.
+ */
+const labelFloated =
+  "top-[9px] text-[11px] font-semibold uppercase tracking-wider";
+const labelResting =
+  "peer-placeholder-shown:text-sm peer-placeholder-shown:font-normal peer-placeholder-shown:normal-case peer-placeholder-shown:tracking-normal";
+const labelRefloat =
+  "peer-focus:top-[9px] peer-focus:text-[11px] peer-focus:font-semibold peer-focus:uppercase peer-focus:tracking-wider";
+
+const labelBase =
+  "pointer-events-none absolute left-4 text-muted transition-all duration-200 peer-focus:text-accent";
+
+function Field({
+  id,
+  name,
+  label,
+  placeholder,
+  type = "text",
+  autoComplete,
+  required,
+  error,
+  errorId,
+  textarea,
+  className,
+}: {
+  id: string;
+  name: string;
+  label: string;
+  placeholder: string;
+  type?: string;
+  autoComplete?: string;
+  required?: boolean;
+  error?: string;
+  errorId?: string;
+  textarea?: boolean;
+  className?: string;
+}) {
+  // Hatalı alan kırmızı kenarlıkla da işaretlenir — yalnızca alttaki yazı
+  // renk körü kullanıcılar ve hızlı tarama için yeterli bir sinyal değil.
+  const borderClass = error
+    ? "border-accent ring-4 ring-accent/10"
+    : "border-line hover:border-ink/25";
+
+  return (
+    <div className={`relative ${className ?? ""}`}>
+      {textarea ? (
+        <textarea
+          id={id}
+          name={name}
+          rows={5}
+          placeholder={placeholder}
+          aria-describedby={errorId}
+          aria-invalid={error ? true : undefined}
+          className={`${fieldBase} ${borderClass} resize-y pt-7 pb-3`}
+        />
+      ) : (
+        <input
+          id={id}
+          name={name}
+          type={type}
+          autoComplete={autoComplete}
+          placeholder={placeholder}
+          aria-describedby={errorId}
+          aria-invalid={error ? true : undefined}
+          className={`${fieldBase} ${borderClass} h-14 pt-5`}
+        />
+      )}
+      <label
+        htmlFor={id}
+        className={`${labelBase} ${labelFloated} ${
+          textarea
+            ? "peer-placeholder-shown:top-[22px]"
+            : "peer-placeholder-shown:top-[18px]"
+        } ${labelResting} ${labelRefloat}`}
+      >
+        {label}
+        {required && <span className="text-accent"> *</span>}
+      </label>
+    </div>
+  );
+}
+
+/**
+ * Prestation seçimi: yerel `<select>` yerine çipler.
+ * Mobilde tek dokunuşla seçilir, tüm seçenekler aynı anda görünür ve
+ * `appearance-none` ile okunu kaybetmiş bir açılır liste bırakmaz.
+ */
+function ServiceChips() {
+  const t = useTranslations("contact.form");
+  const keys = [
+    "peintureInterieure",
+    "crepisFacades",
+    "platrerie",
+    "renovation",
+    "autre",
+  ] as const;
+
+  return (
+    <fieldset className="sm:col-span-2">
+      <legend className="text-[11px] font-semibold uppercase tracking-wider text-muted">
+        {t("service")}
+      </legend>
+      <div className="mt-3 flex flex-wrap gap-2">
+        {keys.map((key) => {
+          const label = t(`serviceOptions.${key}`);
+          return (
+            <label key={key} className="cursor-pointer">
+              <input
+                type="radio"
+                name="service"
+                value={label}
+                className="peer sr-only"
+              />
+              <span className="inline-block rounded-full border border-line bg-paper px-4 py-2 text-sm text-ink/75 transition-all duration-200 hover:border-ink/25 peer-checked:border-accent peer-checked:bg-accent-soft peer-checked:font-medium peer-checked:text-accent peer-focus-visible:ring-2 peer-focus-visible:ring-accent peer-focus-visible:ring-offset-2">
+                {label}
+              </span>
+            </label>
+          );
+        })}
+      </div>
+    </fieldset>
+  );
+}
 
 function SubmitButton() {
   const t = useTranslations("contact.form");
@@ -24,8 +160,31 @@ function SubmitButton() {
     <button
       type="submit"
       disabled={pending}
-      className="inline-flex w-full items-center justify-center rounded-full bg-accent px-7 py-3.5 text-base font-medium text-white shadow-card transition-all duration-300 hover:bg-accent-deep hover:shadow-lift active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
+      className="group inline-flex w-full items-center justify-center gap-2.5 rounded-full bg-accent px-7 py-4 text-base font-medium text-white shadow-card transition-all duration-300 hover:bg-accent-deep hover:shadow-lift active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
     >
+      {pending && (
+        <svg
+          className="h-4 w-4 animate-spin"
+          viewBox="0 0 24 24"
+          fill="none"
+          aria-hidden
+        >
+          <circle
+            cx="12"
+            cy="12"
+            r="9"
+            stroke="currentColor"
+            strokeWidth="2.5"
+            strokeOpacity="0.3"
+          />
+          <path
+            d="M21 12a9 9 0 0 0-9-9"
+            stroke="currentColor"
+            strokeWidth="2.5"
+            strokeLinecap="round"
+          />
+        </svg>
+      )}
       {pending ? t("submitting") : t("submit")}
     </button>
   );
@@ -35,10 +194,21 @@ function FieldError({ id, error }: { id: string; error?: string }) {
   const t = useTranslations("contact.form.errors");
   if (!error) return null;
   return (
-    <p id={id} role="alert" className="mt-1.5 text-xs text-accent">
+    <p id={id} role="alert" className="mt-1.5 px-1 text-xs text-accent">
       {t(error)}
     </p>
   );
+}
+
+/** Alan + altındaki hata mesajını birlikte saran küçük yardımcı */
+function FieldRow({
+  children,
+  className,
+}: {
+  children: ReactNode;
+  className?: string;
+}) {
+  return <div className={className}>{children}</div>;
 }
 
 export function DevisForm() {
@@ -88,106 +258,73 @@ export function DevisForm() {
             noValidate
           >
             <div className="grid gap-5 sm:grid-cols-2">
-              <div>
-                <label htmlFor="devis-name" className={labelClass}>
-                  {t("name")} *
-                </label>
-                <input
+              <FieldRow>
+                <Field
                   id="devis-name"
                   name="name"
-                  type="text"
-                  autoComplete="name"
+                  label={t("name")}
                   placeholder={t("namePlaceholder")}
-                  aria-describedby="err-name"
-                  className={inputClass}
+                  autoComplete="name"
+                  required
+                  error={errors?.name}
+                  errorId="err-name"
                 />
                 <FieldError id="err-name" error={errors?.name} />
-              </div>
-              <div>
-                <label htmlFor="devis-phone" className={labelClass}>
-                  {t("phone")}
-                </label>
-                <input
+              </FieldRow>
+
+              <FieldRow>
+                <Field
                   id="devis-phone"
                   name="phone"
+                  label={t("phone")}
+                  placeholder={t("phonePlaceholder")}
                   type="tel"
                   autoComplete="tel"
-                  placeholder={t("phonePlaceholder")}
-                  aria-describedby="err-contact"
-                  className={inputClass}
+                  error={errors?.contact}
+                  errorId="err-contact"
                 />
                 <FieldError id="err-contact" error={errors?.contact} />
-              </div>
-              <div>
-                <label htmlFor="devis-email" className={labelClass}>
-                  {t("email")}
-                </label>
-                <input
+              </FieldRow>
+
+              <FieldRow>
+                <Field
                   id="devis-email"
                   name="email"
+                  label={t("email")}
+                  placeholder={t("emailPlaceholder")}
                   type="email"
                   autoComplete="email"
-                  placeholder={t("emailPlaceholder")}
-                  aria-describedby="err-email"
-                  className={inputClass}
+                  error={errors?.email}
+                  errorId="err-email"
                 />
                 <FieldError id="err-email" error={errors?.email} />
-              </div>
-              <div>
-                <label htmlFor="devis-city" className={labelClass}>
-                  {t("city")}
-                </label>
-                <input
+              </FieldRow>
+
+              <FieldRow>
+                <Field
                   id="devis-city"
                   name="city"
-                  type="text"
-                  autoComplete="address-level2"
+                  label={t("city")}
                   placeholder={t("cityPlaceholder")}
-                  className={inputClass}
+                  autoComplete="address-level2"
                 />
-              </div>
-              <div className="sm:col-span-2">
-                <label htmlFor="devis-service" className={labelClass}>
-                  {t("service")}
-                </label>
-                <select
-                  id="devis-service"
-                  name="service"
-                  defaultValue=""
-                  className={`${inputClass} appearance-none`}
-                >
-                  <option value="" disabled>
-                    {t("servicePlaceholder")}
-                  </option>
-                  {(
-                    [
-                      "peintureInterieure",
-                      "crepisFacades",
-                      "platrerie",
-                      "renovation",
-                      "autre",
-                    ] as const
-                  ).map((key) => (
-                    <option key={key} value={t(`serviceOptions.${key}`)}>
-                      {t(`serviceOptions.${key}`)}
-                    </option>
-                  ))}
-                </select>
-              </div>
-              <div className="sm:col-span-2">
-                <label htmlFor="devis-message" className={labelClass}>
-                  {t("message")} *
-                </label>
-                <textarea
+              </FieldRow>
+
+              <ServiceChips />
+
+              <FieldRow className="sm:col-span-2">
+                <Field
                   id="devis-message"
                   name="message"
-                  rows={5}
+                  label={t("message")}
                   placeholder={t("messagePlaceholder")}
-                  aria-describedby="err-message"
-                  className={`${inputClass} resize-y`}
+                  required
+                  textarea
+                  error={errors?.message}
+                  errorId="err-message"
                 />
                 <FieldError id="err-message" error={errors?.message} />
-              </div>
+              </FieldRow>
             </div>
 
             {/* Honeypot — botlara karşı, gerçek kullanıcılar görmez */}
@@ -232,10 +369,13 @@ export function DevisForm() {
               </div>
             )}
 
-            <div className="mt-7 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between">
+            <div className="mt-8 flex flex-col items-start gap-4 border-t border-line pt-6 sm:flex-row sm:items-center sm:justify-between">
               <SubmitButton />
               <p className="max-w-xs text-xs leading-relaxed text-muted">
-                {t("privacy")}
+                {t("privacy")}{" "}
+                <Link href="/politique-de-confidentialite" className="underline underline-offset-2 transition-colors hover:text-accent">
+                  {t("privacyLink")}
+                </Link>
               </p>
             </div>
           </motion.form>
