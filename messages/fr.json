@@ -374,15 +374,7 @@
       "subtitle": "Votre responsable de projet vous répond directement.",
       "cta": "Nous écrire"
     },
-    "nav": "Espace client",
-    "promo": {
-      "eyebrow": "Espace client",
-      "title": "Suivez votre chantier, du devis à la dernière couche",
-      "subtitle": "Créez votre espace en quelques secondes : votre devis, le planning, les photos d'avancement et vos factures réunis au même endroit, accessibles quand vous voulez.",
-      "ctaCreate": "Créer mon espace",
-      "ctaLogin": "J'ai déjà un compte",
-      "note": "Gratuit, sans engagement — réservé à nos clients et aux personnes ayant demandé un devis."
-    }
+    "nav": "Espace client"
   },
   "faq": {
     "eyebrow": "Questions fréquentes",

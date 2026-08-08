@@ -50,14 +50,17 @@ export async function submitDevis(
   ].join("\n");
 
   const apiKey = process.env.RESEND_API_KEY;
-  const to = process.env.CONTACT_EMAIL_TO ?? siteConfig.email;
+  // `||` bilinçli: siteConfig.email boş dizge olabilir, `??` onu geçirmezdi
+  const to = process.env.CONTACT_EMAIL_TO || siteConfig.email;
 
-  if (!apiKey) {
+  // Alıcı adresi yoksa gönderim imkânsız — sahte başarı yerine dürüst hata
+  if (!apiKey || !to) {
     // E-posta gönderimi yapılandırılmamış. Müşteriye ASLA "gönderildi" denmez:
     // sahte başarı, müşterinin boşuna beklemesine ve talebin kaybolmasına yol açar.
     // Bunun yerine telefon/WhatsApp'a yönlendiren dürüst bir hata döneriz.
     console.error(
-      "[devis] RESEND_API_KEY tanımlı değil — talep e-postaya GÖNDERİLEMEDİ:\n" +
+      `[devis] ${!apiKey ? "RESEND_API_KEY" : "CONTACT_EMAIL_TO"} tanımlı değil` +
+        " — talep e-postaya GÖNDERİLEMEDİ:\n" +
         lines
     );
     return { status: "error" };

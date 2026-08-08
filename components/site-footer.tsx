@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { siteConfig } from "@/lib/site-config";
+import { siteConfig, whatsappLink } from "@/lib/site-config";
 import { services } from "@/lib/services";
 import { Wordmark } from "./wordmark";
 import { InstagramIcon, TikTokIcon } from "./icons";
@@ -10,13 +10,23 @@ export async function SiteFooter() {
   const tn = await getTranslations("nav");
   const ts = await getTranslations("services.items");
   const tca = await getTranslations("clientArea");
+  const tl = await getTranslations("legal");
 
   const year = new Date().getFullYear();
+
+  // Yasal sayfalar footer'da kendi sütununda: alt şeritteki küçük gri yazı
+  // kolayca gözden kaçıyordu; kurumsal bir sitede bunların bulunabilir olması gerek.
+  const legalLinks = [
+    ["/mentions-legales", "mentions"],
+    ["/politique-de-confidentialite", "confidentialite"],
+    ["/cookies", "cookies"],
+    ["/conditions-generales", "conditions"],
+  ] as const;
 
   return (
     <footer className="border-t border-line bg-surface">
       <div className="mx-auto max-w-6xl px-5 py-16 md:px-8">
-        <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
+        <div className="grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr_1.2fr]">
           <div>
             <Wordmark />
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted">
@@ -97,6 +107,24 @@ export async function SiteFooter() {
             </ul>
           </nav>
 
+          <nav aria-label={tl("navTitle")}>
+            <h3 className="text-xs font-semibold uppercase tracking-widest text-muted">
+              {tl("navTitle")}
+            </h3>
+            <ul className="mt-4 space-y-2.5 text-sm">
+              {legalLinks.map(([href, key]) => (
+                <li key={key}>
+                  <Link
+                    href={href}
+                    className="text-ink/80 transition-colors hover:text-accent"
+                  >
+                    {tl(`${key}.nav`)}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
           <div>
             <h3 className="text-xs font-semibold uppercase tracking-widest text-muted">
               {t("contactTitle")}
@@ -112,12 +140,25 @@ export async function SiteFooter() {
               </li>
               <li>
                 <a
-                  href={`mailto:${siteConfig.email}`}
+                  href={whatsappLink()}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="transition-colors hover:text-accent"
                 >
-                  {siteConfig.email}
+                  WhatsApp — {siteConfig.whatsappDisplay}
                 </a>
               </li>
+              {/* E-posta adresi kurulana kadar bu satır görünmez (bkz. site-config) */}
+              {siteConfig.email && (
+                <li>
+                  <a
+                    href={`mailto:${siteConfig.email}`}
+                    className="transition-colors hover:text-accent"
+                  >
+                    {siteConfig.email}
+                  </a>
+                </li>
+              )}
               <li className="pt-2 text-muted">
                 <span className="block text-xs font-semibold uppercase tracking-widest">
                   {t("areasTitle")}

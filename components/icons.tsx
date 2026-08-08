@@ -77,6 +77,16 @@ export function PinIcon(props: IconProps) {
   );
 }
 
+/** Espace client girişi — header'daki ikon bağlantısı */
+export function UserIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" {...base} {...props}>
+      <circle cx="12" cy="8" r="3.5" />
+      <path d="M4.5 20a7.5 7.5 0 0 1 15 0" />
+    </svg>
+  );
+}
+
 export function CheckIcon(props: IconProps) {
   return (
     <svg viewBox="0 0 24 24" {...base} {...props}>

@@ -1,0 +1,473 @@
+{
+  "eyebrow": "Informations légales",
+  "toc": "Sommaire",
+  "updatedLabel": "Dernière mise à jour : {date}",
+  "navTitle": "Informations légales",
+  "identity": {
+    "legalName": "Raison sociale",
+    "legalForm": "Forme juridique",
+    "representative": "Personne responsable",
+    "address": "Adresse",
+    "ide": "Numéro IDE",
+    "vat": "Numéro TVA",
+    "register": "Registre du commerce",
+    "phone": "Téléphone",
+    "email": "E-mail"
+  },
+  "mentions": {
+    "nav": "Mentions légales",
+    "meta": {
+      "title": "Mentions légales",
+      "description": "Éditeur du site, hébergement, propriété intellectuelle, responsabilité et droit applicable pour le site de Peinture Suisse."
+    },
+    "title": "Mentions légales",
+    "intro": "Les présentes mentions légales s'appliquent à l'ensemble du site de Peinture Suisse. Elles indiquent qui édite ce site, dans quelles conditions il peut être utilisé et quelles responsabilités en découlent.",
+    "sections": [
+      {
+        "title": "Éditeur du site",
+        "paragraphs": [
+          "Le présent site est édité et exploité par :"
+        ],
+        "slot": "identity",
+        "note": "Ces indications permettent de nous identifier et de nous contacter rapidement et sans complication, conformément à l'art. 3 al. 1 let. s de la loi fédérale contre la concurrence déloyale (LCD)."
+      },
+      {
+        "title": "Hébergement",
+        "paragraphs": [
+          "Le site est hébergé par Vercel Inc., États-Unis — [vercel.com](https://vercel.com).",
+          "Les serveurs qui délivrent les pages peuvent être situés en Europe ou aux États-Unis. Les traitements de données qui en découlent, ainsi que les garanties encadrant les transferts à l'étranger, sont décrits dans notre [politique de confidentialité](/politique-de-confidentialite)."
+        ]
+      },
+      {
+        "title": "Propriété intellectuelle",
+        "paragraphs": [
+          "L'ensemble des éléments de ce site — textes, photographies de chantiers, logo, marque, mise en page, structure et code — est protégé par la loi fédérale sur le droit d'auteur (LDA) et par le droit des marques.",
+          "Toute reproduction, diffusion, adaptation ou utilisation commerciale, totale ou partielle, sur quelque support que ce soit, est interdite sans notre accord écrit préalable. La consultation du site et l'impression de pages pour un usage strictement privé restent libres.",
+          "Les photographies publiées représentent des chantiers que nous avons réalisés. Elles ne peuvent pas être réutilisées par des tiers, notamment à des fins publicitaires."
+        ]
+      },
+      {
+        "title": "Exactitude des informations",
+        "paragraphs": [
+          "Nous mettons à jour ce site avec soin. Les descriptions de prestations, les délais indiqués et les ordres de grandeur de prix sont néanmoins donnés à titre purement informatif et peuvent évoluer à tout moment.",
+          "Ces indications ne constituent pas une offre au sens de l'art. 3 du Code des obligations (CO). Seul un devis écrit, établi après visite ou description détaillée du chantier et accepté par le client, engage l'entreprise. Les conditions de cet engagement figurent dans nos [conditions générales](/conditions-generales)."
+        ]
+      },
+      {
+        "title": "Responsabilité",
+        "paragraphs": [
+          "Nous déclinons toute responsabilité pour les dommages directs ou indirects résultant de l'accès au site, de son utilisation, d'une interruption de service ou d'un dysfonctionnement technique, dans les limites autorisées par la loi.",
+          "La responsabilité pour dol ou négligence grave, ainsi que la responsabilité en cas d'atteinte à la vie ou à l'intégrité corporelle, demeure entière et ne peut pas être exclue."
+        ]
+      },
+      {
+        "title": "Liens vers des sites tiers",
+        "paragraphs": [
+          "Ce site contient des liens vers des plateformes tierces, notamment Instagram, TikTok et WhatsApp. Ces liens sont proposés pour votre commodité.",
+          "Nous n'avons aucune influence sur le contenu, la disponibilité ni les pratiques de confidentialité de ces plateformes et n'en assumons pas la responsabilité. Dès que vous suivez un tel lien, ce sont les conditions et la politique de confidentialité de l'exploitant concerné qui s'appliquent."
+        ]
+      },
+      {
+        "title": "Protection des données",
+        "paragraphs": [
+          "Le traitement des données personnelles effectué via ce site — formulaire de demande de devis, espace client, journaux techniques — est décrit en détail dans notre [politique de confidentialité](/politique-de-confidentialite). L'usage des cookies fait l'objet d'une [page dédiée](/cookies)."
+        ]
+      },
+      {
+        "title": "Droit applicable et for",
+        "paragraphs": [
+          "L'utilisation de ce site est soumise au droit suisse, à l'exclusion des règles de conflit de lois.",
+          "Sous réserve des fors impératifs prévus par la loi, notamment ceux institués en faveur des consommateurs, le for exclusif pour tout litige lié à ce site est à Lausanne (canton de Vaud, Suisse)."
+        ]
+      },
+      {
+        "title": "Nous contacter",
+        "paragraphs": [
+          "Pour toute question relative à ce site, à son contenu ou à ces mentions légales, appelez-nous au numéro indiqué au point 1, écrivez-nous sur WhatsApp ou passez par le [formulaire de contact](/contact)."
+        ]
+      }
+    ]
+  },
+  "confidentialite": {
+    "nav": "Confidentialité",
+    "meta": {
+      "title": "Politique de confidentialité",
+      "description": "Quelles données personnelles nous traitons, pourquoi, avec qui nous les partageons, combien de temps nous les conservons et quels sont vos droits."
+    },
+    "title": "Politique de confidentialité",
+    "intro": "Cette politique explique quelles données personnelles nous traitons lorsque vous utilisez notre site, pourquoi nous le faisons, à qui elles sont transmises et quels droits vous pouvez exercer. Elle est établie conformément à la loi fédérale sur la protection des données (LPD) et, pour les visiteurs de l'Union européenne, au règlement général sur la protection des données (RGPD).",
+    "sections": [
+      {
+        "title": "Responsable du traitement",
+        "paragraphs": [
+          "Le responsable du traitement des données collectées via ce site est :"
+        ],
+        "slot": "identity",
+        "note": "Pour toute question relative à la protection des données ou pour exercer vos droits, contactez-nous par téléphone ou via le [formulaire de contact](/contact). Nous n'avons pas désigné de conseiller à la protection des données ; vos demandes nous parviennent donc sans intermédiaire."
+      },
+      {
+        "title": "Nos principes",
+        "items": [
+          "Nous ne collectons que les données dont nous avons réellement besoin pour vous répondre et exécuter nos prestations.",
+          "Nous ne vendons, ne louons et n'échangeons aucune donnée personnelle.",
+          "Nous n'utilisons ni outil de mesure d'audience (Google Analytics ou équivalent), ni pixel publicitaire, ni profilage à des fins de marketing.",
+          "Les polices de caractères du site sont livrées depuis nos propres serveurs : consulter une page ne déclenche aucun appel vers un service tiers."
+        ]
+      },
+      {
+        "title": "Données que nous traitons",
+        "paragraphs": [
+          "Selon la manière dont vous utilisez le site, nous traitons les catégories de données suivantes :"
+        ],
+        "items": [
+          "**Demande de devis** — nom, numéro de téléphone, adresse e-mail, localité, prestation souhaitée et contenu de votre message. Le nom et au moins un moyen de contact sont nécessaires pour vous répondre ; les autres champs sont facultatifs.",
+          "**Espace client** — adresse e-mail, nom affiché et mot de passe. Le mot de passe est stocké sous forme chiffrée (haché) par notre prestataire d'authentification : ni lui ni nous ne pouvons le lire. Si vous choisissez « Continuer avec Google », nous recevons à la place votre adresse e-mail, votre nom et votre photo de profil Google.",
+          "**Données techniques** — adresse IP, type de navigateur et de système d'exploitation, pages consultées, date et heure de la requête. Ces données figurent dans les journaux du serveur et servent au fonctionnement et à la sécurité du site.",
+          "**Contact direct** — si vous nous écrivez par e-mail, appelez ou passez par WhatsApp, nous traitons les données que vous nous transmettez à cette occasion, y compris les photos de chantier que vous nous envoyez."
+        ],
+        "note": "Nous ne traitons aucune donnée sensible au sens de l'art. 5 let. c LPD. Merci de ne pas nous transmettre de telles données (santé, opinions religieuses ou politiques, etc.) via le formulaire ou par messagerie."
+      },
+      {
+        "title": "Pourquoi nous traitons ces données",
+        "items": [
+          "Répondre à vos demandes, établir un devis et organiser une visite de chantier.",
+          "Conclure et exécuter le contrat d'entreprise : planification, réalisation des travaux, facturation, garantie.",
+          "Gérer votre espace client : création du compte, authentification, accès à vos documents.",
+          "Assurer la sécurité et la disponibilité du site, prévenir les abus et les envois automatisés.",
+          "Respecter nos obligations légales, en particulier la conservation des pièces comptables (art. 958f CO)."
+        ]
+      },
+      {
+        "title": "Bases légales",
+        "paragraphs": [
+          "En droit suisse, le traitement de données personnelles ne nécessite pas de base légale spécifique tant qu'il respecte les principes de la LPD : licéité, bonne foi, proportionnalité, finalité reconnaissable et sécurité. Nous nous y tenons pour chacun des traitements décrits ci-dessus.",
+          "Pour les personnes résidant dans l'Union européenne, les bases légales du RGPD sont les suivantes : l'exécution du contrat ou de mesures précontractuelles (art. 6 par. 1 let. b) pour les devis, les travaux et l'espace client ; notre intérêt légitime (art. 6 par. 1 let. f) pour la sécurité du site et la prévention des abus ; l'obligation légale (art. 6 par. 1 let. c) pour la conservation comptable."
+        ]
+      },
+      {
+        "title": "Prestataires et destinataires",
+        "paragraphs": [
+          "Nous faisons appel à des prestataires techniques qui traitent des données pour notre compte, sur instruction et dans le cadre d'un contrat de sous-traitance. Aucun d'eux n'est autorisé à utiliser vos données à ses propres fins commerciales."
+        ],
+        "table": {
+          "head": ["Prestataire", "Rôle", "Siège"],
+          "rows": [
+            [
+              "Vercel Inc.",
+              "Hébergement du site et journaux techniques",
+              "États-Unis"
+            ],
+            [
+              "Clerk Inc.",
+              "Authentification et gestion des comptes de l'espace client",
+              "États-Unis"
+            ],
+            [
+              "Resend (Plus Five Five, Inc.)",
+              "Acheminement des e-mails générés par le formulaire de devis",
+              "États-Unis"
+            ],
+            [
+              "Google LLC",
+              "Uniquement si vous vous connectez avec « Continuer avec Google »",
+              "États-Unis"
+            ]
+          ]
+        },
+        "note": "Si vous nous écrivez via le bouton WhatsApp, l'échange se déroule sur l'infrastructure de WhatsApp Ireland Ltd. (groupe Meta), selon les conditions de cette plateforme, sur lesquelles nous n'avons aucune influence. Par ailleurs, vos données peuvent être communiquées à notre fiduciaire, à notre assurance ou aux autorités lorsque la loi l'exige."
+      },
+      {
+        "title": "Transferts à l'étranger",
+        "paragraphs": [
+          "Les prestataires listés ci-dessus ont leur siège aux États-Unis et vos données peuvent y être traitées ou stockées.",
+          "Ces communications reposent sur les garanties prévues aux art. 16 et 17 LPD : soit l'adhésion du prestataire au Swiss–U.S. Data Privacy Framework reconnu par le Conseil fédéral, soit des clauses contractuelles types approuvées par le Préposé fédéral, complétées le cas échéant par des mesures techniques telles que le chiffrement des transmissions."
+        ]
+      },
+      {
+        "title": "Durée de conservation",
+        "paragraphs": [
+          "Nous conservons les données aussi longtemps que nécessaire à la finalité pour laquelle elles ont été collectées, puis nous les supprimons ou les anonymisons :"
+        ],
+        "items": [
+          "**Demandes de devis restées sans suite** — 12 mois, afin de pouvoir retrouver un échange si vous nous recontactez.",
+          "**Dossiers de chantier, contrats et factures** — 10 ans à compter de la fin de l'exercice, conformément à l'art. 958f CO.",
+          "**Compte de l'espace client** — jusqu'à la suppression du compte, que vous pouvez demander à tout moment ; les données résiduelles sont effacées dans les 30 jours.",
+          "**Journaux techniques du serveur** — quelques semaines au maximum, puis suppression automatique."
+        ]
+      },
+      {
+        "title": "Sécurité",
+        "paragraphs": [
+          "Le site est intégralement servi en HTTPS et impose le chiffrement du transport (HSTS). Une politique de sécurité du contenu (CSP) restreint les scripts et les connexions aux seules origines nécessaires, ce qui limite fortement les risques d'injection de code et de fuite de données.",
+          "Les mots de passe de l'espace client ne sont jamais stockés en clair. L'accès aux demandes de devis et aux dossiers clients est réservé aux personnes de l'entreprise qui en ont besoin.",
+          "Aucune mesure ne peut toutefois garantir une sécurité absolue lors d'une transmission par Internet. Merci de ne pas nous envoyer d'informations particulièrement sensibles par e-mail ou messagerie."
+        ]
+      },
+      {
+        "title": "Vos droits",
+        "paragraphs": [
+          "Vous disposez à tout moment des droits suivants sur les données qui vous concernent :"
+        ],
+        "items": [
+          "**Accès** — obtenir la confirmation que nous traitons vos données et en recevoir une copie (art. 25 LPD).",
+          "**Rectification** — faire corriger des données inexactes ou incomplètes (art. 32 LPD).",
+          "**Effacement** — demander la suppression des données dont nous n'avons plus besoin et que nous ne sommes pas tenus de conserver.",
+          "**Opposition** — vous opposer à un traitement fondé sur notre intérêt légitime.",
+          "**Remise ou transmission** — recevoir dans un format courant les données que vous nous avez fournies (art. 28 LPD ; portabilité au sens de l'art. 20 RGPD).",
+          "**Retrait du consentement** — lorsqu'un traitement repose sur votre consentement, le retirer sans effet rétroactif."
+        ],
+        "note": "Adressez-nous votre demande par téléphone ou via le [formulaire de contact](/contact). Nous répondons en principe dans les 30 jours et gratuitement. Pour éviter de communiquer vos données à un tiers, nous pouvons vous demander de justifier votre identité."
+      },
+      {
+        "title": "Cookies",
+        "paragraphs": [
+          "Ce site n'utilise que les cookies strictement nécessaires à son fonctionnement — aucune bannière de consentement n'est donc affichée, car il n'y a rien à accepter ou à refuser. Le détail figure sur notre [page consacrée aux cookies](/cookies)."
+        ]
+      },
+      {
+        "title": "Modification de cette politique",
+        "paragraphs": [
+          "Nous pouvons adapter cette politique si nos prestations, nos outils ou le cadre légal évoluent. La version applicable est celle publiée sur cette page ; la date de dernière mise à jour figure en haut du document."
+        ]
+      },
+      {
+        "title": "Réclamation",
+        "paragraphs": [
+          "Si vous estimez que le traitement de vos données n'est pas conforme au droit, nous vous invitons d'abord à nous en parler : la plupart des situations se règlent rapidement.",
+          "Vous pouvez également vous adresser au Préposé fédéral à la protection des données et à la transparence (PFPDT), Feldeggweg 1, 3003 Berne — [edoeb.admin.ch](https://www.edoeb.admin.ch). Si vous résidez dans l'Union européenne, vous pouvez saisir l'autorité de contrôle de votre pays de résidence."
+        ]
+      }
+    ]
+  },
+  "cookies": {
+    "nav": "Cookies",
+    "meta": {
+      "title": "Politique de cookies",
+      "description": "Quels cookies ce site dépose, à quoi ils servent, combien de temps ils durent et comment les supprimer."
+    },
+    "title": "Politique de cookies",
+    "intro": "Ce site n'utilise que les cookies indispensables à son fonctionnement. Aucun cookie publicitaire, aucun outil de mesure d'audience, aucun traceur tiers. Cette page recense précisément ce qui est déposé sur votre appareil et pourquoi.",
+    "sections": [
+      {
+        "title": "Qu'est-ce qu'un cookie ?",
+        "paragraphs": [
+          "Un cookie est un petit fichier texte déposé sur votre appareil par le site que vous consultez. Il permet notamment de se souvenir d'un choix — votre langue, par exemple — ou de savoir que vous êtes déjà connecté, afin de ne pas vous redemander vos identifiants à chaque page.",
+          "Les technologies apparentées, comme le stockage local du navigateur (localStorage), sont assimilées aux cookies dans cette page lorsqu'elles remplissent la même fonction."
+        ]
+      },
+      {
+        "title": "Notre approche",
+        "paragraphs": [
+          "Nous n'utilisons que des cookies techniquement nécessaires : sans eux, le changement de langue ou la connexion à l'espace client ne fonctionnerait pas.",
+          "C'est aussi la raison pour laquelle aucune bannière de consentement ne s'affiche : il n'y a rien à accepter ni à refuser, puisque nous ne déposons aucun cookie destiné à la publicité, au suivi ou à la mesure d'audience."
+        ]
+      },
+      {
+        "title": "Cookies déposés",
+        "table": {
+          "head": ["Nom", "Déposé par", "Rôle", "Durée"],
+          "rows": [
+            [
+              "NEXT_LOCALE",
+              "Ce site",
+              "Mémorise la langue choisie (français, allemand ou anglais) pour vous réafficher la bonne version",
+              "Jusqu'à 1 an"
+            ],
+            [
+              "__session",
+              "Clerk",
+              "Maintient votre session lorsque vous êtes connecté à l'espace client",
+              "Durée de la session"
+            ],
+            [
+              "__client_uat",
+              "Clerk",
+              "Indique au serveur si une session est active, afin d'afficher la bonne interface (connecté ou non)",
+              "Durée de la session"
+            ],
+            [
+              "__clerk_db_jwt",
+              "Clerk",
+              "Jeton technique utilisé pendant les étapes d'authentification",
+              "Durée de la session"
+            ]
+          ]
+        },
+        "note": "Les cookies d'authentification sont posés par notre prestataire Clerk, qui gère la connexion à l'espace client. Leurs noms et leurs durées exactes peuvent évoluer avec ses mises à jour techniques ; le détail est publié sur [clerk.com](https://clerk.com/legal/privacy). Aucun de ces cookies ne sert à vous suivre d'un site à l'autre."
+      },
+      {
+        "title": "Ce que nous n'utilisons pas",
+        "items": [
+          "Aucun outil de mesure d'audience : ni Google Analytics, ni Matomo, ni équivalent.",
+          "Aucun pixel publicitaire (Meta, Google Ads, TikTok Ads ou autre) et aucun reciblage.",
+          "Aucun widget de réseau social intégré : les liens vers Instagram et TikTok sont de simples liens, ils ne chargent aucun script tiers tant que vous ne cliquez pas.",
+          "Aucune police de caractères distante : elles sont livrées depuis nos propres serveurs, sans appel à Google Fonts."
+        ]
+      },
+      {
+        "title": "Gérer ou supprimer les cookies",
+        "paragraphs": [
+          "Vous gardez le contrôle : tous les navigateurs permettent d'afficher les cookies déposés, de les supprimer et de les bloquer, globalement ou site par site. Ces réglages se trouvent en général sous « Confidentialité et sécurité ».",
+          "Si vous bloquez les cookies de ce site, la consultation des pages reste possible, mais la connexion à l'espace client ne fonctionnera plus et votre choix de langue ne sera pas mémorisé d'une visite à l'autre."
+        ]
+      },
+      {
+        "title": "Base légale",
+        "paragraphs": [
+          "L'art. 45c let. b de la loi sur les télécommunications (LTC) autorise le traitement de données sur un appareil tiers lorsque les utilisateurs sont informés de sa finalité et de la possibilité de le refuser. La présente page constitue cette information ; le refus s'exerce via les réglages du navigateur décrits au point précédent.",
+          "Les cookies strictement nécessaires au service demandé ne requièrent pas de consentement préalable en droit suisse. Nous n'en déposons pas d'autres."
+        ]
+      },
+      {
+        "title": "Questions",
+        "paragraphs": [
+          "Le traitement des données associées à ces cookies est décrit dans notre [politique de confidentialité](/politique-de-confidentialite). Pour toute question, contactez-nous — nos coordonnées figurent dans les [mentions légales](/mentions-legales)."
+        ]
+      }
+    ]
+  },
+  "conditions": {
+    "nav": "CGV",
+    "meta": {
+      "title": "Conditions générales",
+      "description": "Devis, prix, paiement, délais, réception des travaux, garantie et droit de révocation : les conditions générales de Peinture Suisse."
+    },
+    "title": "Conditions générales",
+    "intro": "Ces conditions générales encadrent nos devis et nos chantiers. Elles complètent le devis que vous signez et les règles du contrat d'entreprise du Code des obligations suisse (art. 363 ss CO). Nous les avons écrites pour qu'elles se lisent sans dictionnaire juridique.",
+    "sections": [
+      {
+        "title": "Champ d'application",
+        "paragraphs": [
+          "Les présentes conditions générales (CG) s'appliquent à tous nos devis, contrats et travaux, sauf convention écrite contraire.",
+          "En cas de contradiction, le devis accepté prime sur les présentes CG. Les conditions d'achat éventuelles du client ne s'appliquent que si nous les avons acceptées par écrit."
+        ]
+      },
+      {
+        "title": "Devis et offres",
+        "paragraphs": [
+          "Le devis est gratuit et n'engage pas le client. Il est établi après une visite sur place ou sur la base des informations et photos que vous nous transmettez.",
+          "Sauf mention contraire, un devis est valable 30 jours dès son établissement.",
+          "Les descriptions de prestations et les ordres de grandeur de prix publiés sur ce site ne constituent pas une offre au sens de l'art. 3 CO."
+        ],
+        "note": "Certains éléments ne sont pas visibles lors de la visite : support dégradé, humidité, ancienne peinture incompatible, présence d'amiante. S'ils apparaissent en cours de chantier, nous vous en informons et nous convenons ensemble de la suite avant de poursuivre — jamais après coup sur la facture."
+      },
+      {
+        "title": "Conclusion du contrat",
+        "paragraphs": [
+          "Le contrat est conclu lorsque vous acceptez le devis : par signature, par un e-mail exprès ou par tout autre accord écrit.",
+          "Un accord donné oralement ou par messagerie est valable. Nous en confirmons néanmoins la teneur par écrit, afin qu'aucun malentendu ne subsiste sur l'étendue des travaux."
+        ]
+      },
+      {
+        "title": "Prix, TVA et frais",
+        "paragraphs": [
+          "Les prix figurent au devis, en francs suisses (CHF).",
+          "Le devis indique si la taxe sur la valeur ajoutée (TVA) s'applique et, le cas échéant, si les montants sont exprimés hors taxe ou toutes taxes comprises. Le taux normal en vigueur en Suisse est de 8,1 %."
+        ],
+        "items": [
+          "Sauf indication contraire au devis, ne sont **pas compris** dans le prix : la location et le montage d'échafaudages, les travaux de maçonnerie, d'électricité ou de menuiserie, l'évacuation de mobilier volumineux.",
+          "Le désamiantage et le traitement de peintures au plomb relèvent d'entreprises spécialisées agréées et font l'objet d'un mandat distinct."
+        ]
+      },
+      {
+        "title": "Paiement",
+        "paragraphs": [
+          "Sauf convention contraire au devis, les factures sont payables net à 30 jours dès réception, sans escompte.",
+          "Pour les chantiers de longue durée, des acomptes ou une facturation par étapes peuvent être convenus ; leur montant et leur échéance figurent alors au devis.",
+          "À l'échéance, le client est en demeure sans rappel préalable (art. 102 al. 2 CO) et un intérêt moratoire de 5 % l'an est dû (art. 104 al. 1 CO). Les frais de rappel et de recouvrement effectifs sont à sa charge.",
+          "La contestation d'une partie des travaux ne dispense pas du paiement des prestations non contestées."
+        ]
+      },
+      {
+        "title": "Délais et déroulement du chantier",
+        "paragraphs": [
+          "Les délais sont convenus de bonne foi. Ils sont indicatifs, sauf lorsqu'ils sont qualifiés de fermes par écrit.",
+          "Ils peuvent être prolongés dans une mesure raisonnable en cas de retard d'un autre corps de métier, de conditions météorologiques rendant les travaux extérieurs impossibles, de modifications demandées par le client ou de retard dans la mise à disposition des locaux.",
+          "Les travaux sont exécutés selon les règles de l'art et les prescriptions d'application des fabricants de produits."
+        ]
+      },
+      {
+        "title": "Obligations du client",
+        "items": [
+          "Donner libre accès aux locaux aux heures convenues et remettre les clés ou codes nécessaires.",
+          "Mettre gratuitement à disposition l'eau et l'électricité et, si possible, un point de nettoyage.",
+          "Vider les pièces ou déplacer le mobilier et les objets fragiles. À défaut, nous pouvons le faire contre facturation, sans répondre des objets de valeur laissés sur place.",
+          "Nous signaler avant le début des travaux tout élément susceptible d'influencer le chantier : présence ou suspicion d'amiante ou de plomb, humidité, fissures structurelles, installations dissimulées dans les murs.",
+          "Obtenir les autorisations nécessaires auprès du propriétaire, de la gérance ou de la copropriété lorsque les travaux les requièrent."
+        ],
+        "note": "Les bâtiments construits ou rénovés avant 1990 peuvent contenir de l'amiante. Si un doute sérieux apparaît en cours de chantier, les travaux sont suspendus jusqu'à analyse. Il s'agit d'une obligation de protection de la santé, pas d'un choix commercial."
+      },
+      {
+        "title": "Travaux supplémentaires et modifications",
+        "paragraphs": [
+          "Toute prestation non prévue au devis fait l'objet d'un accord préalable sur son principe et son prix, confirmé par écrit dès que possible.",
+          "Si des travaux supplémentaires s'imposent d'urgence pour éviter un dommage, nous pouvons les exécuter et vous en informer sans délai."
+        ]
+      },
+      {
+        "title": "Réception et avis des défauts",
+        "paragraphs": [
+          "À la fin des travaux, le client est invité à vérifier l'ouvrage, si possible en notre présence.",
+          "Les défauts apparents doivent être signalés lors de la réception ou immédiatement après ; les défauts cachés, dès leur découverte (art. 367 CO).",
+          "En l'absence d'avis dans ces délais, l'ouvrage est réputé accepté pour les défauts qui auraient pu être constatés lors d'une vérification usuelle (art. 370 al. 2 CO)."
+        ]
+      },
+      {
+        "title": "Garantie",
+        "paragraphs": [
+          "Nous garantissons une exécution conforme au devis et aux règles de l'art.",
+          "Sauf convention contraire, la garantie est celle du Code des obligations : les droits du maître pour les défauts d'un ouvrage immobilier se prescrivent par cinq ans dès la réception (art. 371 al. 2 CO).",
+          "En cas de défaut avéré dont nous répondons, nous procédons en priorité à la réfection, à nos frais et dans un délai convenable."
+        ],
+        "items": [
+          "Sont exclus de la garantie : l'usure normale, les dommages causés par le client ou par un tiers, les défauts provenant du support ou de travaux antérieurs qui ne nous avaient pas été signalés, ainsi que les modifications apportées après la réception.",
+          "Les légères variations de teinte et de brillance inhérentes aux matériaux, au séchage ou à la lumière du lieu ne constituent pas un défaut. Un écran d'ordinateur ou de téléphone ne restitue jamais exactement une teinte : seul un échantillon posé sur place fait foi."
+        ]
+      },
+      {
+        "title": "Résiliation par le client",
+        "paragraphs": [
+          "Vous pouvez vous départir du contrat tant que l'ouvrage n'est pas terminé, en payant le travail déjà exécuté et en indemnisant complètement l'entreprise (art. 377 CO).",
+          "Cette indemnité couvre notamment les matériaux commandés spécifiquement pour votre chantier, les heures déjà engagées et le créneau de planning réservé qui ne peut plus être réattribué."
+        ]
+      },
+      {
+        "title": "Droit de révocation",
+        "paragraphs": [
+          "Lorsqu'un contrat est conclu à votre domicile ou sur votre lieu de travail, pour un usage privé et pour un montant supérieur à 100 francs, la loi vous accorde un délai de révocation de quatorze jours (art. 40a ss CO). Le cas échéant, nous vous en informons par écrit au moment de la signature.",
+          "Ce droit n'existe en revanche pas lorsque vous avez expressément souhaité la visite ou les négociations (art. 40c CO) — c'est le cas lorsque vous nous sollicitez vous-même via ce site, par téléphone ou par WhatsApp pour obtenir un devis et fixer un rendez-vous."
+        ]
+      },
+      {
+        "title": "Responsabilité",
+        "paragraphs": [
+          "Nous répondons des dommages causés dans l'exécution des travaux conformément aux art. 97 ss et 41 ss CO.",
+          "Dans la mesure permise par la loi, notre responsabilité pour les dommages indirects et le manque à gagner est exclue. La responsabilité pour dol, négligence grave et atteinte à la vie ou à l'intégrité corporelle demeure entière.",
+          "Tout dommage constaté doit nous être annoncé sans délai, afin que les faits puissent être établis et les assurances informées à temps."
+        ]
+      },
+      {
+        "title": "Force majeure",
+        "paragraphs": [
+          "Aucune partie ne répond d'un retard ou d'une inexécution dus à un événement échappant à son contrôle : catastrophe naturelle, incendie, épidémie, décision d'autorité, grève ou rupture durable d'approvisionnement. Les délais sont suspendus pour la durée de l'empêchement."
+        ]
+      },
+      {
+        "title": "Protection des données et photographies",
+        "paragraphs": [
+          "Les données transmises dans le cadre du devis et du chantier sont traitées conformément à notre [politique de confidentialité](/politique-de-confidentialite).",
+          "Nous photographions nos chantiers à des fins de documentation technique. Toute publication de ces images — site internet, réseaux sociaux — n'a lieu qu'avec votre accord, que vous pouvez retirer en tout temps ; l'image est alors retirée de nos supports dans un délai raisonnable."
+        ]
+      },
+      {
+        "title": "Dispositions finales",
+        "paragraphs": [
+          "Si une clause des présentes CG devait être nulle ou inapplicable, les autres clauses resteraient valables ; la clause concernée serait remplacée par une règle valable s'en approchant le plus.",
+          "Le contrat est soumis au droit suisse, à l'exclusion de la Convention des Nations Unies sur les contrats de vente internationale de marchandises.",
+          "Sous réserve des fors impératifs prévus par la loi, notamment en faveur des consommateurs, le for exclusif est à Lausanne (canton de Vaud, Suisse)."
+        ],
+        "note": "La version applicable est celle en vigueur au moment de l'acceptation du devis. Sa date figure en haut de cette page."
+      }
+    ]
+  }
+}

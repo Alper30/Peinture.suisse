@@ -104,13 +104,16 @@ export default async function ClientAreaPage({
               <PhoneIcon className="h-4 w-4" />
               {siteConfig.phoneDisplay}
             </a>
-            <a
-              href={`mailto:${siteConfig.email}`}
-              className="inline-flex items-center justify-center gap-2 text-sm text-white/70 transition-colors hover:text-white"
-            >
-              <MailIcon className="h-4 w-4" />
-              {siteConfig.email}
-            </a>
+            {/* E-posta adresi kurulana kadar gösterilmez (bkz. site-config) */}
+            {siteConfig.email && (
+              <a
+                href={`mailto:${siteConfig.email}`}
+                className="inline-flex items-center justify-center gap-2 text-sm text-white/70 transition-colors hover:text-white"
+              >
+                <MailIcon className="h-4 w-4" />
+                {siteConfig.email}
+              </a>
+            )}
           </div>
         </div>
       </Reveal>

@@ -18,8 +18,24 @@ export const siteConfig = {
   phoneHref: "tel:+41762036353",
   // WhatsApp: 077 944 85 56 (uluslararası format, + işareti olmadan)
   whatsappNumber: "41779448556",
-  // [PLACEHOLDER] — gerçek e-posta adresi gelince güncelle
-  email: "contact@peinture-suisse.ch",
+  // Aynı numaranın okunabilir hâli — yasal sayfalarda gösterilir
+  whatsappDisplay: "+41 77 944 85 56",
+  /**
+   * E-posta adresi — profesyonel adres kurulana kadar BOŞ.
+   *
+   * Uydurma bir adres (contact@peinture-suisse.ch) yazmak, hem alan adı bize
+   * ait olmadığı için hem de yasal sayfalarda "haklarınızı bu adresten
+   * kullanın" dendiği için gerçek bir sorundu: müşteri yazıyor, mesaj hiçbir
+   * yere ulaşmıyor. Adres olmadığında telefon + WhatsApp + iletişim formu
+   * zaten çalışıyor; e-posta satırları da hiç render edilmiyor.
+   *
+   * Doldurduğunuzda hiçbir şey değiştirmenize gerek yok — tüm kullanım
+   * yerleri (footer, iletişim, espace client, JSON-LD, yasal sayfalar)
+   * kendiliğinden geri gelir.
+   */
+  // `as string`: nesne `as const` olduğu için aksi halde tip `""` sabitine
+  // daralır ve "adres var mı?" kontrolleri derleyicide ölü koda dönerdi.
+  email: "" as string,
 
   address: {
     // [PLACEHOLDER] — sokak adresi gelince güncelle

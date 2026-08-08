@@ -1,0 +1,469 @@
+{
+  "eyebrow": "Legal information",
+  "toc": "Contents",
+  "updatedLabel": "Last updated: {date}",
+  "navTitle": "Legal",
+  "identity": {
+    "legalName": "Registered name",
+    "legalForm": "Legal form",
+    "representative": "Responsible person",
+    "address": "Address",
+    "ide": "Business identification number (IDE/UID)",
+    "vat": "VAT number",
+    "register": "Commercial register",
+    "phone": "Phone",
+    "email": "Email"
+  },
+  "mentions": {
+    "nav": "Legal notice",
+    "meta": {
+      "title": "Legal notice",
+      "description": "Website publisher, hosting, intellectual property, liability and applicable law for the Peinture Suisse website."
+    },
+    "title": "Legal notice",
+    "intro": "This legal notice applies to the entire Peinture Suisse website. It states who operates the site, on what terms it may be used and what liability follows from that use.",
+    "sections": [
+      {
+        "title": "Website publisher",
+        "paragraphs": [
+          "This website is published and operated by:"
+        ],
+        "slot": "identity",
+        "note": "These details allow you to identify and contact us quickly and without difficulty, in line with art. 3 para. 1 let. s of the Swiss Federal Act against Unfair Competition (UCA/LCD)."
+      },
+      {
+        "title": "Hosting",
+        "paragraphs": [
+          "The site is hosted by Vercel Inc., United States — [vercel.com](https://vercel.com).",
+          "The servers delivering these pages may be located in Europe or in the United States. The resulting data processing, together with the safeguards covering transfers abroad, is described in our [privacy policy](/politique-de-confidentialite)."
+        ]
+      },
+      {
+        "title": "Intellectual property",
+        "paragraphs": [
+          "All elements of this website — text, jobsite photographs, logo, brand, layout, structure and code — are protected by the Swiss Federal Act on Copyright (CopA/LDA) and by trademark law.",
+          "Any reproduction, distribution, adaptation or commercial use, in whole or in part and on any medium, is prohibited without our prior written consent. Browsing the site and printing pages for strictly private use remain free.",
+          "The photographs published here show work we carried out ourselves. They may not be reused by third parties, in particular for advertising purposes."
+        ]
+      },
+      {
+        "title": "Accuracy of the information",
+        "paragraphs": [
+          "We maintain this website with care. Service descriptions, stated lead times and price ranges are nevertheless purely indicative and may change at any time.",
+          "These indications do not constitute an offer within the meaning of art. 3 of the Swiss Code of Obligations (CO). Only a written quotation, drawn up after a site visit or a detailed description of the work and accepted by the client, binds the company. The terms of that commitment are set out in our [general terms and conditions](/conditions-generales)."
+        ]
+      },
+      {
+        "title": "Liability",
+        "paragraphs": [
+          "To the extent permitted by law, we accept no liability for direct or indirect damage arising from accessing the site, using it, an interruption of service or a technical malfunction.",
+          "Liability for intent or gross negligence, and liability in the event of injury to life or physical integrity, remains in full and cannot be excluded."
+        ]
+      },
+      {
+        "title": "Links to third-party sites",
+        "paragraphs": [
+          "This website contains links to third-party platforms, in particular Instagram, TikTok and WhatsApp. These links are provided for your convenience.",
+          "We have no influence over the content, availability or privacy practices of those platforms and accept no responsibility for them. As soon as you follow such a link, the terms and privacy policy of the operator concerned apply."
+        ]
+      },
+      {
+        "title": "Data protection",
+        "paragraphs": [
+          "The processing of personal data through this website — quotation request form, client area, technical logs — is described in detail in our [privacy policy](/politique-de-confidentialite). The use of cookies is covered on a [dedicated page](/cookies)."
+        ]
+      },
+      {
+        "title": "Applicable law and jurisdiction",
+        "paragraphs": [
+          "Use of this website is governed by Swiss law, excluding its conflict-of-law rules.",
+          "Subject to mandatory places of jurisdiction provided by law, in particular those established in favour of consumers, the exclusive place of jurisdiction for any dispute relating to this website is Lausanne (canton of Vaud, Switzerland)."
+        ]
+      },
+      {
+        "title": "Contact us",
+        "paragraphs": [
+          "For any question about this website, its content or this legal notice, call us on the number given in section 1, message us on WhatsApp or use the [contact form](/contact)."
+        ]
+      }
+    ]
+  },
+  "confidentialite": {
+    "nav": "Privacy",
+    "meta": {
+      "title": "Privacy policy",
+      "description": "What personal data we process, why, who we share it with, how long we keep it and what rights you have."
+    },
+    "title": "Privacy policy",
+    "intro": "This policy explains what personal data we process when you use our website, why we do so, who receives it and which rights you can exercise. It follows the Swiss Federal Act on Data Protection (FADP/LPD) and, for visitors from the European Union, the General Data Protection Regulation (GDPR).",
+    "sections": [
+      {
+        "title": "Data controller",
+        "paragraphs": [
+          "The controller for the data collected through this website is:"
+        ],
+        "slot": "identity",
+        "note": "For any data protection question, or to exercise your rights, contact us by phone or through the [contact form](/contact). We have not appointed a data protection adviser, so your requests reach us without an intermediary."
+      },
+      {
+        "title": "Our principles",
+        "items": [
+          "We only collect the data we genuinely need in order to answer you and carry out our work.",
+          "We never sell, rent or trade personal data.",
+          "We use no audience measurement tool (Google Analytics or equivalent), no advertising pixel and no profiling for marketing purposes.",
+          "The site's fonts are served from our own servers: opening a page triggers no call to a third-party service."
+        ]
+      },
+      {
+        "title": "Data we process",
+        "paragraphs": [
+          "Depending on how you use the site, we process the following categories of data:"
+        ],
+        "items": [
+          "**Quotation request** — name, phone number, email address, locality, requested service and the content of your message. Your name and at least one means of contact are needed for us to reply; the other fields are optional.",
+          "**Client area** — email address, display name and password. The password is stored only in hashed form by our authentication provider: neither they nor we can read it. If you choose “Continue with Google”, we instead receive your Google email address, name and profile picture.",
+          "**Technical data** — IP address, browser and operating system type, pages viewed, date and time of the request. This data appears in server logs and serves the operation and security of the site.",
+          "**Direct contact** — if you email us, call or use WhatsApp, we process the data you send on that occasion, including any jobsite photographs you share."
+        ],
+        "note": "We process no sensitive personal data within the meaning of art. 5 let. c FADP. Please do not send us such data (health, religious or political views, etc.) through the form or by message."
+      },
+      {
+        "title": "Why we process this data",
+        "items": [
+          "Answering your enquiries, preparing a quotation and arranging a site visit.",
+          "Concluding and performing the contract for work: planning, carrying out the work, invoicing, warranty.",
+          "Managing your client area: account creation, sign-in, access to your documents.",
+          "Keeping the site secure and available, preventing abuse and automated submissions.",
+          "Meeting our legal obligations, in particular the retention of accounting records (art. 958f CO)."
+        ]
+      },
+      {
+        "title": "Legal bases",
+        "paragraphs": [
+          "Under Swiss law, processing personal data requires no specific legal basis as long as it respects the FADP principles: lawfulness, good faith, proportionality, recognisable purpose and data security. We observe these for every processing operation described above.",
+          "For people residing in the European Union, the GDPR legal bases are as follows: performance of a contract or pre-contractual steps (art. 6(1)(b)) for quotations, works and the client area; our legitimate interest (art. 6(1)(f)) for site security and abuse prevention; legal obligation (art. 6(1)(c)) for accounting retention."
+        ]
+      },
+      {
+        "title": "Providers and recipients",
+        "paragraphs": [
+          "We rely on technical providers that process data on our behalf, on our instructions and under a data processing agreement. None of them may use your data for their own commercial purposes."
+        ],
+        "table": {
+          "head": ["Provider", "Role", "Location"],
+          "rows": [
+            ["Vercel Inc.", "Website hosting and technical logs", "United States"],
+            [
+              "Clerk Inc.",
+              "Authentication and account management for the client area",
+              "United States"
+            ],
+            [
+              "Resend (Plus Five Five, Inc.)",
+              "Delivery of the emails generated by the quotation form",
+              "United States"
+            ],
+            [
+              "Google LLC",
+              "Only if you sign in using “Continue with Google”",
+              "United States"
+            ]
+          ]
+        },
+        "note": "If you write to us through the WhatsApp button, the exchange takes place on the infrastructure of WhatsApp Ireland Ltd. (Meta group), under that platform's terms, over which we have no influence. Your data may also be disclosed to our accountant, our insurer or the authorities where the law requires it."
+      },
+      {
+        "title": "Transfers abroad",
+        "paragraphs": [
+          "The providers listed above are based in the United States and your data may be processed or stored there.",
+          "These disclosures rely on the safeguards set out in art. 16 and 17 FADP: either the provider's participation in the Swiss–U.S. Data Privacy Framework recognised by the Federal Council, or standard contractual clauses approved by the Federal Data Protection Commissioner, supplemented where appropriate by technical measures such as encryption in transit."
+        ]
+      },
+      {
+        "title": "Retention periods",
+        "paragraphs": [
+          "We keep data for as long as necessary for the purpose it was collected for, then delete or anonymise it:"
+        ],
+        "items": [
+          "**Quotation requests that led nowhere** — 12 months, so that an earlier exchange can be found if you contact us again.",
+          "**Job files, contracts and invoices** — 10 years from the end of the financial year, in accordance with art. 958f CO.",
+          "**Client area account** — until the account is deleted, which you may request at any time; residual data is removed within 30 days.",
+          "**Technical server logs** — a few weeks at most, then deleted automatically."
+        ]
+      },
+      {
+        "title": "Security",
+        "paragraphs": [
+          "The site is served entirely over HTTPS and enforces transport encryption (HSTS). A Content Security Policy (CSP) restricts scripts and connections to the necessary origins only, which sharply limits the risk of code injection and data leakage.",
+          "Client area passwords are never stored in clear text. Access to quotation requests and client files is limited to the people in the company who need it.",
+          "No measure can guarantee absolute security for a transmission over the internet, however. Please do not send us particularly sensitive information by email or messaging."
+        ]
+      },
+      {
+        "title": "Your rights",
+        "paragraphs": [
+          "You have the following rights over the data concerning you, at any time:"
+        ],
+        "items": [
+          "**Access** — obtain confirmation that we process your data and receive a copy of it (art. 25 FADP).",
+          "**Rectification** — have inaccurate or incomplete data corrected (art. 32 FADP).",
+          "**Erasure** — request deletion of data we no longer need and are not required to keep.",
+          "**Objection** — object to processing based on our legitimate interest.",
+          "**Handover or transfer** — receive the data you provided to us in a common format (art. 28 FADP; portability under art. 20 GDPR).",
+          "**Withdrawal of consent** — where processing relies on your consent, withdraw it without retroactive effect."
+        ],
+        "note": "Send your request by phone or through the [contact form](/contact). We normally respond within 30 days and free of charge. To avoid disclosing your data to someone else, we may ask you to prove your identity."
+      },
+      {
+        "title": "Cookies",
+        "paragraphs": [
+          "This site uses only the cookies strictly necessary for it to work — which is why no consent banner is shown: there is nothing to accept or refuse. The details are on our [cookie page](/cookies)."
+        ]
+      },
+      {
+        "title": "Changes to this policy",
+        "paragraphs": [
+          "We may adapt this policy if our services, our tools or the legal framework change. The applicable version is the one published on this page; the date of the last update appears at the top of the document."
+        ]
+      },
+      {
+        "title": "Complaints",
+        "paragraphs": [
+          "If you believe your data is not being processed lawfully, please talk to us first: most situations are settled quickly.",
+          "You may also contact the Federal Data Protection and Information Commissioner (FDPIC), Feldeggweg 1, 3003 Bern — [edoeb.admin.ch](https://www.edoeb.admin.ch). If you reside in the European Union, you may lodge a complaint with the supervisory authority of your country of residence."
+        ]
+      }
+    ]
+  },
+  "cookies": {
+    "nav": "Cookies",
+    "meta": {
+      "title": "Cookie policy",
+      "description": "Which cookies this site sets, what they are for, how long they last and how to remove them."
+    },
+    "title": "Cookie policy",
+    "intro": "This site uses only the cookies essential to its operation. No advertising cookies, no audience measurement, no third-party trackers. This page lists exactly what is stored on your device and why.",
+    "sections": [
+      {
+        "title": "What is a cookie?",
+        "paragraphs": [
+          "A cookie is a small text file placed on your device by the site you are visiting. It can remember a choice — your language, for instance — or recognise that you are already signed in, so you do not have to enter your credentials on every page.",
+          "Related technologies such as browser local storage (localStorage) are treated as cookies on this page where they serve the same function."
+        ]
+      },
+      {
+        "title": "Our approach",
+        "paragraphs": [
+          "We use only technically necessary cookies: without them, switching language or signing in to the client area would not work.",
+          "That is also why no consent banner appears: there is nothing to accept or refuse, since we set no cookies for advertising, tracking or audience measurement."
+        ]
+      },
+      {
+        "title": "Cookies we set",
+        "table": {
+          "head": ["Name", "Set by", "Purpose", "Duration"],
+          "rows": [
+            [
+              "NEXT_LOCALE",
+              "This site",
+              "Remembers the language you chose (French, German or English) so the right version is shown",
+              "Up to 1 year"
+            ],
+            [
+              "__session",
+              "Clerk",
+              "Keeps your session alive while you are signed in to the client area",
+              "Session"
+            ],
+            [
+              "__client_uat",
+              "Clerk",
+              "Tells the server whether a session is active, so the correct interface (signed in or not) is displayed",
+              "Session"
+            ],
+            [
+              "__clerk_db_jwt",
+              "Clerk",
+              "Technical token used during the authentication steps",
+              "Session"
+            ]
+          ]
+        },
+        "note": "The authentication cookies are set by our provider Clerk, which handles sign-in to the client area. Their names and exact durations may change with its technical updates; details are published at [clerk.com](https://clerk.com/legal/privacy). None of these cookies is used to track you across websites."
+      },
+      {
+        "title": "What we do not use",
+        "items": [
+          "No audience measurement tool: no Google Analytics, no Matomo, nothing equivalent.",
+          "No advertising pixel (Meta, Google Ads, TikTok Ads or other) and no retargeting.",
+          "No embedded social media widgets: the links to Instagram and TikTok are plain links and load no third-party script unless you click them.",
+          "No remote fonts: they are served from our own servers, with no call to Google Fonts."
+        ]
+      },
+      {
+        "title": "Managing or deleting cookies",
+        "paragraphs": [
+          "You stay in control: every browser lets you view the cookies that have been set, delete them and block them, either globally or site by site. These settings are usually found under “Privacy and security”.",
+          "If you block this site's cookies, you can still read the pages, but signing in to the client area will no longer work and your language choice will not be remembered between visits."
+        ]
+      },
+      {
+        "title": "Legal basis",
+        "paragraphs": [
+          "Art. 45c let. b of the Swiss Telecommunications Act (TCA/LTC) permits processing data on a third-party device where users are informed of its purpose and of their ability to refuse it. This page provides that information; refusal is exercised through the browser settings described in the previous section.",
+          "Cookies strictly necessary for the service requested require no prior consent under Swiss law. We set no others."
+        ]
+      },
+      {
+        "title": "Questions",
+        "paragraphs": [
+          "The processing of the data associated with these cookies is described in our [privacy policy](/politique-de-confidentialite). For any question, contact us — our contact details are in the [legal notice](/mentions-legales)."
+        ]
+      }
+    ]
+  },
+  "conditions": {
+    "nav": "Terms",
+    "meta": {
+      "title": "General terms and conditions",
+      "description": "Quotations, prices, payment, lead times, acceptance of the work, warranty and right of withdrawal: the terms of Peinture Suisse."
+    },
+    "title": "General terms and conditions",
+    "intro": "These terms govern our quotations and our jobs. They supplement the quotation you accept and the rules on contracts for work in the Swiss Code of Obligations (art. 363 et seq. CO). We have written them to be read without a legal dictionary.",
+    "sections": [
+      {
+        "title": "Scope",
+        "paragraphs": [
+          "These general terms and conditions (GTC) apply to all our quotations, contracts and works, unless otherwise agreed in writing.",
+          "In the event of a conflict, the accepted quotation prevails over these GTC. Any purchasing conditions of the client apply only if we have accepted them in writing."
+        ]
+      },
+      {
+        "title": "Quotations",
+        "paragraphs": [
+          "The quotation is free of charge and does not bind the client. It is drawn up after a site visit or on the basis of the information and photographs you send us.",
+          "Unless stated otherwise, a quotation is valid for 30 days from the date it was issued.",
+          "The service descriptions and price ranges published on this website do not constitute an offer within the meaning of art. 3 CO."
+        ],
+        "note": "Some things are not visible during a visit: a degraded substrate, damp, an incompatible previous coating, asbestos. If they appear once work has started, we tell you and we agree together on how to proceed before continuing — never afterwards on the invoice."
+      },
+      {
+        "title": "Formation of the contract",
+        "paragraphs": [
+          "The contract is formed when you accept the quotation: by signature, by an express email or by any other written agreement.",
+          "Agreement given verbally or by messaging is valid. We nevertheless confirm its content in writing so that no misunderstanding remains about the scope of the work."
+        ]
+      },
+      {
+        "title": "Prices, VAT and additional costs",
+        "paragraphs": [
+          "Prices are set out in the quotation, in Swiss francs (CHF).",
+          "The quotation states whether value added tax (VAT) applies and, if so, whether the amounts are exclusive or inclusive of tax. The standard rate in force in Switzerland is 8.1%."
+        ],
+        "items": [
+          "Unless stated otherwise in the quotation, the price does **not include**: hire and erection of scaffolding, masonry, electrical or carpentry work, or removal of bulky furniture.",
+          "Asbestos removal and the treatment of lead-based paint are matters for certified specialist firms and form the subject of a separate engagement."
+        ]
+      },
+      {
+        "title": "Payment",
+        "paragraphs": [
+          "Unless otherwise agreed in the quotation, invoices are payable net within 30 days of receipt, without discount.",
+          "For longer jobs, instalments or staged invoicing may be agreed; the amounts and due dates are then set out in the quotation.",
+          "On expiry of the deadline the client is in default without further reminder (art. 102 para. 2 CO) and default interest of 5% per year is due (art. 104 para. 1 CO). Actual reminder and collection costs are borne by the client.",
+          "Disputing part of the work does not release the client from paying for the undisputed services."
+        ]
+      },
+      {
+        "title": "Lead times and progress of the work",
+        "paragraphs": [
+          "Lead times are agreed in good faith. They are indicative unless described as firm in writing.",
+          "They may be extended to a reasonable extent in the event of delay by another trade, weather making exterior work impossible, changes requested by the client, or late availability of the premises.",
+          "Work is carried out according to good trade practice and the application instructions of the product manufacturers."
+        ]
+      },
+      {
+        "title": "Client's obligations",
+        "items": [
+          "Provide free access to the premises at the agreed times and hand over the necessary keys or codes.",
+          "Provide water and electricity free of charge and, where possible, a cleaning point.",
+          "Empty the rooms or move furniture and fragile items. Failing this, we may do so and invoice for it, without being liable for valuables left on site.",
+          "Tell us before work starts about anything that may affect the job: known or suspected asbestos or lead, damp, structural cracks, installations concealed in the walls.",
+          "Obtain the necessary authorisations from the owner, the managing agent or the condominium association where the work requires them."
+        ],
+        "note": "Buildings constructed or renovated before 1990 may contain asbestos. If a serious suspicion arises during the work, it is suspended pending analysis. This is a health protection obligation, not a commercial choice."
+      },
+      {
+        "title": "Additional work and changes",
+        "paragraphs": [
+          "Any service not provided for in the quotation is subject to prior agreement on its principle and its price, confirmed in writing as soon as possible.",
+          "If additional work is urgently required to prevent damage, we may carry it out and will inform you without delay."
+        ]
+      },
+      {
+        "title": "Acceptance and notice of defects",
+        "paragraphs": [
+          "Once the work is finished, the client is invited to inspect it, if possible in our presence.",
+          "Apparent defects must be notified at acceptance or immediately afterwards; hidden defects as soon as they are discovered (art. 367 CO).",
+          "Absent notice within those periods, the work is deemed accepted as regards defects that a customary inspection would have revealed (art. 370 para. 2 CO)."
+        ]
+      },
+      {
+        "title": "Warranty",
+        "paragraphs": [
+          "We warrant that the work conforms to the quotation and to good trade practice.",
+          "Unless otherwise agreed, the warranty is that of the Code of Obligations: the client's claims for defects in immovable work become time-barred five years after acceptance (art. 371 para. 2 CO).",
+          "Where a defect for which we are responsible is established, we give priority to rectifying it, at our expense and within a reasonable time."
+        ],
+        "items": [
+          "Excluded from the warranty: normal wear, damage caused by the client or a third party, defects arising from the substrate or from earlier work that was not disclosed to us, and changes made after acceptance.",
+          "Slight variations in shade and sheen caused by the material, by drying or by the light of the room are not defects. A computer or phone screen never reproduces a colour exactly: only a sample applied on site is decisive."
+        ]
+      },
+      {
+        "title": "Termination by the client",
+        "paragraphs": [
+          "You may withdraw from the contract as long as the work is not completed, by paying for the work already done and fully compensating the company (art. 377 CO).",
+          "That compensation covers in particular materials ordered specifically for your job, hours already committed, and the reserved slot in our schedule that can no longer be reallocated."
+        ]
+      },
+      {
+        "title": "Right of withdrawal",
+        "paragraphs": [
+          "Where a contract is concluded at your home or workplace, for private use and for an amount above 100 francs, the law grants you a withdrawal period of fourteen days (art. 40a et seq. CO). Where that applies, we inform you in writing at the time of signature.",
+          "That right does not exist, however, where you expressly requested the visit or the negotiations (art. 40c CO) — which is the case when you contact us yourself through this website, by phone or via WhatsApp to obtain a quotation and arrange an appointment."
+        ]
+      },
+      {
+        "title": "Liability",
+        "paragraphs": [
+          "We are liable for damage caused in carrying out the work in accordance with art. 97 et seq. and art. 41 et seq. CO.",
+          "To the extent permitted by law, our liability for indirect damage and loss of profit is excluded. Liability for intent, gross negligence and injury to life or physical integrity remains in full.",
+          "Any damage observed must be reported to us without delay, so that the facts can be established and insurers informed in time."
+        ]
+      },
+      {
+        "title": "Force majeure",
+        "paragraphs": [
+          "Neither party is liable for delay or non-performance caused by an event beyond its control: natural disaster, fire, epidemic, decision of an authority, strike or lasting supply failure. Deadlines are suspended for the duration of the impediment."
+        ]
+      },
+      {
+        "title": "Data protection and photographs",
+        "paragraphs": [
+          "Data provided in connection with the quotation and the work is processed in accordance with our [privacy policy](/politique-de-confidentialite).",
+          "We photograph our jobs for technical documentation. Any publication of those images — website, social media — takes place only with your consent, which you may withdraw at any time; the image is then removed from our channels within a reasonable period."
+        ]
+      },
+      {
+        "title": "Final provisions",
+        "paragraphs": [
+          "Should any clause of these GTC be void or unenforceable, the remaining clauses remain valid; the clause concerned is replaced by a valid rule that comes closest to it.",
+          "The contract is governed by Swiss law, excluding the United Nations Convention on Contracts for the International Sale of Goods.",
+          "Subject to mandatory places of jurisdiction provided by law, in particular in favour of consumers, the exclusive place of jurisdiction is Lausanne (canton of Vaud, Switzerland)."
+        ],
+        "note": "The applicable version is the one in force when the quotation was accepted. Its date appears at the top of this page."
+      }
+    ]
+  }
+}

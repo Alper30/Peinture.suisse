@@ -1,0 +1,469 @@
+{
+  "eyebrow": "Rechtliche Hinweise",
+  "toc": "Inhalt",
+  "updatedLabel": "Letzte Aktualisierung: {date}",
+  "navTitle": "Rechtliches",
+  "identity": {
+    "legalName": "Firma",
+    "legalForm": "Rechtsform",
+    "representative": "Verantwortliche Person",
+    "address": "Adresse",
+    "ide": "UID-Nummer",
+    "vat": "MWST-Nummer",
+    "register": "Handelsregister",
+    "phone": "Telefon",
+    "email": "E-Mail"
+  },
+  "mentions": {
+    "nav": "Impressum",
+    "meta": {
+      "title": "Impressum",
+      "description": "Betreiber der Website, Hosting, Urheberrecht, Haftung und anwendbares Recht für die Website von Peinture Suisse."
+    },
+    "title": "Impressum",
+    "intro": "Dieses Impressum gilt für die gesamte Website von Peinture Suisse. Es hält fest, wer diese Website betreibt, unter welchen Bedingungen sie genutzt werden darf und welche Haftung daraus entsteht.",
+    "sections": [
+      {
+        "title": "Betreiber der Website",
+        "paragraphs": [
+          "Diese Website wird herausgegeben und betrieben von:"
+        ],
+        "slot": "identity",
+        "note": "Diese Angaben ermöglichen es, uns rasch und unkompliziert zu identifizieren und zu kontaktieren — entsprechend Art. 3 Abs. 1 lit. s des Bundesgesetzes gegen den unlauteren Wettbewerb (UWG)."
+      },
+      {
+        "title": "Hosting",
+        "paragraphs": [
+          "Die Website wird von Vercel Inc., USA, gehostet — [vercel.com](https://vercel.com).",
+          "Die Server, welche die Seiten ausliefern, können sich in Europa oder in den USA befinden. Die damit verbundenen Datenbearbeitungen sowie die Garantien für Bekanntgaben ins Ausland sind in unserer [Datenschutzerklärung](/politique-de-confidentialite) beschrieben."
+        ]
+      },
+      {
+        "title": "Urheberrecht",
+        "paragraphs": [
+          "Sämtliche Elemente dieser Website — Texte, Baustellenfotos, Logo, Marke, Gestaltung, Aufbau und Code — sind durch das Bundesgesetz über das Urheberrecht (URG) und das Markenrecht geschützt.",
+          "Jede Vervielfältigung, Verbreitung, Bearbeitung oder kommerzielle Nutzung, ganz oder teilweise und auf welchem Träger auch immer, ist ohne unsere vorgängige schriftliche Zustimmung untersagt. Das Betrachten der Website und das Ausdrucken einzelner Seiten für den rein privaten Gebrauch bleiben frei.",
+          "Die veröffentlichten Fotografien zeigen von uns ausgeführte Arbeiten. Sie dürfen von Dritten nicht weiterverwendet werden, insbesondere nicht zu Werbezwecken."
+        ]
+      },
+      {
+        "title": "Richtigkeit der Angaben",
+        "paragraphs": [
+          "Wir pflegen diese Website sorgfältig. Die Beschreibungen der Leistungen, die genannten Fristen und die Preisgrössenordnungen sind dennoch rein informativ und können sich jederzeit ändern.",
+          "Diese Angaben stellen kein Angebot im Sinne von Art. 3 des Obligationenrechts (OR) dar. Nur eine schriftliche Offerte, die nach einer Besichtigung oder einer detaillierten Beschreibung der Baustelle erstellt und vom Kunden angenommen wurde, verpflichtet das Unternehmen. Die Bedingungen dazu finden sich in unseren [allgemeinen Geschäftsbedingungen](/conditions-generales)."
+        ]
+      },
+      {
+        "title": "Haftung",
+        "paragraphs": [
+          "Wir lehnen im gesetzlich zulässigen Rahmen jede Haftung für direkte oder indirekte Schäden ab, die aus dem Zugriff auf die Website, ihrer Nutzung, einem Unterbruch des Dienstes oder einer technischen Störung entstehen.",
+          "Die Haftung für Absicht und grobe Fahrlässigkeit sowie die Haftung bei Verletzung von Leben und Körper bleibt vollumfänglich bestehen und kann nicht wegbedungen werden."
+        ]
+      },
+      {
+        "title": "Links zu Websites Dritter",
+        "paragraphs": [
+          "Diese Website enthält Links zu Plattformen Dritter, namentlich Instagram, TikTok und WhatsApp. Diese Links werden zu Ihrer Bequemlichkeit angeboten.",
+          "Wir haben keinen Einfluss auf Inhalt, Verfügbarkeit oder Datenschutzpraxis dieser Plattformen und übernehmen dafür keine Verantwortung. Sobald Sie einem solchen Link folgen, gelten die Bedingungen und die Datenschutzerklärung des jeweiligen Anbieters."
+        ]
+      },
+      {
+        "title": "Datenschutz",
+        "paragraphs": [
+          "Die Bearbeitung von Personendaten über diese Website — Offertformular, Kundenbereich, technische Protokolle — ist ausführlich in unserer [Datenschutzerklärung](/politique-de-confidentialite) beschrieben. Dem Einsatz von Cookies ist eine [eigene Seite](/cookies) gewidmet."
+        ]
+      },
+      {
+        "title": "Anwendbares Recht und Gerichtsstand",
+        "paragraphs": [
+          "Die Nutzung dieser Website untersteht schweizerischem Recht unter Ausschluss der Kollisionsnormen.",
+          "Unter Vorbehalt zwingender Gerichtsstände, namentlich zugunsten von Konsumentinnen und Konsumenten, ist ausschliesslicher Gerichtsstand für Streitigkeiten im Zusammenhang mit dieser Website Lausanne (Kanton Waadt, Schweiz)."
+        ]
+      },
+      {
+        "title": "Kontakt",
+        "paragraphs": [
+          "Bei Fragen zu dieser Website, ihrem Inhalt oder diesem Impressum rufen Sie uns unter der in Punkt 1 genannten Nummer an, schreiben Sie uns über WhatsApp oder nutzen Sie das [Kontaktformular](/contact)."
+        ]
+      }
+    ]
+  },
+  "confidentialite": {
+    "nav": "Datenschutz",
+    "meta": {
+      "title": "Datenschutzerklärung",
+      "description": "Welche Personendaten wir bearbeiten, wozu, an wen wir sie weitergeben, wie lange wir sie aufbewahren und welche Rechte Sie haben."
+    },
+    "title": "Datenschutzerklärung",
+    "intro": "Diese Erklärung beschreibt, welche Personendaten wir bearbeiten, wenn Sie unsere Website nutzen, weshalb wir das tun, an wen die Daten weitergegeben werden und welche Rechte Sie geltend machen können. Sie richtet sich nach dem Bundesgesetz über den Datenschutz (DSG) und — für Besucherinnen und Besucher aus der Europäischen Union — nach der Datenschutz-Grundverordnung (DSGVO).",
+    "sections": [
+      {
+        "title": "Verantwortliche Stelle",
+        "paragraphs": [
+          "Verantwortlich für die Bearbeitung der über diese Website erhobenen Daten ist:"
+        ],
+        "slot": "identity",
+        "note": "Für Fragen zum Datenschutz oder zur Ausübung Ihrer Rechte wenden Sie sich telefonisch an uns oder nutzen Sie das [Kontaktformular](/contact). Wir haben keine Datenschutzberaterin bzw. keinen Datenschutzberater bezeichnet; Ihre Anliegen erreichen uns somit ohne Zwischenstelle."
+      },
+      {
+        "title": "Unsere Grundsätze",
+        "items": [
+          "Wir erheben nur jene Daten, die wir tatsächlich benötigen, um Ihnen zu antworten und unsere Arbeiten auszuführen.",
+          "Wir verkaufen, vermieten und tauschen keine Personendaten.",
+          "Wir setzen weder Webanalyse-Werkzeuge (Google Analytics oder Vergleichbares) noch Werbepixel noch Profiling zu Marketingzwecken ein.",
+          "Die Schriften der Website werden von unseren eigenen Servern ausgeliefert: Der Aufruf einer Seite löst keinen Abruf bei einem Drittanbieter aus."
+        ]
+      },
+      {
+        "title": "Welche Daten wir bearbeiten",
+        "paragraphs": [
+          "Je nachdem, wie Sie die Website nutzen, bearbeiten wir folgende Datenkategorien:"
+        ],
+        "items": [
+          "**Offertanfrage** — Name, Telefonnummer, E-Mail-Adresse, Ort, gewünschte Leistung und Inhalt Ihrer Nachricht. Der Name und mindestens eine Kontaktmöglichkeit sind für eine Antwort erforderlich; die übrigen Felder sind freiwillig.",
+          "**Kundenbereich** — E-Mail-Adresse, angezeigter Name und Passwort. Das Passwort wird von unserem Authentifizierungsdienst ausschliesslich verschlüsselt (gehasht) gespeichert: Weder er noch wir können es lesen. Wenn Sie «Weiter mit Google» wählen, erhalten wir stattdessen Ihre Google-E-Mail-Adresse, Ihren Namen und Ihr Profilbild.",
+          "**Technische Daten** — IP-Adresse, Browser- und Betriebssystemtyp, aufgerufene Seiten, Datum und Uhrzeit der Anfrage. Diese Daten fallen in den Serverprotokollen an und dienen dem Betrieb und der Sicherheit der Website.",
+          "**Direkter Kontakt** — Wenn Sie uns per E-Mail schreiben, anrufen oder über WhatsApp kontaktieren, bearbeiten wir die Daten, die Sie uns dabei übermitteln, einschliesslich zugesandter Baustellenfotos."
+        ],
+        "note": "Wir bearbeiten keine besonders schützenswerten Personendaten im Sinne von Art. 5 lit. c DSG. Bitte übermitteln Sie uns solche Daten (Gesundheit, religiöse oder politische Ansichten usw.) weder über das Formular noch per Nachricht."
+      },
+      {
+        "title": "Wozu wir diese Daten bearbeiten",
+        "items": [
+          "Beantwortung Ihrer Anfragen, Erstellung einer Offerte und Organisation einer Besichtigung.",
+          "Abschluss und Erfüllung des Werkvertrags: Planung, Ausführung der Arbeiten, Rechnungsstellung, Gewährleistung.",
+          "Verwaltung Ihres Kundenbereichs: Kontoerstellung, Anmeldung, Zugriff auf Ihre Dokumente.",
+          "Sicherstellung von Sicherheit und Verfügbarkeit der Website, Abwehr von Missbrauch und automatisierten Zusendungen.",
+          "Erfüllung gesetzlicher Pflichten, insbesondere der Aufbewahrung von Geschäftsbüchern (Art. 958f OR)."
+        ]
+      },
+      {
+        "title": "Rechtsgrundlagen",
+        "paragraphs": [
+          "Nach schweizerischem Recht bedarf die Bearbeitung von Personendaten keiner besonderen Rechtsgrundlage, solange die Grundsätze des DSG eingehalten werden: Rechtmässigkeit, Treu und Glauben, Verhältnismässigkeit, Erkennbarkeit des Zwecks und Datensicherheit. Daran halten wir uns bei jeder der oben beschriebenen Bearbeitungen.",
+          "Für Personen mit Wohnsitz in der Europäischen Union gelten folgende Rechtsgrundlagen der DSGVO: Erfüllung des Vertrags oder vorvertraglicher Massnahmen (Art. 6 Abs. 1 lit. b) für Offerten, Arbeiten und Kundenbereich; unser berechtigtes Interesse (Art. 6 Abs. 1 lit. f) für Sicherheit und Missbrauchsabwehr; rechtliche Verpflichtung (Art. 6 Abs. 1 lit. c) für die buchhalterische Aufbewahrung."
+        ]
+      },
+      {
+        "title": "Dienstleister und Empfänger",
+        "paragraphs": [
+          "Wir arbeiten mit technischen Dienstleistern zusammen, die Daten in unserem Auftrag, nach unseren Weisungen und auf Basis eines Auftragsbearbeitungsvertrags bearbeiten. Keiner von ihnen darf Ihre Daten für eigene kommerzielle Zwecke verwenden."
+        ],
+        "table": {
+          "head": ["Dienstleister", "Aufgabe", "Sitz"],
+          "rows": [
+            ["Vercel Inc.", "Hosting der Website und technische Protokolle", "USA"],
+            [
+              "Clerk Inc.",
+              "Authentifizierung und Kontoverwaltung des Kundenbereichs",
+              "USA"
+            ],
+            [
+              "Resend (Plus Five Five, Inc.)",
+              "Zustellung der E-Mails aus dem Offertformular",
+              "USA"
+            ],
+            [
+              "Google LLC",
+              "Nur wenn Sie sich mit «Weiter mit Google» anmelden",
+              "USA"
+            ]
+          ]
+        },
+        "note": "Wenn Sie uns über die WhatsApp-Schaltfläche schreiben, findet der Austausch auf der Infrastruktur von WhatsApp Ireland Ltd. (Meta-Konzern) und nach deren Bedingungen statt, auf die wir keinen Einfluss haben. Zudem können Ihre Daten unserer Treuhandstelle, unserer Versicherung oder Behörden bekanntgegeben werden, soweit das Gesetz dies verlangt."
+      },
+      {
+        "title": "Bekanntgabe ins Ausland",
+        "paragraphs": [
+          "Die oben aufgeführten Dienstleister haben ihren Sitz in den USA; Ihre Daten können dort bearbeitet oder gespeichert werden.",
+          "Diese Bekanntgaben stützen sich auf die Garantien nach Art. 16 und 17 DSG: entweder auf den Beitritt des Dienstleisters zum vom Bundesrat anerkannten Swiss–U.S. Data Privacy Framework oder auf vom Eidgenössischen Datenschutzbeauftragten genehmigte Standardvertragsklauseln, gegebenenfalls ergänzt durch technische Massnahmen wie die Verschlüsselung der Übertragung."
+        ]
+      },
+      {
+        "title": "Aufbewahrungsdauer",
+        "paragraphs": [
+          "Wir bewahren Daten so lange auf, wie es für den Zweck der Erhebung erforderlich ist, und löschen oder anonymisieren sie anschliessend:"
+        ],
+        "items": [
+          "**Offertanfragen ohne Folgeauftrag** — 12 Monate, damit ein früherer Austausch bei erneuter Kontaktaufnahme auffindbar bleibt.",
+          "**Baustellendossiers, Verträge und Rechnungen** — 10 Jahre ab Ende des Geschäftsjahres, gemäss Art. 958f OR.",
+          "**Konto im Kundenbereich** — bis zur Löschung des Kontos, die Sie jederzeit verlangen können; verbleibende Daten werden innert 30 Tagen entfernt.",
+          "**Technische Serverprotokolle** — höchstens einige Wochen, danach automatische Löschung."
+        ]
+      },
+      {
+        "title": "Sicherheit",
+        "paragraphs": [
+          "Die Website wird ausschliesslich über HTTPS ausgeliefert und erzwingt die Transportverschlüsselung (HSTS). Eine Content-Security-Policy (CSP) beschränkt Skripte und Verbindungen auf die notwendigen Herkünfte, was das Risiko von Code-Einschleusung und Datenabfluss deutlich senkt.",
+          "Passwörter des Kundenbereichs werden nie im Klartext gespeichert. Der Zugriff auf Offertanfragen und Kundendossiers ist auf die Personen im Betrieb beschränkt, die ihn benötigen.",
+          "Keine Massnahme kann jedoch absolute Sicherheit bei einer Übertragung über das Internet gewährleisten. Bitte senden Sie uns besonders heikle Informationen nicht per E-Mail oder Messenger."
+        ]
+      },
+      {
+        "title": "Ihre Rechte",
+        "paragraphs": [
+          "Sie haben jederzeit folgende Rechte in Bezug auf die Sie betreffenden Daten:"
+        ],
+        "items": [
+          "**Auskunft** — Bestätigung, ob wir Ihre Daten bearbeiten, und Erhalt einer Kopie (Art. 25 DSG).",
+          "**Berichtigung** — Korrektur unrichtiger oder unvollständiger Daten (Art. 32 DSG).",
+          "**Löschung** — Entfernung von Daten, die wir nicht mehr benötigen und nicht aufbewahren müssen.",
+          "**Widerspruch** — Widerspruch gegen eine Bearbeitung, die sich auf unser berechtigtes Interesse stützt.",
+          "**Herausgabe oder Übertragung** — Erhalt der von Ihnen bereitgestellten Daten in einem gängigen Format (Art. 28 DSG; Datenübertragbarkeit nach Art. 20 DSGVO).",
+          "**Widerruf der Einwilligung** — sofern eine Bearbeitung auf Ihrer Einwilligung beruht, ohne Rückwirkung."
+        ],
+        "note": "Richten Sie Ihr Anliegen telefonisch oder über das [Kontaktformular](/contact) an uns. Wir antworten grundsätzlich innert 30 Tagen und kostenlos. Um Ihre Daten nicht an Dritte herauszugeben, können wir einen Identitätsnachweis verlangen."
+      },
+      {
+        "title": "Cookies",
+        "paragraphs": [
+          "Diese Website verwendet ausschliesslich Cookies, die für ihren Betrieb zwingend erforderlich sind — deshalb erscheint kein Einwilligungsbanner, denn es gibt nichts anzunehmen oder abzulehnen. Die Einzelheiten finden Sie auf unserer [Cookie-Seite](/cookies)."
+        ]
+      },
+      {
+        "title": "Änderung dieser Erklärung",
+        "paragraphs": [
+          "Wir können diese Erklärung anpassen, wenn sich unsere Leistungen, unsere Werkzeuge oder die Rechtslage ändern. Massgebend ist die auf dieser Seite veröffentlichte Fassung; das Datum der letzten Aktualisierung steht am Anfang des Dokuments."
+        ]
+      },
+      {
+        "title": "Beschwerde",
+        "paragraphs": [
+          "Wenn Sie der Ansicht sind, die Bearbeitung Ihrer Daten sei nicht rechtmässig, sprechen Sie uns bitte zuerst darauf an: Die meisten Situationen lassen sich rasch klären.",
+          "Sie können sich auch an den Eidgenössischen Datenschutz- und Öffentlichkeitsbeauftragten (EDÖB), Feldeggweg 1, 3003 Bern — [edoeb.admin.ch](https://www.edoeb.admin.ch) — wenden. Mit Wohnsitz in der Europäischen Union können Sie die Aufsichtsbehörde Ihres Wohnsitzstaates anrufen."
+        ]
+      }
+    ]
+  },
+  "cookies": {
+    "nav": "Cookies",
+    "meta": {
+      "title": "Cookie-Richtlinie",
+      "description": "Welche Cookies diese Website setzt, wozu sie dienen, wie lange sie gespeichert bleiben und wie Sie sie löschen."
+    },
+    "title": "Cookie-Richtlinie",
+    "intro": "Diese Website verwendet ausschliesslich Cookies, die für ihren Betrieb unerlässlich sind. Keine Werbe-Cookies, keine Webanalyse, keine Tracker von Dritten. Diese Seite listet genau auf, was auf Ihrem Gerät gespeichert wird und weshalb.",
+    "sections": [
+      {
+        "title": "Was ist ein Cookie?",
+        "paragraphs": [
+          "Ein Cookie ist eine kleine Textdatei, welche die aufgerufene Website auf Ihrem Gerät ablegt. Damit lässt sich beispielsweise eine Auswahl merken — etwa Ihre Sprache — oder erkennen, dass Sie bereits angemeldet sind, damit Sie Ihre Zugangsdaten nicht auf jeder Seite erneut eingeben müssen.",
+          "Verwandte Technologien wie der lokale Browserspeicher (localStorage) werden auf dieser Seite den Cookies gleichgestellt, soweit sie dieselbe Funktion erfüllen."
+        ]
+      },
+      {
+        "title": "Unser Ansatz",
+        "paragraphs": [
+          "Wir setzen nur technisch notwendige Cookies ein: Ohne sie würden der Sprachwechsel und die Anmeldung im Kundenbereich nicht funktionieren.",
+          "Aus demselben Grund erscheint kein Einwilligungsbanner: Es gibt nichts anzunehmen oder abzulehnen, da wir keine Cookies für Werbung, Tracking oder Reichweitenmessung setzen."
+        ]
+      },
+      {
+        "title": "Gesetzte Cookies",
+        "table": {
+          "head": ["Name", "Gesetzt von", "Zweck", "Dauer"],
+          "rows": [
+            [
+              "NEXT_LOCALE",
+              "Diese Website",
+              "Merkt sich die gewählte Sprache (Französisch, Deutsch oder Englisch), um die richtige Fassung anzuzeigen",
+              "Bis zu 1 Jahr"
+            ],
+            [
+              "__session",
+              "Clerk",
+              "Hält Ihre Sitzung aufrecht, solange Sie im Kundenbereich angemeldet sind",
+              "Dauer der Sitzung"
+            ],
+            [
+              "__client_uat",
+              "Clerk",
+              "Teilt dem Server mit, ob eine Sitzung aktiv ist, damit die richtige Ansicht (angemeldet oder nicht) erscheint",
+              "Dauer der Sitzung"
+            ],
+            [
+              "__clerk_db_jwt",
+              "Clerk",
+              "Technisches Token, das während der Anmeldeschritte verwendet wird",
+              "Dauer der Sitzung"
+            ]
+          ]
+        },
+        "note": "Die Anmelde-Cookies werden von unserem Dienstleister Clerk gesetzt, der die Anmeldung im Kundenbereich abwickelt. Ihre Namen und genauen Laufzeiten können sich mit dessen technischen Aktualisierungen ändern; die Einzelheiten sind auf [clerk.com](https://clerk.com/legal/privacy) veröffentlicht. Keines dieser Cookies dient dazu, Sie über Websites hinweg zu verfolgen."
+      },
+      {
+        "title": "Was wir nicht einsetzen",
+        "items": [
+          "Kein Webanalyse-Werkzeug: weder Google Analytics noch Matomo noch Vergleichbares.",
+          "Keine Werbepixel (Meta, Google Ads, TikTok Ads oder andere) und kein Retargeting.",
+          "Keine eingebetteten Social-Media-Widgets: Die Links zu Instagram und TikTok sind einfache Links und laden keine fremden Skripte, solange Sie nicht klicken.",
+          "Keine externen Schriften: Sie werden von unseren eigenen Servern ausgeliefert, ohne Abruf bei Google Fonts."
+        ]
+      },
+      {
+        "title": "Cookies verwalten oder löschen",
+        "paragraphs": [
+          "Sie behalten die Kontrolle: Alle Browser erlauben es, gesetzte Cookies anzuzeigen, zu löschen und zu blockieren — generell oder pro Website. Diese Einstellungen finden sich meist unter «Datenschutz und Sicherheit».",
+          "Wenn Sie die Cookies dieser Website blockieren, können Sie die Seiten weiterhin lesen; die Anmeldung im Kundenbereich funktioniert dann jedoch nicht mehr und Ihre Sprachwahl wird von Besuch zu Besuch nicht gespeichert."
+        ]
+      },
+      {
+        "title": "Rechtsgrundlage",
+        "paragraphs": [
+          "Art. 45c lit. b des Fernmeldegesetzes (FMG) erlaubt die Bearbeitung von Daten auf fremden Geräten, wenn die Nutzerinnen und Nutzer über den Zweck und über die Möglichkeit der Ablehnung informiert werden. Diese Seite stellt diese Information dar; die Ablehnung erfolgt über die im vorherigen Punkt beschriebenen Browsereinstellungen.",
+          "Für die zur Erbringung des gewünschten Dienstes zwingend erforderlichen Cookies ist nach schweizerischem Recht keine vorgängige Einwilligung nötig. Andere setzen wir nicht."
+        ]
+      },
+      {
+        "title": "Fragen",
+        "paragraphs": [
+          "Die Bearbeitung der mit diesen Cookies verbundenen Daten ist in unserer [Datenschutzerklärung](/politique-de-confidentialite) beschrieben. Bei Fragen kontaktieren Sie uns — unsere Kontaktangaben stehen im [Impressum](/mentions-legales)."
+        ]
+      }
+    ]
+  },
+  "conditions": {
+    "nav": "AGB",
+    "meta": {
+      "title": "Allgemeine Geschäftsbedingungen",
+      "description": "Offerte, Preise, Zahlung, Termine, Abnahme, Gewährleistung und Widerrufsrecht: die AGB von Peinture Suisse."
+    },
+    "title": "Allgemeine Geschäftsbedingungen",
+    "intro": "Diese Geschäftsbedingungen gelten für unsere Offerten und Baustellen. Sie ergänzen die von Ihnen angenommene Offerte sowie die Regeln des Werkvertrags im schweizerischen Obligationenrecht (Art. 363 ff. OR). Wir haben sie so geschrieben, dass sie ohne juristisches Wörterbuch lesbar sind.",
+    "sections": [
+      {
+        "title": "Geltungsbereich",
+        "paragraphs": [
+          "Diese allgemeinen Geschäftsbedingungen (AGB) gelten für alle unsere Offerten, Verträge und Arbeiten, soweit nichts anderes schriftlich vereinbart ist.",
+          "Bei Widersprüchen geht die angenommene Offerte diesen AGB vor. Allfällige Einkaufsbedingungen des Kunden gelten nur, wenn wir sie schriftlich anerkannt haben."
+        ]
+      },
+      {
+        "title": "Offerten",
+        "paragraphs": [
+          "Die Offerte ist kostenlos und für den Kunden unverbindlich. Sie wird nach einer Besichtigung vor Ort oder aufgrund der von Ihnen übermittelten Angaben und Fotos erstellt.",
+          "Soweit nicht anders vermerkt, ist eine Offerte 30 Tage ab Ausstellung gültig.",
+          "Die auf dieser Website veröffentlichten Leistungsbeschreibungen und Preisgrössenordnungen stellen kein Angebot im Sinne von Art. 3 OR dar."
+        ],
+        "note": "Manches ist bei der Besichtigung nicht sichtbar: geschädigter Untergrund, Feuchtigkeit, unverträglicher Altanstrich, Asbest. Zeigt sich dies während der Arbeiten, informieren wir Sie und wir legen das weitere Vorgehen gemeinsam fest, bevor wir fortfahren — nie nachträglich auf der Rechnung."
+      },
+      {
+        "title": "Vertragsschluss",
+        "paragraphs": [
+          "Der Vertrag kommt zustande, wenn Sie die Offerte annehmen: durch Unterschrift, durch eine ausdrückliche E-Mail oder durch eine andere schriftliche Vereinbarung.",
+          "Eine mündlich oder per Nachricht erteilte Zustimmung ist gültig. Wir bestätigen deren Inhalt dennoch schriftlich, damit über den Umfang der Arbeiten kein Missverständnis bestehen bleibt."
+        ]
+      },
+      {
+        "title": "Preise, MWST und Nebenkosten",
+        "paragraphs": [
+          "Die Preise sind in der Offerte in Schweizer Franken (CHF) aufgeführt.",
+          "Die Offerte hält fest, ob die Mehrwertsteuer (MWST) anfällt und gegebenenfalls, ob die Beträge exklusive oder inklusive Steuer verstanden werden. Der geltende Normalsatz in der Schweiz beträgt 8,1 %."
+        ],
+        "items": [
+          "Soweit in der Offerte nicht anders vermerkt, **nicht enthalten** sind: Miete und Aufbau von Gerüsten, Maurer-, Elektro- oder Schreinerarbeiten sowie die Entsorgung sperriger Möbel.",
+          "Asbestsanierung und die Behandlung bleihaltiger Anstriche sind Sache zugelassener Fachbetriebe und Gegenstand eines separaten Auftrags."
+        ]
+      },
+      {
+        "title": "Zahlung",
+        "paragraphs": [
+          "Soweit in der Offerte nicht anders vereinbart, sind Rechnungen netto innert 30 Tagen ab Erhalt zahlbar, ohne Skonto.",
+          "Bei länger dauernden Baustellen können Akontozahlungen oder eine Abrechnung nach Etappen vereinbart werden; Betrag und Fälligkeit stehen dann in der Offerte.",
+          "Mit Ablauf der Frist gerät der Kunde ohne Mahnung in Verzug (Art. 102 Abs. 2 OR) und schuldet einen Verzugszins von 5 % pro Jahr (Art. 104 Abs. 1 OR). Die tatsächlichen Mahn- und Inkassokosten gehen zu seinen Lasten.",
+          "Die Beanstandung eines Teils der Arbeiten befreit nicht von der Zahlung der unbestrittenen Leistungen."
+        ]
+      },
+      {
+        "title": "Termine und Ablauf der Arbeiten",
+        "paragraphs": [
+          "Termine werden nach Treu und Glauben vereinbart. Sie gelten als Richtwerte, sofern sie nicht schriftlich als fix bezeichnet werden.",
+          "Sie können in angemessenem Umfang verlängert werden bei Verzug eines anderen Gewerks, bei Witterung, die Aussenarbeiten verunmöglicht, bei vom Kunden gewünschten Änderungen oder bei verspäteter Bereitstellung der Räume.",
+          "Die Arbeiten werden nach den Regeln der Baukunde und den Verarbeitungsvorschriften der Produkthersteller ausgeführt."
+        ]
+      },
+      {
+        "title": "Pflichten des Kunden",
+        "items": [
+          "Freien Zugang zu den Räumen zu den vereinbarten Zeiten gewähren und die nötigen Schlüssel oder Codes übergeben.",
+          "Wasser und Strom unentgeltlich zur Verfügung stellen und nach Möglichkeit eine Reinigungsstelle.",
+          "Die Räume ausräumen oder Mobiliar und zerbrechliche Gegenstände wegstellen. Andernfalls können wir dies gegen Verrechnung übernehmen, ohne für zurückgelassene Wertgegenstände einzustehen.",
+          "Uns vor Beginn der Arbeiten alles mitteilen, was die Baustelle beeinflussen kann: Asbest- oder Bleiverdacht, Feuchtigkeit, strukturelle Risse, in den Wänden verborgene Installationen.",
+          "Die erforderlichen Bewilligungen bei Eigentümerschaft, Verwaltung oder Stockwerkeigentümergemeinschaft einholen, soweit die Arbeiten sie voraussetzen."
+        ],
+        "note": "Vor 1990 erstellte oder renovierte Gebäude können Asbest enthalten. Ergibt sich während der Arbeiten ein ernsthafter Verdacht, werden diese bis zur Analyse eingestellt. Das ist eine Pflicht zum Gesundheitsschutz, keine kaufmännische Entscheidung."
+      },
+      {
+        "title": "Zusatzarbeiten und Änderungen",
+        "paragraphs": [
+          "Jede in der Offerte nicht vorgesehene Leistung bedarf einer vorgängigen Einigung über Grundsatz und Preis, die sobald wie möglich schriftlich bestätigt wird.",
+          "Sind Zusatzarbeiten dringend erforderlich, um einen Schaden abzuwenden, können wir sie ausführen und informieren Sie unverzüglich."
+        ]
+      },
+      {
+        "title": "Abnahme und Mängelrüge",
+        "paragraphs": [
+          "Nach Abschluss der Arbeiten wird der Kunde eingeladen, das Werk zu prüfen, wenn möglich in unserem Beisein.",
+          "Offene Mängel sind bei der Abnahme oder unmittelbar danach zu rügen, verdeckte Mängel sofort nach ihrer Entdeckung (Art. 367 OR).",
+          "Unterbleibt die Anzeige innert dieser Fristen, gilt das Werk für jene Mängel als genehmigt, die bei einer üblichen Prüfung erkennbar gewesen wären (Art. 370 Abs. 2 OR)."
+        ]
+      },
+      {
+        "title": "Gewährleistung",
+        "paragraphs": [
+          "Wir gewährleisten eine Ausführung, die der Offerte und den Regeln der Baukunde entspricht.",
+          "Soweit nichts anderes vereinbart ist, gilt die Gewährleistung des Obligationenrechts: Die Ansprüche des Bestellers wegen Mängeln eines unbeweglichen Werks verjähren fünf Jahre nach der Abnahme (Art. 371 Abs. 2 OR).",
+          "Liegt ein Mangel vor, für den wir einstehen, nehmen wir vorrangig die Nachbesserung auf unsere Kosten und innert angemessener Frist vor."
+        ],
+        "items": [
+          "Von der Gewährleistung ausgenommen sind: normale Abnutzung, vom Kunden oder von Dritten verursachte Schäden, Mängel aus dem Untergrund oder aus früheren Arbeiten, die uns nicht gemeldet wurden, sowie Änderungen nach der Abnahme.",
+          "Leichte Abweichungen in Farbton und Glanz, die auf Material, Trocknung oder Lichtverhältnisse zurückgehen, sind kein Mangel. Ein Computer- oder Telefonbildschirm gibt einen Farbton nie exakt wieder: Massgebend ist allein ein vor Ort aufgetragenes Muster."
+        ]
+      },
+      {
+        "title": "Rücktritt durch den Kunden",
+        "paragraphs": [
+          "Sie können vom Vertrag zurücktreten, solange das Werk nicht vollendet ist, gegen Vergütung der bereits geleisteten Arbeit und volle Schadloshaltung des Unternehmens (Art. 377 OR).",
+          "Diese Entschädigung umfasst namentlich eigens für Ihre Baustelle bestellte Materialien, bereits aufgewendete Stunden und das reservierte Zeitfenster, das nicht mehr anderweitig vergeben werden kann."
+        ]
+      },
+      {
+        "title": "Widerrufsrecht",
+        "paragraphs": [
+          "Wird ein Vertrag bei Ihnen zu Hause oder an Ihrem Arbeitsplatz für den privaten Gebrauch und über einen Betrag von mehr als 100 Franken abgeschlossen, gewährt Ihnen das Gesetz eine Widerrufsfrist von vierzehn Tagen (Art. 40a ff. OR). Wir weisen Sie diesfalls bei der Unterzeichnung schriftlich darauf hin.",
+          "Dieses Recht besteht hingegen nicht, wenn Sie die Besichtigung oder die Verhandlungen ausdrücklich gewünscht haben (Art. 40c OR) — was zutrifft, wenn Sie uns über diese Website, telefonisch oder über WhatsApp selbst um eine Offerte und einen Termin ersuchen."
+        ]
+      },
+      {
+        "title": "Haftung",
+        "paragraphs": [
+          "Wir haften für Schäden, die wir bei der Ausführung der Arbeiten verursachen, nach Art. 97 ff. und Art. 41 ff. OR.",
+          "Soweit gesetzlich zulässig, ist unsere Haftung für indirekte Schäden und entgangenen Gewinn ausgeschlossen. Die Haftung für Absicht, grobe Fahrlässigkeit sowie für Verletzung von Leben und Körper bleibt vollumfänglich bestehen.",
+          "Festgestellte Schäden sind uns unverzüglich zu melden, damit der Sachverhalt festgehalten und die Versicherungen rechtzeitig informiert werden können."
+        ]
+      },
+      {
+        "title": "Höhere Gewalt",
+        "paragraphs": [
+          "Keine Partei haftet für Verzug oder Nichterfüllung infolge eines Ereignisses ausserhalb ihres Einflussbereichs: Naturkatastrophe, Brand, Epidemie, behördliche Anordnung, Streik oder dauerhafter Lieferunterbruch. Die Fristen ruhen für die Dauer der Verhinderung."
+        ]
+      },
+      {
+        "title": "Datenschutz und Fotografien",
+        "paragraphs": [
+          "Die im Rahmen der Offerte und der Baustelle übermittelten Daten werden gemäss unserer [Datenschutzerklärung](/politique-de-confidentialite) bearbeitet.",
+          "Wir fotografieren unsere Baustellen zur technischen Dokumentation. Eine Veröffentlichung dieser Bilder — Website, soziale Netzwerke — erfolgt nur mit Ihrem Einverständnis, das Sie jederzeit widerrufen können; das Bild wird dann innert angemessener Frist von unseren Kanälen entfernt."
+        ]
+      },
+      {
+        "title": "Schlussbestimmungen",
+        "paragraphs": [
+          "Sollte eine Bestimmung dieser AGB nichtig oder undurchsetzbar sein, bleiben die übrigen Bestimmungen gültig; die betroffene Bestimmung wird durch eine gültige Regelung ersetzt, die ihr am nächsten kommt.",
+          "Der Vertrag untersteht schweizerischem Recht unter Ausschluss des Übereinkommens der Vereinten Nationen über Verträge über den internationalen Warenkauf.",
+          "Unter Vorbehalt zwingender Gerichtsstände, namentlich zugunsten von Konsumentinnen und Konsumenten, ist ausschliesslicher Gerichtsstand Lausanne (Kanton Waadt, Schweiz)."
+        ],
+        "note": "Massgebend ist die im Zeitpunkt der Annahme der Offerte geltende Fassung. Deren Datum steht am Anfang dieser Seite."
+      }
+    ]
+  }
+}

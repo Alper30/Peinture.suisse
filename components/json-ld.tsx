@@ -11,7 +11,8 @@ export function JsonLd({ locale }: { locale: string }) {
     name: siteConfig.name,
     url: `${siteConfig.baseUrl}/${locale}`,
     telephone: siteConfig.phoneDisplay,
-    email: siteConfig.email,
+    // Boş bir `email` alanı Google'a yanlış sinyal verir — adres yoksa hiç yazma
+    ...(siteConfig.email ? { email: siteConfig.email } : {}),
     address: {
       "@type": "PostalAddress",
       addressLocality: siteConfig.address.addressLocality,

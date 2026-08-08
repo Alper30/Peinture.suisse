@@ -8,8 +8,19 @@ export default getRequestConfig(async ({ requestLocale }) => {
     ? requested
     : routing.defaultLocale;
 
+  /**
+   * Yasal metinler ayrı dosyada tutulur ve `legal` ad alanı altına eklenir.
+   * Gerekçe: mentions légales / confidentialité / cookies / CGV toplamı ana
+   * çeviri dosyasının birkaç katı; aynı dosyada arayüz metinlerini bulmayı
+   * zorlaştırır ve her sayfa yüklemesinde gereksiz yere taşınır.
+   */
+  const [ui, legal] = await Promise.all([
+    import(`../messages/${locale}.json`),
+    import(`../messages/legal/${locale}.json`),
+  ]);
+
   return {
     locale,
-    messages: (await import(`../messages/${locale}.json`)).default,
+    messages: { ...ui.default, legal: legal.default },
   };
 });

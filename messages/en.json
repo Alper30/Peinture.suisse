@@ -374,15 +374,7 @@
       "subtitle": "Your project manager replies to you directly.",
       "cta": "Write to us"
     },
-    "nav": "Client area",
-    "promo": {
-      "eyebrow": "Client area",
-      "title": "Follow your project, from quote to final coat",
-      "subtitle": "Create your space in seconds: your quote, the schedule, progress photos and invoices all in one place, available whenever you need them.",
-      "ctaCreate": "Create my space",
-      "ctaLogin": "I already have an account",
-      "note": "Free, no commitment — for our clients and anyone who has requested a quote."
-    }
+    "nav": "Client area"
   },
   "faq": {
     "eyebrow": "Frequently asked",

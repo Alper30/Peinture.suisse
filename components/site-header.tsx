@@ -6,6 +6,7 @@ import { UserButton, useAuth } from "@clerk/nextjs";
 import { Link, usePathname } from "@/i18n/navigation";
 import { Wordmark } from "./wordmark";
 import { LocaleSwitcher } from "./locale-switcher";
+import { UserIcon } from "./icons";
 
 const navItems = [
   { href: "/", key: "home" },
@@ -72,7 +73,6 @@ export function SiteHeader() {
 
   // Anasayfa hero'su koyu fotoğraf: scroll edilmemişken açık renkli header
   const onDark = pathname === "/" && !scrolled && !open;
-  const barColor = onDark ? "bg-white" : "bg-ink";
 
   return (
     <>
@@ -127,18 +127,24 @@ export function SiteHeader() {
           </nav>
 
           <div className="hidden items-center gap-3 lg:flex">
-            <Link
-              href={isSignedIn ? "/espace-client" : "/connexion"}
-              className={`text-sm tracking-wide transition-colors duration-200 ${
-                onDark
-                  ? "text-white/70 hover:text-white"
-                  : "text-muted hover:text-ink"
-              }`}
-            >
-              {ta("nav")}
-            </Link>
-            {isSignedIn && (
+            {/* Girişli kullanıcıda Clerk avatarı, değilse sade bir giriş ikonu.
+                İkonun kendisi metin taşımadığı için erişilebilir ad aria-label
+                ile veriliyor; title da fare üzerindeyken aynı bilgiyi verir. */}
+            {isSignedIn ? (
               <UserButton appearance={{ elements: { avatarBox: "h-8 w-8" } }} />
+            ) : (
+              <Link
+                href="/connexion"
+                aria-label={ta("nav")}
+                title={ta("nav")}
+                className={`flex h-9 w-9 items-center justify-center rounded-full transition-colors duration-200 ${
+                  onDark
+                    ? "text-white/70 hover:bg-white/10 hover:text-white"
+                    : "text-muted hover:bg-ink/5 hover:text-ink"
+                }`}
+              >
+                <UserIcon className="h-5 w-5" />
+              </Link>
             )}
             <LocaleSwitcher tone={onDark ? "light" : "dark"} />
             <Link
@@ -149,32 +155,46 @@ export function SiteHeader() {
             </Link>
           </div>
 
-          {/* Mobil menü butonu */}
-          <button
-            type="button"
-            onClick={() => setOpen((v) => !v)}
-            aria-label={open ? th("menuClose") : th("menuOpen")}
-            aria-expanded={open}
-            className="relative z-50 flex h-10 w-10 items-center justify-center lg:hidden"
-          >
-            <span className="relative block h-4 w-6">
-              <span
-                className={`absolute top-0 left-0 block h-0.5 w-6 transition-all duration-300 ${
-                  onDark ? "bg-white" : "bg-ink"
-                } ${open ? "translate-y-[7px] rotate-45" : ""}`}
-              />
-              <span
-                className={`absolute top-[7px] left-0 block h-0.5 w-6 transition-all duration-300 ${
-                  onDark ? "bg-white" : "bg-ink"
-                } ${open ? "opacity-0" : "opacity-100"}`}
-              />
-              <span
-                className={`absolute bottom-0 left-0 block h-0.5 w-6 transition-all duration-300 ${
-                  onDark ? "bg-white" : "bg-ink"
-                } ${open ? "-translate-y-[7px] -rotate-45" : ""}`}
-              />
-            </span>
-          </button>
+          {/* Mobil: giriş ikonu + menü butonu.
+              İkon burada duruyor ki giriş için menüyü açmak gerekmesin.
+              Header z-50, menü katmanı z-40 — menü açıkken de tıklanabilir. */}
+          <div className="relative z-50 flex items-center gap-1 lg:hidden">
+            <Link
+              href={isSignedIn ? "/espace-client" : "/connexion"}
+              aria-label={ta("nav")}
+              className={`flex h-10 w-10 items-center justify-center rounded-full transition-colors duration-200 ${
+                onDark ? "text-white/80" : "text-muted"
+              }`}
+            >
+              <UserIcon className="h-5 w-5" />
+            </Link>
+
+            <button
+              type="button"
+              onClick={() => setOpen((v) => !v)}
+              aria-label={open ? th("menuClose") : th("menuOpen")}
+              aria-expanded={open}
+              className="flex h-10 w-10 items-center justify-center"
+            >
+              <span className="relative block h-4 w-6">
+                <span
+                  className={`absolute top-0 left-0 block h-0.5 w-6 transition-all duration-300 ${
+                    onDark ? "bg-white" : "bg-ink"
+                  } ${open ? "translate-y-[7px] rotate-45" : ""}`}
+                />
+                <span
+                  className={`absolute top-[7px] left-0 block h-0.5 w-6 transition-all duration-300 ${
+                    onDark ? "bg-white" : "bg-ink"
+                  } ${open ? "opacity-0" : "opacity-100"}`}
+                />
+                <span
+                  className={`absolute bottom-0 left-0 block h-0.5 w-6 transition-all duration-300 ${
+                    onDark ? "bg-white" : "bg-ink"
+                  } ${open ? "-translate-y-[7px] -rotate-45" : ""}`}
+                />
+              </span>
+            </button>
+          </div>
         </div>
       </header>
 

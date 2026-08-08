@@ -112,24 +112,27 @@ export default async function ContactPage({
                       </span>
                     </a>
                   </li>
-                  <li>
-                    <a
-                      href={`mailto:${siteConfig.email}`}
-                      className="group flex items-center gap-3.5"
-                    >
-                      <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-accent-soft text-accent">
-                        <MailIcon className="h-5 w-5" />
-                      </span>
-                      <span>
-                        <span className="block text-xs uppercase tracking-wider text-muted">
-                          {t("infoEmail")}
+                  {/* E-posta adresi kurulana kadar gösterilmez (bkz. site-config) */}
+                  {siteConfig.email && (
+                    <li>
+                      <a
+                        href={`mailto:${siteConfig.email}`}
+                        className="group flex items-center gap-3.5"
+                      >
+                        <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-accent-soft text-accent">
+                          <MailIcon className="h-5 w-5" />
                         </span>
-                        <span className="font-medium text-ink transition-colors group-hover:text-accent">
-                          {siteConfig.email}
+                        <span>
+                          <span className="block text-xs uppercase tracking-wider text-muted">
+                            {t("infoEmail")}
+                          </span>
+                          <span className="font-medium text-ink transition-colors group-hover:text-accent">
+                            {siteConfig.email}
+                          </span>
                         </span>
-                      </span>
-                    </a>
-                  </li>
+                      </a>
+                    </li>
+                  )}
                 </ul>
               </div>
 

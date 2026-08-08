@@ -322,3 +322,17 @@ body:has(.auth-screen) > main {
     animation: none;
   }
 }
+
+/* Yasal sayfalardaki metin içi bağlantılar — gövde metninden ayrışsın ama
+   satır ritmini bozmasın diye alt çizgi offset'li */
+.legal-link {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.legal-link:hover {
+  color: var(--color-accent-deep);
+}
