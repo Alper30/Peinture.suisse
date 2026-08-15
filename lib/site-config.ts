@@ -21,17 +21,20 @@ export const siteConfig = {
   // Aynı numaranın okunabilir hâli — yasal sayfalarda gösterilir
   whatsappDisplay: "+41 77 944 85 56",
   /**
-   * E-posta adresi — profesyonel adres kurulana kadar BOŞ.
+   * E-posta adresi — posta kutusu GERÇEKTEN kurulana kadar BOŞ.
    *
-   * Uydurma bir adres (contact@peinture-suisse.ch) yazmak, hem alan adı bize
-   * ait olmadığı için hem de yasal sayfalarda "haklarınızı bu adresten
-   * kullanın" dendiği için gerçek bir sorundu: müşteri yazıyor, mesaj hiçbir
+   * Buraya çalışmayan bir adres yazmak gerçek bir sorundu: yasal sayfalar
+   * "haklarınızı bu adresten kullanın" diyor, müşteri yazıyor, mesaj hiçbir
    * yere ulaşmıyor. Adres olmadığında telefon + WhatsApp + iletişim formu
    * zaten çalışıyor; e-posta satırları da hiç render edilmiyor.
    *
+   * DİKKAT: peinture-suisse.ch BİZE AİT DEĞİL — aynı sektörde faal, ayrı bir
+   * İsviçre işletmesine ait. Bizim alan adımız peinture-suisse-romande.ch.
+   * Örnek/şablon adres yazarken bile o alan adını kullanmayın.
+   *
    * Doldurduğunuzda hiçbir şey değiştirmenize gerek yok — tüm kullanım
    * yerleri (footer, iletişim, espace client, JSON-LD, yasal sayfalar)
-   * kendiliğinden geri gelir.
+   * kendiliğinden geri gelir. Örn: contact@peinture-suisse-romande.ch
    */
   // `as string`: nesne `as const` olduğu için aksi halde tip `""` sabitine
   // daralır ve "adres var mı?" kontrolleri derleyicide ölü koda dönerdi.
