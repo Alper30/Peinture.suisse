@@ -28,7 +28,7 @@ export async function legalMetadata(
   return {
     title: t("title"),
     description: t("description"),
-    alternates: localeAlternates(href),
+    alternates: localeAlternates(href, locale),
   };
 }
 

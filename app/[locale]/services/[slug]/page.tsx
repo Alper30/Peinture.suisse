@@ -32,7 +32,7 @@ export async function generateMetadata({
   return {
     title: t(`${service.key}.title`),
     description: t(`${service.key}.short`),
-    alternates: localeAlternates(`/services/${slug}`),
+    alternates: localeAlternates(`/services/${slug}`, locale),
   };
 }
 

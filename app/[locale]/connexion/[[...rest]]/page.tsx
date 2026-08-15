@@ -14,7 +14,7 @@ export async function generateMetadata({
   return {
     title: t("signIn.title"),
     description: t("signIn.subtitle"),
-    alternates: localeAlternates("/connexion"),
+    alternates: localeAlternates("/connexion", locale),
     // Giriş sayfaları arama sonuçlarında görünmemeli
     robots: { index: false, follow: true },
   };

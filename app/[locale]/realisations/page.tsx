@@ -31,7 +31,7 @@ export async function generateMetadata({
   return {
     title: t("realisations.title"),
     description: t("realisations.description"),
-    alternates: localeAlternates("/realisations"),
+    alternates: localeAlternates("/realisations", locale),
   };
 }
 

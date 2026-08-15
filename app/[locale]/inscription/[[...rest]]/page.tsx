@@ -14,7 +14,7 @@ export async function generateMetadata({
   return {
     title: t("signUp.title"),
     description: t("signUp.subtitle"),
-    alternates: localeAlternates("/inscription"),
+    alternates: localeAlternates("/inscription", locale),
     robots: { index: false, follow: true },
   };
 }
