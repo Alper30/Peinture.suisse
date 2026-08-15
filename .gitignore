@@ -44,6 +44,8 @@ next-env.d.ts
 /.serena
 /.agents
 /.claude/skills
+# yerel araç ayarları — makineye özel, depoyla seyahat etmemeli
+/.claude/settings.local.json
 
 # şablon dosyası kasıtlı olarak paylaşılır (gerçek değer içermez)
 !.env.example
