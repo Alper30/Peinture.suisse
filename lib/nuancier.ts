@@ -50,6 +50,21 @@ export const paintScenes: PaintScene[] = [
 ];
 
 /**
+ * Anasayfadaki bölümlerin boya çipi renkleri.
+ *
+ * Her değer, O BÖLÜMDE gösterilen fotoğrafın duvarından örneklendi — yani çip
+ * bir şey iddia ediyor ve iddiası doğru. Fotoğrafı olmayan bölümlere (hizmet
+ * bölgesi, SSS) bilerek çip verilmez: her başlığa renk dağıtmak yapıyı
+ * bilgilendirmez, yalnızca süsler.
+ */
+export const sectionTints = {
+  /** ParallaxDuo → int-sauge.jpg */
+  standard: "#605A43",
+  /** BeforeAfterSlider → int-boheme.jpg */
+  beforeAfter: "#D9D2C6",
+} as const;
+
+/**
  * Zamanlama — globals.css'teki `--paint-delay` / `--paint-wipe` ile AYNI olmalı.
  * Tek kaynak burası: CSS değerleri hero bileşeninde inline custom property
  * olarak basılır, böylece ikisi ayrışamaz.

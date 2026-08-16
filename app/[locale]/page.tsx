@@ -16,6 +16,7 @@ import { Marquee } from "@/components/marquee";
 import { ImageBand } from "@/components/image-band";
 import { ArrowRightIcon } from "@/components/icons";
 import { services } from "@/lib/services";
+import { sectionTints } from "@/lib/nuancier";
 import { siteConfig } from "@/lib/site-config";
 import { localeAlternates } from "@/lib/seo";
 
@@ -69,6 +70,7 @@ export default async function HomePage({
           <SectionHeading
             eyebrow={t("standard.eyebrow")}
             title={t("standard.title")}
+            tint={sectionTints.standard}
           />
           <Reveal delay={0.1}>
             <div className="space-y-5 text-base leading-relaxed text-ink/80 md:text-lg lg:pt-2">
@@ -116,6 +118,7 @@ export default async function HomePage({
           eyebrow={t("beforeAfter.eyebrow")}
           title={t("beforeAfter.title")}
           subtitle={t("beforeAfter.subtitle")}
+          tint={sectionTints.beforeAfter}
         />
         <Reveal delay={0.1} className="mt-10">
           <BeforeAfterSlider

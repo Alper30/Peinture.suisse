@@ -466,3 +466,45 @@ body:has(.auth-screen) > main {
     transition: none;
   }
 }
+
+/* Otomatik dönen içeriklerde (hero sahneleri, hizmet karuseli) etkin noktanın
+   içi, bir sonrakine kalan süre kadar dolar. Süs değil bilgi: ziyaretçi hem
+   içeriğin döndüğünü hem ne zaman değişeceğini görür, üstüne gelince durduğunu
+   da fark eder. Zamanlama `--dot-duration` ile dışarıdan verilir; tek kaynak
+   bileşendeki süre sabitidir. */
+@keyframes dotProgress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.dot-progress {
+  position: relative;
+  overflow: hidden;
+}
+
+.dot-progress::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: var(--color-accent);
+  transform-origin: left center;
+  animation: dotProgress var(--dot-duration, 6s) linear both;
+}
+
+.dot-progress[data-paused="true"]::after {
+  animation-play-state: paused;
+}
+
+/* Hareket azaltmada sayaç akmaz; nokta yine dolu görünür ki hangisinin etkin
+   olduğu bilgisi kaybolmasın. */
+@media (prefers-reduced-motion: reduce) {
+  .dot-progress::after {
+    animation: none;
+    transform: scaleX(1);
+  }
+}

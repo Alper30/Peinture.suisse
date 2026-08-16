@@ -116,7 +116,12 @@ export function BeforeAfterSlider({
           className="absolute inset-y-0 z-10 w-0.5 bg-white shadow-[0_0_12px_rgb(0_0_0/0.35)]"
           style={{ left: `${pos}%` }}
         >
-          <div className="absolute top-1/2 left-1/2 flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-lift transition-transform duration-200 group-active:scale-95">
+          {/* Tutamaç: imleç kutunun üstüne gelince hafifçe büyür ("beni sürükle"),
+              basılıyken küçülür ("tuttum"). 150–200 ms — mikro geri bildirim
+              bandı; daha uzunu gecikme gibi hissettirir. Çizgi bilerek net
+              beyaz kaldı: hero'daki yumuşak boya kenarı buraya konsaydı
+              tutamacın nerede olduğu okunmaz olurdu. */}
+          <div className="absolute top-1/2 left-1/2 flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-lift transition-transform duration-150 ease-out group-hover:scale-105 group-active:scale-95">
             <svg
               viewBox="0 0 24 24"
               className="h-5 w-5 text-ink"

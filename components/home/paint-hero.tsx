@@ -1,6 +1,12 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import {
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+  useSyncExternalStore,
+} from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
@@ -33,6 +39,12 @@ import {
  * (başlık, renk adı) gerçek metindir. `prefers-reduced-motion` yolunda rulo
  * geçişi hiç çalışmaz — bitmiş mekân doğrudan görünür, sahneler yine değişir.
  */
+/** useSyncExternalStore aboneliği — bileşen dışında, kimliği sabit kalsın */
+function subscribeToVisibility(onChange: () => void) {
+  document.addEventListener("visibilitychange", onChange);
+  return () => document.removeEventListener("visibilitychange", onChange);
+}
+
 export function PaintHero() {
   const t = useTranslations("home.hero");
   const tc = useTranslations("common");
@@ -46,7 +58,19 @@ export function PaintHero() {
    */
   const [loadedUpTo, setLoadedUpTo] = useState(1);
   const [inView, setInView] = useState(true);
-  const [tabVisible, setTabVisible] = useState(true);
+  /**
+   * Sekme görünürlüğü `useSyncExternalStore` ile okunur, `useState` + olay
+   * dinleyicisiyle DEĞİL. Sebep: `visibilitychange` yalnızca DEĞİŞİMDE
+   * tetiklenir. Sayfa arka plandaki bir sekmede açıldıysa (bağlantıyı yeni
+   * sekmede açmak, oturum geri yükleme, önden getirme) olay hiç gelmez ve
+   * döngü kimse bakmazken saatlerce dönerdi. Bu API ilk değeri de okur;
+   * sunucuda görünür varsayılır ki hidrasyon uyuşmazlığı olmasın.
+   */
+  const tabVisible = useSyncExternalStore(
+    subscribeToVisibility,
+    () => !document.hidden,
+    () => true
+  );
 
   const sectionRef = useRef<HTMLElement>(null);
   const wipeRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -95,14 +119,7 @@ export function PaintHero() {
       { threshold: 0.15 }
     );
     io.observe(el);
-
-    const onVisibility = () => setTabVisible(!document.hidden);
-    document.addEventListener("visibilitychange", onVisibility);
-
-    return () => {
-      io.disconnect();
-      document.removeEventListener("visibilitychange", onVisibility);
-    };
+    return () => io.disconnect();
   }, []);
 
   const scene = paintScenes[active];
@@ -238,16 +255,22 @@ export function PaintHero() {
 
             <ul className="flex items-center gap-2">
               {paintScenes.map((s, i) => (
-                <li key={s.id}>
+                /* Anahtara `running` dahil: döngü durup yeniden başladığında
+                   zamanlayıcı da sayaç da sıfırlanır, ikisi ayrışmaz. */
+                <li key={`${s.id}-${running}`}>
                   <button
                     type="button"
                     onClick={() => show(i)}
                     aria-current={i === active}
                     aria-label={t("sceneLabel", { n: i + 1 })}
+                    data-paused={!running}
+                    style={
+                      { "--dot-duration": `${PAINT_CYCLE_MS}ms` } as React.CSSProperties
+                    }
                     className={cn(
                       "block h-1.5 rounded-full transition-all duration-300",
                       i === active
-                        ? "w-9 bg-accent"
+                        ? "dot-progress w-9 bg-white/25"
                         : "w-4 bg-white/35 hover:bg-white/70"
                     )}
                   />

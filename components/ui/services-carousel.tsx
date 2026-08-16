@@ -15,6 +15,9 @@ import { serviceIcons, ArrowRightIcon } from "@/components/icons";
  * büyük görsel + üstüne bindirmeli kart + ok/nokta navigasyonu.
  * İçerik: hizmetlerimiz (görsel, başlık, açıklama, hizmet sayfası linki).
  */
+/** Otomatik geçiş aralığı — noktadaki ilerleme sayacı da bunu kullanır */
+const AUTOPLAY_MS = 6000;
+
 const fade = {
   initial: { opacity: 0 },
   animate: { opacity: 1 },
@@ -35,7 +38,7 @@ export function ServicesCarousel({ className }: { className?: string }) {
     if (reduce || paused) return;
     const id = setInterval(
       () => setCurrentIndex((i) => (i + 1) % services.length),
-      6000
+      AUTOPLAY_MS
     );
     return () => clearInterval(id);
   }, [reduce, paused]);
@@ -138,15 +141,23 @@ export function ServicesCarousel({ className }: { className?: string }) {
         <div className="flex items-center gap-2">
           {services.map((s, i) => (
             <button
-              key={s.slug}
+              /* Anahtara duraklama durumu dahil: hover kalkınca hem zamanlayıcı
+                 hem sayaç SIFIRDAN başlasın. Aksi hâlde JS 6 sn'lik yeni bir tur
+                 açarken CSS sayacı kaldığı yerden devam eder ve dolu nokta
+                 saniyelerce bekler — yani gösterge yalan söyler. */
+              key={`${s.slug}-${paused}`}
               type="button"
               onClick={() => setCurrentIndex(i)}
               aria-label={tn("goTo", { n: i + 1 })}
               aria-current={i === currentIndex ? "true" : undefined}
+              data-paused={paused || reduce ? "true" : "false"}
+              style={
+                { "--dot-duration": `${AUTOPLAY_MS}ms` } as React.CSSProperties
+              }
               className={cn(
                 "h-2.5 cursor-pointer rounded-full transition-all duration-300",
                 i === currentIndex
-                  ? "w-7 bg-accent"
+                  ? "dot-progress w-7 bg-line"
                   : "w-2.5 bg-line hover:bg-muted/50"
               )}
             />
