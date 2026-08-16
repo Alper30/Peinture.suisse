@@ -160,7 +160,7 @@ function SubmitButton() {
     <button
       type="submit"
       disabled={pending}
-      className="group inline-flex w-full items-center justify-center gap-2.5 rounded-full bg-accent px-7 py-4 text-base font-medium text-white shadow-card transition-all duration-300 hover:bg-accent-deep hover:shadow-lift active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
+      className="btn-sweep group inline-flex w-full items-center justify-center gap-2.5 rounded-full bg-accent px-7 py-4 text-base font-medium text-white shadow-card transition-all duration-300 hover:shadow-lift active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
     >
       {pending && (
         <svg

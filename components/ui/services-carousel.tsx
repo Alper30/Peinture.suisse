@@ -66,7 +66,7 @@ export function ServicesCarousel({ className }: { className?: string }) {
         </p>
         <Link
           href={`/services/${service.slug}`}
-          className="mt-7 inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-medium text-white shadow-card transition-all duration-300 hover:bg-accent-deep hover:shadow-lift active:scale-[0.98]"
+          className="btn-sweep mt-7 inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-medium text-white shadow-card transition-all duration-300 hover:shadow-lift active:scale-[0.98]"
         >
           {tc("readMore")}
           <ArrowRightIcon className="h-4 w-4" />

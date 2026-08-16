@@ -4,8 +4,10 @@ import type { ComponentProps, ReactNode } from "react";
 type Variant = "primary" | "secondary" | "ghost" | "whatsapp";
 
 const variants: Record<Variant, string> = {
-  primary:
-    "bg-accent text-white hover:bg-accent-deep shadow-card hover:shadow-lift",
+  /* btn-sweep: rengi hover'da bir anda değiştirmek yerine soldan sağa "sürer" —
+     hero'daki rulo geçişinin küçük kardeşi. Bu yüzden `hover:bg-accent-deep`
+     YOK: ikisi birlikte olsaydı zemin anında koyulaşır, sürme görünmezdi. */
+  primary: "btn-sweep bg-accent text-white shadow-card hover:shadow-lift",
   secondary:
     "bg-ink text-white hover:bg-black shadow-card hover:shadow-lift",
   ghost:

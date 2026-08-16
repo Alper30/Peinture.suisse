@@ -92,7 +92,7 @@ export default async function ClientAreaPage({
           <div className="flex flex-col gap-3">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-medium text-white transition-all duration-300 hover:bg-accent-deep active:scale-[0.98]"
+              className="btn-sweep inline-flex items-center justify-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-medium text-white transition-all duration-300 active:scale-[0.98]"
             >
               {t("help.cta")}
               <ArrowRightIcon className="h-4 w-4" />

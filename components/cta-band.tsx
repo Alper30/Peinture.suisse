@@ -42,7 +42,7 @@ export function CtaBand({
           <div className="relative mt-9 flex flex-wrap items-center justify-center gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center rounded-full bg-accent px-7 py-3.5 text-base font-medium text-white shadow-card transition-all duration-300 hover:bg-accent-deep hover:shadow-lift active:scale-[0.98]"
+              className="btn-sweep inline-flex items-center justify-center rounded-full bg-accent px-7 py-3.5 text-base font-medium text-white shadow-card transition-all duration-300 hover:shadow-lift active:scale-[0.98]"
             >
               {primaryLabel}
             </Link>

@@ -135,7 +135,7 @@ export default async function ServiceDetailPage({
                 </ul>
                 <Link
                   href="/contact"
-                  className="mt-7 inline-flex w-full items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-medium text-white shadow-card transition-all duration-300 hover:bg-accent-deep hover:shadow-lift active:scale-[0.98]"
+                  className="btn-sweep mt-7 inline-flex w-full items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-medium text-white shadow-card transition-all duration-300 hover:shadow-lift active:scale-[0.98]"
                 >
                   {t("requestQuote")}
                 </Link>

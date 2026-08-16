@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { ExpandHero } from "@/components/home/expand-hero";
+import { PaintHero } from "@/components/home/paint-hero";
 import { SectionHeading } from "@/components/section-heading";
 import { Reveal } from "@/components/reveal";
 import { CtaBand } from "@/components/cta-band";
@@ -59,7 +59,7 @@ export default async function HomePage({
     <>
       <IntroCurtain />
 
-      <ExpandHero />
+      <PaintHero />
 
       <TrustBand />
 

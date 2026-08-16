@@ -63,14 +63,16 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "House painters · Lausanne & French-speaking Switzerland",
       "titleLine1": "Spaces transformed,",
       "titleLine2": "flawlessly finished.",
       "subtitle": "Painting, rendering and plastering in Lausanne. Careful craftsmanship, reliable deadlines and a free quote within 24 hours.",
-      "trust1": "Reply within 24 hours",
-      "trust2": "Clear, detailed pricing",
-      "trust3": "Clean job site, deadlines kept",
-      "scrollCue": "Scroll"
+      "scenes": {
+        "salon": "Warm white",
+        "boheme": "Off-white",
+        "sauge": "Sage",
+        "facade": "Limestone ochre"
+      },
+      "sceneLabel": "Show view {n}"
     },
     "services": {
       "eyebrow": "Our services",

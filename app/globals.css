@@ -183,9 +183,12 @@ button {
   }
 }
 
+/* Easing sitenin geri kalanıyla aynı üstel yavaşlama. Eskiden yaylanan bir
+   eğri vardı (0.34, 1.56, …): gerçek nesneler hedefi aşıp geri gelmez, o
+   overshoot butonu oyuncak gibi gösteriyordu. */
 .wa-fab {
-  animation: fabIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 1.2s both;
-  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+  animation: fabIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) 1.2s both;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .wa-fab:hover {
@@ -335,4 +338,131 @@ body:has(.auth-screen) > main {
 
 .legal-link:hover {
   color: var(--color-accent-deep);
+}
+
+/* ---------------------------------------------------------------------------
+   Hero — « le mur qui se peint »  (components/home/paint-hero.tsx)
+
+   Rulo geçişi İKİ katmana bölünür, çünkü ikisinin maliyeti çok farklı:
+     • .paint-wipe        → tam ekran fotoğrafı açan maske (clip-path). Ağır iş,
+                            bu yüzden yavaş ve tek seferlik; kendi katmanına
+                            terfi ettirilir (will-change).
+     • .paint-edge-track  → yalnızca ıslak kenarı taşıyan ince bant. Sadece
+                            transform, GPU'da bedavaya yakın.
+   Efektin "ıslak boya" hissini veren şey o ince bant; maske tek başına kuru
+   bir silme gibi görünürdü.
+
+   İkisi de AYNI süre/gecikme/easing ile çalışır ve ikisi de yüzdeyi kabın
+   genişliğine göre ölçer — bu yüzden kenar, maskenin sınırından asla ayrılmaz.
+   Süreler lib/nuancier.ts'ten inline custom property olarak gelir; tek kaynak
+   orasıdır, CSS burada yalnızca yedek değer tutar.
+   --------------------------------------------------------------------------- */
+
+@keyframes paintWipe {
+  from {
+    clip-path: inset(0 0 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 100%);
+  }
+}
+
+/* 2D translate bilinçli: translate3d, animasyon çalışmadığı anlarda da kalıcı
+   bir compositor katmanı yaratır. Tarayıcı zaten animasyon SÜRESİNCE bu
+   dönüşümü GPU'ya taşır; kalıcı katmana gerek yok. */
+@keyframes paintEdge {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.paint-wipe {
+  animation: paintWipe var(--paint-wipe, 1400ms) cubic-bezier(0.16, 1, 0.3, 1)
+    var(--paint-delay, 250ms) both;
+}
+
+.paint-edge-track {
+  animation: paintEdge var(--paint-wipe, 1400ms) cubic-bezier(0.16, 1, 0.3, 1)
+    var(--paint-delay, 250ms) both;
+  pointer-events: none;
+}
+
+/* Islak kenar: kabın sol sınırına oturur, bandın kendisi kabla birlikte kayar.
+   Rengi o an sürülen boyanın rengi (--paint) — animasyon dekor değil, bilgi. */
+.paint-edge {
+  position: absolute;
+  top: -2%;
+  bottom: -2%;
+  left: 0;
+  width: 84px;
+  transform: translateX(-42px);
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    color-mix(in srgb, var(--paint, #fff) 60%, transparent) 40%,
+    color-mix(in srgb, #fff 60%, var(--paint, #fff)) 54%,
+    color-mix(in srgb, var(--paint, #fff) 35%, transparent) 66%,
+    transparent 100%
+  );
+  filter: blur(3px);
+  opacity: 0.9;
+}
+
+@media (min-width: 768px) {
+  .paint-edge {
+    width: 130px;
+    transform: translateX(-65px);
+  }
+}
+
+/* Hareket azaltma: geçiş hiç oynamaz — bitmiş mekân doğrudan görünür.
+   Sahneler yine değişir, yani anlam (farklı işler gösteriliyor) korunur. */
+@media (prefers-reduced-motion: reduce) {
+  .paint-wipe {
+    animation: none;
+    clip-path: inset(0 0 0 100%);
+  }
+
+  .paint-edge-track {
+    display: none;
+  }
+}
+
+/* Birincil butonlarda fırça darbesi: renk soldan sağa "sürülür".
+   Hero'daki geçişin küçük kardeşi — aynı yön, aynı easing, 1/7 süre. */
+.btn-sweep {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.btn-sweep::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--sweep, var(--color-accent-deep));
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-sweep:hover::before,
+.btn-sweep:focus-visible::before {
+  transform: scaleX(1);
+}
+
+/* Devre dışı buton "tıklanabilirim" sinyali vermemeli (gönderim sırasında
+   devis formunun butonu devre dışı kalıyor). */
+.btn-sweep:disabled::before {
+  content: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-sweep::before {
+    transition: none;
+  }
 }

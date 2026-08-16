@@ -149,7 +149,7 @@ export function SiteHeader() {
             <LocaleSwitcher tone={onDark ? "light" : "dark"} />
             <Link
               href="/contact"
-              className="inline-flex items-center rounded-full bg-accent px-5 py-2.5 text-sm font-medium text-white shadow-card transition-all duration-300 hover:bg-accent-deep hover:shadow-lift active:scale-[0.98]"
+              className="btn-sweep inline-flex items-center rounded-full bg-accent px-5 py-2.5 text-sm font-medium text-white shadow-card transition-all duration-300 hover:shadow-lift active:scale-[0.98]"
             >
               {tc("devisCta")}
             </Link>
@@ -239,7 +239,7 @@ export function SiteHeader() {
           <Link
             href="/contact"
             tabIndex={open ? 0 : -1}
-            className="inline-flex items-center justify-center rounded-full bg-accent px-6 py-3.5 text-base font-medium text-white shadow-card"
+            className="btn-sweep inline-flex items-center justify-center rounded-full bg-accent px-6 py-3.5 text-base font-medium text-white shadow-card"
           >
             {tc("devisCta")}
           </Link>
