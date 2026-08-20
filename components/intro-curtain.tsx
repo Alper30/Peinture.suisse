@@ -15,10 +15,20 @@ export function IntroCurtain() {
   const reduce = useReducedMotion();
   const [active, setActive] = useState(false);
 
+  /**
+   * `set-state-in-effect` burada bilinçli olarak kapatıldı.
+   *
+   * Perdenin oynayıp oynamayacağı yalnızca `sessionStorage`'dan bilinebilir ve
+   * o sunucuda yoktur. Başlangıç değeri `false` olmak ZORUNDA: sunucu ile
+   * istemcinin ilk render'ı aynı olmazsa hydration uyuşmazlığı çıkar. Yani
+   * "effect'te oku, sonra state'i düzelt" bu iş için kaçınılmaz desen —
+   * kuralın uyardığı kademeli render döngüsü değil, tek seferlik kurulum.
+   */
   useEffect(() => {
     if (reduce) return;
     if (sessionStorage.getItem("ps-intro")) return;
     sessionStorage.setItem("ps-intro", "1");
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setActive(true);
 
     document.body.style.overflow = "hidden";

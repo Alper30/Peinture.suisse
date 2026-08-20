@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Remember eklentisinin geçici dosyaları — proje kodu değil
+    ".remember/**",
   ]),
 ]);
 

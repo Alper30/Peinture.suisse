@@ -20,7 +20,6 @@ const STEPS = [1, 2, 3] as const;
  * Mobil ve prefers-reduced-motion'da statik listeye düşer.
  */
 export function ScrollProcess() {
-  const t = useTranslations("home.process");
   const reduce = useReducedMotion();
   const [interactive, setInteractive] = useState(false);
 

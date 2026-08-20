@@ -22,6 +22,19 @@ export function Reveal({ children, delay = 0, y = 28, className }: RevealProps) 
   const ref = useRef<HTMLDivElement>(null);
   const [state, setState] = useState<"idle" | "hidden" | "shown">("idle");
 
+  /**
+   * `set-state-in-effect` bu effect boyunca bilinçli olarak kapatıldı.
+   *
+   * Hangi duruma geçileceği yalnızca tarayıcıda bilinebilir: `matchMedia`,
+   * `IntersectionObserver` desteği ve elemanın ÖLÇÜLEN konumu. Üçü de sunucuda
+   * yok. Başlangıç `"idle"` olmak zorunda ki SSR çıktısı ile ilk istemci
+   * render'ı aynı olsun (aksi halde hydration uyuşmazlığı) ve JS hiç
+   * çalışmazsa içerik görünür kalsın.
+   *
+   * Kuralın hedeflediği sorun render → setState → render döngüsüdür; burada
+   * ise mount'ta bir kez ölçüm yapılıp tek bir geçiş yapılıyor.
+   */
+  /* eslint-disable react-hooks/set-state-in-effect */
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
@@ -60,6 +73,7 @@ export function Reveal({ children, delay = 0, y = 28, className }: RevealProps) 
     io.observe(el);
     return () => io.disconnect();
   }, []);
+  /* eslint-enable react-hooks/set-state-in-effect */
 
   return (
     <div

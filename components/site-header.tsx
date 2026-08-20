@@ -60,8 +60,17 @@ export function SiteHeader() {
     };
   }, []);
 
-  // Sayfa değişince mobil menüyü kapat
-  useEffect(() => setOpen(false), [pathname]);
+  // Sayfa değişince mobil menüyü kapat.
+  //
+  // Effect değil, render sırasında ayarlama: React'in "bir değer değiştiğinde
+  // state'i sıfırla" için önerdiği desen. Effect ile yapıldığında menü önce
+  // yeni sayfayla birlikte bir kare AÇIK çizilir, sonra kapanırdı; burada
+  // React aynı geçişte yeniden render edip DOM'a hiç yansıtmıyor.
+  const [prevPathname, setPrevPathname] = useState(pathname);
+  if (pathname !== prevPathname) {
+    setPrevPathname(pathname);
+    setOpen(false);
+  }
 
   // Menü açıkken arka plan kaymasın
   useEffect(() => {
