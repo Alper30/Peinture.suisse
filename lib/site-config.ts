@@ -21,24 +21,22 @@ export const siteConfig = {
   // Aynı numaranın okunabilir hâli — yasal sayfalarda gösterilir
   whatsappDisplay: "+41 77 944 85 56",
   /**
-   * E-posta adresi — posta kutusu GERÇEKTEN kurulana kadar BOŞ.
+   * E-posta adresi — posta kutusu 20 Ağustos 2026'da Infomaniak'ta gerçekten
+   * kuruldu, bu yüzden artık dolu. Daha önce bilerek boştu: yasal sayfalar
+   * "haklarınızı bu adresten kullanın" diyor, çalışmayan bir adres yazmak
+   * müşterinin mesajının hiçbir yere ulaşmaması demekti.
    *
-   * Buraya çalışmayan bir adres yazmak gerçek bir sorundu: yasal sayfalar
-   * "haklarınızı bu adresten kullanın" diyor, müşteri yazıyor, mesaj hiçbir
-   * yere ulaşmıyor. Adres olmadığında telefon + WhatsApp + iletişim formu
-   * zaten çalışıyor; e-posta satırları da hiç render edilmiyor.
+   * Adres aynı zamanda devis formunun SMTP kimliğidir (bkz. lib/devis-action.ts).
+   * Değiştirirseniz Vercel'deki SMTP_USER ve CONTACT_EMAIL_TO da güncellenmeli,
+   * yoksa gönderim sunucu tarafından reddedilir.
    *
    * DİKKAT: peinture-suisse.ch BİZE AİT DEĞİL — aynı sektörde faal, ayrı bir
    * İsviçre işletmesine ait. Bizim alan adımız peinture-suisse-romande.ch.
    * Örnek/şablon adres yazarken bile o alan adını kullanmayın.
-   *
-   * Doldurduğunuzda hiçbir şey değiştirmenize gerek yok — tüm kullanım
-   * yerleri (footer, iletişim, espace client, JSON-LD, yasal sayfalar)
-   * kendiliğinden geri gelir. Örn: contact@peinture-suisse-romande.ch
    */
-  // `as string`: nesne `as const` olduğu için aksi halde tip `""` sabitine
+  // `as string`: nesne `as const` olduğu için aksi halde tip sabit dizgeye
   // daralır ve "adres var mı?" kontrolleri derleyicide ölü koda dönerdi.
-  email: "" as string,
+  email: "contact@peinture-suisse-romande.ch" as string,
 
   address: {
     // [PLACEHOLDER] — sokak adresi gelince güncelle
