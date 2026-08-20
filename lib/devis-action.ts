@@ -3,12 +3,31 @@
 import nodemailer from "nodemailer";
 import { siteConfig } from "@/lib/site-config";
 
+/** Müşterinin forma yazdığı ham içerik — gönderim başarısız olursa geri döner */
+export type DevisDraft = {
+  name: string;
+  phone: string;
+  email: string;
+  city: string;
+  service: string;
+  message: string;
+};
+
 export type DevisFormState = {
   status: "idle" | "success" | "error";
   /** Anahtarlar messages/*.json → contact.form.errors.* ile çevrilir */
   fieldErrors?: Partial<
     Record<"name" | "contact" | "email" | "message", string>
   >;
+  /**
+   * Gönderim teknik bir nedenle başarısız olduğunda müşterinin YAZDIĞI metin
+   * geri döner; form bununla WhatsApp bağlantısını hazır doldurur. Müşteri
+   * her şeyi ikinci kez yazmak zorunda kalmaz — yazdırmak, talebi kaybetmektir.
+   *
+   * Veri yalnızca isteği gönderen tarayıcıya döner (useActionState yanıtı):
+   * hiçbir yere yazılmaz, loglanmaz, üçüncü tarafa gitmez.
+   */
+  draft?: DevisDraft;
 };
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -72,6 +91,8 @@ export async function submitDevis(
     return { status: "error", fieldErrors };
   }
 
+  const draft: DevisDraft = { name, phone, email, city, service, message };
+
   const lines = [
     `Nom: ${name}`,
     `Téléphone: ${phone || "—"}`,
@@ -114,7 +135,7 @@ export async function submitDevis(
       `[devis] ${missing} tanımlı değil` +
         ` — talep e-postaya GÖNDERİLEMEDİ (mesaj uzunluğu: ${lines.length})`
     );
-    return { status: "error" };
+    return { status: "error", draft };
   }
 
   try {
@@ -140,6 +161,6 @@ export async function submitDevis(
   } catch (error) {
     // Hata nesnesi müşteri verisi taşımaz (SMTP kodu/mesajı), loglanabilir.
     console.error("[devis] E-posta gönderilemedi:", error);
-    return { status: "error" };
+    return { status: "error", draft };
   }
 }

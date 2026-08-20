@@ -301,6 +301,7 @@
       "successTitle": "Danke, Ihre Anfrage ist unterwegs!",
       "successText": "Wir melden uns innert 24 Stunden. Für eine noch schnellere Antwort schreiben Sie uns auf WhatsApp.",
       "errorGeneric": "Der Formularversand ist momentan nicht verfügbar. Schreiben Sie uns auf WhatsApp oder rufen Sie an — wir antworten sofort.",
+      "errorDraftKept": "Ihre Nachricht bleibt erhalten: Der WhatsApp-Button sendet sie bereits ausgefüllt – Sie müssen nichts neu schreiben.",
       "errors": {
         "nameRequired": "Bitte geben Sie Ihren Namen an.",
         "contactRequired": "Geben Sie mindestens Telefon oder E-Mail an.",

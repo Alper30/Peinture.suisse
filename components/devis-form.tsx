@@ -5,7 +5,11 @@ import { useFormStatus } from "react-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import { submitDevis, type DevisFormState } from "@/lib/devis-action";
+import {
+  submitDevis,
+  type DevisDraft,
+  type DevisFormState,
+} from "@/lib/devis-action";
 import { siteConfig, whatsappLink } from "@/lib/site-config";
 import { CheckIcon, PhoneIcon, WhatsAppIcon } from "./icons";
 
@@ -150,6 +154,37 @@ function ServiceChips() {
       </div>
     </fieldset>
   );
+}
+
+/**
+ * Başarısız gönderimi hazır bir WhatsApp mesajına çevirir.
+ *
+ * Müşteri formu doldurmuş, gönder'e basmış ve teknik bir hata almış durumda.
+ * Onu "bize WhatsApp'tan yazın" deyip boş bir sohbete atmak, yazdığı her şeyi
+ * ikinci kez yazdırmak demek — çoğu kişi bunu yapmaz ve talep kaybolur.
+ * Bu yüzden aynı içerik mesaja hazır gelir, tek dokunuşla gönderilir.
+ *
+ * Etiketler formun kendi çevirilerinden geliyor: müşteri mesajı kendi
+ * dilinde görür, ayrı bir çeviri seti bakımı gerekmez.
+ */
+function draftToMessage(
+  draft: DevisDraft,
+  t: (key: string) => string
+): string {
+  const header = (
+    [
+      [t("name"), draft.name],
+      [t("phone"), draft.phone],
+      [t("email"), draft.email],
+      [t("city"), draft.city],
+      [t("service"), draft.service],
+    ] as const
+  )
+    .filter(([, value]) => value)
+    .map(([label, value]) => `${label}: ${value}`)
+    .join("\n");
+
+  return draft.message ? `${header}\n\n${draft.message}` : header;
 }
 
 function SubmitButton() {
@@ -348,6 +383,11 @@ export function DevisForm() {
                 <p className="text-sm leading-relaxed text-ink">
                   {t("errorGeneric")}
                 </p>
+                {state.draft && (
+                  <p className="mt-2 text-sm leading-relaxed text-muted">
+                    {t("errorDraftKept")}
+                  </p>
+                )}
                 <div className="mt-4 flex flex-wrap gap-3">
                   <a
                     href={siteConfig.phoneHref}
@@ -357,7 +397,11 @@ export function DevisForm() {
                     {siteConfig.phoneDisplay}
                   </a>
                   <a
-                    href={whatsappLink(tc("whatsappPrefill"))}
+                    href={whatsappLink(
+                      state.draft
+                        ? draftToMessage(state.draft, t)
+                        : tc("whatsappPrefill")
+                    )}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 rounded-full bg-whatsapp px-5 py-2.5 text-sm font-medium text-white transition-all duration-300 hover:brightness-95 active:scale-[0.98]"
