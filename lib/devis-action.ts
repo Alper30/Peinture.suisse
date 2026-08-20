@@ -1,6 +1,6 @@
 "use server";
 
-import { Resend } from "resend";
+import nodemailer from "nodemailer";
 import { siteConfig } from "@/lib/site-config";
 
 export type DevisFormState = {
@@ -12,6 +12,40 @@ export type DevisFormState = {
 };
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+/**
+ * SMTP varsayılanları — alan adının DNS bölgesindeki SRV kayıtlarından okundu
+ * (`_submissions._tcp` → 465, `_submission._tcp` → 587, RFC 6186).
+ *
+ * 465 (implicit TLS) tercih edildi, 587 (STARTTLS) değil: 465'te bağlantı
+ * doğrudan şifreli açılır. STARTTLS düz metin başlayıp yükseltme ister — bu
+ * hem fazladan gidiş-geliş hem de yükseltme sessizce başarısız olursa şifresiz
+ * gönderim riskidir.
+ *
+ * Env ile ezilebilir: sağlayıcı değişirse kod değişmez.
+ */
+const SMTP_HOST = process.env.SMTP_HOST ?? "mail.infomaniak.com";
+const SMTP_PORT = Number(process.env.SMTP_PORT ?? 465);
+
+/**
+ * Serverless'ta zaman aşımları KRİTİK.
+ *
+ * Takılan bir SMTP bağlantısı, işlevin tüm süresini yakar: kullanıcı boş
+ * ekrana bakar, sonunda platform isteği keser ve elimizde ne başarı ne de
+ * anlamlı bir hata kalır. Bu yüzden üç aşamanın her biri ayrı sınırlanıyor.
+ *
+ * Değerler bilinçli olarak kısa: kullanıcı formun karşısında bekliyor.
+ * Geçici bir yavaşlıkta hatalı "gönderilemedi" demek, kullanıcıyı 30 saniye
+ * bekletmekten iyidir — dürüst hata zaten telefon/WhatsApp'a yönlendiriyor.
+ */
+const TIMEOUTS = {
+  /** TCP bağlantısı kurulana kadar */
+  connectionTimeout: 8_000,
+  /** Sunucunun ilk karşılama (greeting) mesajı */
+  greetingTimeout: 8_000,
+  /** Komutlar arası bekleme */
+  socketTimeout: 12_000,
+} as const;
 
 export async function submitDevis(
   _prev: DevisFormState,
@@ -49,31 +83,25 @@ export async function submitDevis(
     message,
   ].join("\n");
 
-  const apiKey = process.env.RESEND_API_KEY;
+  const user = process.env.SMTP_USER;
+  const pass = process.env.SMTP_PASSWORD;
   // `||` bilinçli: siteConfig.email boş dizge olabilir, `??` onu geçirmezdi
   const to = process.env.CONTACT_EMAIL_TO || siteConfig.email;
   /**
-   * Gönderici, Resend'de doğrulanmış KENDİ alan adımız olmalı.
-   * Resend'in paylaşımlı sandbox adresi (onboarding@resend.dev) yalnızca
-   * Resend hesabının sahibi olan adrese teslim eder; başka her alıcıda 403
-   * döner, `catch` onu yutar ve talep sessizce kaybolur. Ayrıca `From:` bize
-   * ait olmayan bir alan adıysa DMARC hizalaması hiçbir zaman kendi alan
-   * adımıza göre değerlendirilemez. Bu yüzden üretimde zorunlu tutuluyor;
-   * yerel geliştirmede sandbox'a düşmesi sakıncasız.
+   * Gönderici, SMTP'de KİMLİK DOĞRULANAN posta kutusuyla aynı olmalı.
+   * Infomaniak (ve ciddi her sağlayıcı) başkası adına gönderimi reddeder.
+   * Bu yüzden varsayılan doğrudan `SMTP_USER` — ayrıca yazmaya gerek yok,
+   * yanlış yazılıp DMARC hizalamasının bozulması da imkânsız hale gelir.
    */
-  const from =
-    process.env.CONTACT_EMAIL_FROM ??
-    (process.env.NODE_ENV === "production"
-      ? undefined
-      : "Peinture Suisse <onboarding@resend.dev>");
+  const from = process.env.CONTACT_EMAIL_FROM || user;
 
   // Yapılandırma eksikse gönderim imkânsız — sahte başarı yerine dürüst hata
-  if (!apiKey || !to || !from) {
-    const missing = !apiKey
-      ? "RESEND_API_KEY"
-      : !to
-        ? "CONTACT_EMAIL_TO"
-        : "CONTACT_EMAIL_FROM";
+  if (!user || !pass || !to || !from) {
+    const missing = !user
+      ? "SMTP_USER"
+      : !pass
+        ? "SMTP_PASSWORD"
+        : "CONTACT_EMAIL_TO";
     // Müşteriye ASLA "gönderildi" denmez: sahte başarı, müşterinin boşuna
     // beklemesine ve talebin kaybolmasına yol açar. Bunun yerine
     // telefon/WhatsApp'a yönlendiren dürüst bir hata döneriz.
@@ -90,16 +118,27 @@ export async function submitDevis(
   }
 
   try {
-    const resend = new Resend(apiKey);
-    await resend.emails.send({
+    const transporter = nodemailer.createTransport({
+      host: SMTP_HOST,
+      port: SMTP_PORT,
+      // 465 → implicit TLS. Başka bir port verilirse STARTTLS'e düşer.
+      secure: SMTP_PORT === 465,
+      auth: { user, pass },
+      ...TIMEOUTS,
+    });
+
+    await transporter.sendMail({
       from,
       to,
+      // Yanıtla'ya basınca doğrudan müşteriye gitsin
       replyTo: email || undefined,
       subject: `Nouvelle demande de devis — ${name}`,
       text: lines,
     });
+
     return { status: "success" };
   } catch (error) {
+    // Hata nesnesi müşteri verisi taşımaz (SMTP kodu/mesajı), loglanabilir.
     console.error("[devis] E-posta gönderilemedi:", error);
     return { status: "error" };
   }
