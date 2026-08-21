@@ -2,11 +2,14 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
-import { UserButton, useAuth } from "@clerk/nextjs";
 import { Link, usePathname } from "@/i18n/navigation";
 import { Wordmark } from "./wordmark";
 import { LocaleSwitcher } from "./locale-switcher";
-import { UserIcon } from "./icons";
+import {
+  AccountDesktop,
+  AccountMenuLink,
+  AccountMobileIcon,
+} from "./auth/header-account";
 import { clientAreaEnabled } from "@/lib/site-config";
 
 const navItems = [
@@ -28,9 +31,6 @@ export function SiteHeader() {
   const tc = useTranslations("common");
   const th = useTranslations("header");
   const ta = useTranslations("clientArea");
-  // Clerk v7: SignedIn/SignedOut bileşenleri kaldırıldı, useAuth kullanılır.
-  // Bağlantı her zaman görünür (yer değiştirme olmasın), yalnızca hedefi değişir.
-  const { isSignedIn } = useAuth();
   const pathname = usePathname();
   const barRef = useRef<HTMLDivElement>(null);
   const [scrolled, setScrolled] = useState(false);
@@ -139,25 +139,9 @@ export function SiteHeader() {
             {/* Girişli kullanıcıda Clerk avatarı, değilse sade bir giriş ikonu.
                 İkonun kendisi metin taşımadığı için erişilebilir ad aria-label
                 ile veriliyor; title da fare üzerindeyken aynı bilgiyi verir. */}
-            {clientAreaEnabled &&
-              (isSignedIn ? (
-                <UserButton
-                  appearance={{ elements: { avatarBox: "h-8 w-8" } }}
-                />
-              ) : (
-                <Link
-                  href="/connexion"
-                  aria-label={ta("nav")}
-                  title={ta("nav")}
-                  className={`flex h-9 w-9 items-center justify-center rounded-full transition-colors duration-200 ${
-                    onDark
-                      ? "text-white/70 hover:bg-white/10 hover:text-white"
-                      : "text-muted hover:bg-ink/5 hover:text-ink"
-                  }`}
-                >
-                  <UserIcon className="h-5 w-5" />
-                </Link>
-              ))}
+            {clientAreaEnabled && (
+              <AccountDesktop onDark={onDark} label={ta("nav")} />
+            )}
             <LocaleSwitcher tone={onDark ? "light" : "dark"} />
             <Link
               href="/contact"
@@ -172,15 +156,7 @@ export function SiteHeader() {
               Header z-50, menü katmanı z-40 — menü açıkken de tıklanabilir. */}
           <div className="relative z-50 flex items-center gap-1 lg:hidden">
             {clientAreaEnabled && (
-              <Link
-                href={isSignedIn ? "/espace-client" : "/connexion"}
-                aria-label={ta("nav")}
-                className={`flex h-10 w-10 items-center justify-center rounded-full transition-colors duration-200 ${
-                  onDark ? "text-white/80" : "text-muted"
-                }`}
-              >
-                <UserIcon className="h-5 w-5" />
-              </Link>
+              <AccountMobileIcon onDark={onDark} label={ta("nav")} />
             )}
 
             <button
@@ -245,13 +221,7 @@ export function SiteHeader() {
           style={open ? { animationDelay: "0.4s" } : undefined}
         >
           {clientAreaEnabled && (
-            <Link
-              href={isSignedIn ? "/espace-client" : "/connexion"}
-              tabIndex={open ? 0 : -1}
-              className="text-sm font-medium text-muted"
-            >
-              {ta("nav")}
-            </Link>
+            <AccountMenuLink label={ta("nav")} tabIndex={open ? 0 : -1} />
           )}
           <LocaleSwitcher className="self-start" />
           <Link

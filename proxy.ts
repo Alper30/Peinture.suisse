@@ -1,6 +1,7 @@
 import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
 import createIntlMiddleware from "next-intl/middleware";
 import { routing } from "./i18n/routing";
+import { clientAreaEnabled } from "./lib/site-config";
 
 /**
  * Next 16'da `middleware` konvansiyonu `proxy` olarak yeniden adlandırıldı.
@@ -17,12 +18,12 @@ const isProtectedRoute = createRouteMatcher([
   "/espace-client(.*)",
 ]);
 
-export default clerkMiddleware(
+const withClerk = clerkMiddleware(
   async (auth, req) => {
     if (isProtectedRoute(req)) {
       const segment = req.nextUrl.pathname.split("/")[1];
       const locale = routing.locales.includes(
-        segment as (typeof routing.locales)[number]
+        segment as (typeof routing.locales)[number],
       )
         ? segment
         : routing.defaultLocale;
@@ -34,7 +35,7 @@ export default clerkMiddleware(
     }
 
     return handleI18n(req);
-  }
+  },
   /**
    * CSP burada ÜRETİLMEZ — next.config.ts'de statik olarak tanımlıdır.
    *
@@ -47,6 +48,15 @@ export default clerkMiddleware(
    * bloklanıyordu — site JavaScript'siz kalıyordu.
    */
 );
+
+/**
+ * Müşteri alanı kapalıyken Clerk hiç devreye girmiyor: her istekte oturum
+ * çerezi okumak, gerekirse handshake yönlendirmesi yapmak — hepsi korunacak
+ * bir şey olmadığı için boşuna iş. Geriye yalnızca dil yönlendirmesi kalıyor.
+ *
+ * Bayrak açıldığında koruma aynen geri gelir. Bkz. lib/site-config.ts
+ */
+export default clientAreaEnabled ? withClerk : handleI18n;
 
 export const config = {
   matcher: "/((?!api|_next|_vercel|.*\\..*).*)",

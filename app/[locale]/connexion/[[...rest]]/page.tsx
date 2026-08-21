@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { SignIn } from "@clerk/nextjs";
+import { clientAreaEnabled } from "@/lib/site-config";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { AuthLayout } from "@/components/auth/auth-layout";
 import { localeAlternates } from "@/lib/seo";
@@ -27,6 +29,18 @@ export default async function SignInPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
+
+  /**
+   * Müşteri alanı kapalıyken bu rota yayında değil.
+   *
+   * Kök layout o durumda ClerkProvider'ı hiç render etmiyor (~123 KB tasarruf),
+   * dolayısıyla buradaki Clerk bileşenleri zaten çalışamazdı. Boş bir hata
+   * yerine dürüst bir 404 dönüyoruz. Bayrak `true` olduğunda sayfa olduğu gibi
+   * geri gelir. Bkz. lib/site-config.ts
+   */
+  if (!clientAreaEnabled) {
+    notFound();
+  }
   const t = await getTranslations("auth");
 
   return (
