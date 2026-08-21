@@ -70,6 +70,27 @@ export const siteConfig = {
   },
 } as const;
 
+/**
+ * Müşteri alanı (espace client) giriş noktaları gösterilsin mi?
+ *
+ * Bugün `false`: alan gerçekten var ve çalışıyor ama İÇİ BOŞ — üç kart da
+ * "henüz bir şey yok" diyor, arkasında ne veritabanı ne de dosya var. Müşteriyi
+ * kayıt olmaya çağırıp hiçbir şey göstermemek, güven kazandırmaz, kaybettirir.
+ *
+ * Ayrıca hesap açtırmak kişisel veri toplamak demek: nLPD/GDPR kapsamında
+ * saklama, silme ve bilgilendirme yükümlülüğü doğar. Karşılığında müşteriye
+ * bugün hiçbir fayda sunmuyoruz.
+ *
+ * Kod, rotalar ve Clerk kurulumu YERİNDE duruyor — sadece header ve footer'daki
+ * bağlantılar gizleniyor. Portal gerçekten yapıldığında burayı `true` yapmak
+ * yeterli. O gün Clerk'i production instance'ına almayı da unutma: şu an
+ * development anahtarlarıyla çalışıyor (kullanıcı ve istek limitleri düşük).
+ *
+ * Açık `: boolean` tipi bilinçli — `as const` bir nesnenin içinde olsaydı değer
+ * `false` literal'ine daralır, karşılaştırmalar derleyicide ölü koda dönerdi.
+ */
+export const clientAreaEnabled: boolean = false;
+
 export function whatsappLink(message?: string) {
   const base = `https://wa.me/${siteConfig.whatsappNumber}`;
   return message ? `${base}?text=${encodeURIComponent(message)}` : base;

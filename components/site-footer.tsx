@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { siteConfig, whatsappLink } from "@/lib/site-config";
+import { clientAreaEnabled, siteConfig, whatsappLink } from "@/lib/site-config";
 import { services } from "@/lib/services";
 import { Wordmark } from "./wordmark";
 import { InstagramIcon, TikTokIcon } from "./icons";
@@ -77,15 +77,18 @@ export async function SiteFooter() {
                   </Link>
                 </li>
               ))}
-              {/* Müşteri alanı: kimlik bağlantısının aranacağı ikinci yer */}
-              <li>
-                <Link
-                  href="/connexion"
-                  className="text-ink/80 transition-colors hover:text-accent"
-                >
-                  {tca("nav")}
-                </Link>
-              </li>
+              {/* Müşteri alanı: kimlik bağlantısının aranacağı ikinci yer.
+                  İçi dolana kadar gizli — bkz. lib/site-config.ts */}
+              {clientAreaEnabled && (
+                <li>
+                  <Link
+                    href="/connexion"
+                    className="text-ink/80 transition-colors hover:text-accent"
+                  >
+                    {tca("nav")}
+                  </Link>
+                </li>
+              )}
             </ul>
           </nav>
 

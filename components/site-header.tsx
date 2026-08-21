@@ -7,6 +7,7 @@ import { Link, usePathname } from "@/i18n/navigation";
 import { Wordmark } from "./wordmark";
 import { LocaleSwitcher } from "./locale-switcher";
 import { UserIcon } from "./icons";
+import { clientAreaEnabled } from "@/lib/site-config";
 
 const navItems = [
   { href: "/", key: "home" },
@@ -42,8 +43,7 @@ export function SiteHeader() {
       raf = requestAnimationFrame(() => {
         raf = 0;
         const y = window.scrollY;
-        const max =
-          document.documentElement.scrollHeight - window.innerHeight;
+        const max = document.documentElement.scrollHeight - window.innerHeight;
         const p = max > 0 ? Math.min(Math.max(y / max, 0), 1) : 0;
         if (barRef.current) {
           barRef.current.style.transform = `scaleX(${p})`;
@@ -139,22 +139,25 @@ export function SiteHeader() {
             {/* Girişli kullanıcıda Clerk avatarı, değilse sade bir giriş ikonu.
                 İkonun kendisi metin taşımadığı için erişilebilir ad aria-label
                 ile veriliyor; title da fare üzerindeyken aynı bilgiyi verir. */}
-            {isSignedIn ? (
-              <UserButton appearance={{ elements: { avatarBox: "h-8 w-8" } }} />
-            ) : (
-              <Link
-                href="/connexion"
-                aria-label={ta("nav")}
-                title={ta("nav")}
-                className={`flex h-9 w-9 items-center justify-center rounded-full transition-colors duration-200 ${
-                  onDark
-                    ? "text-white/70 hover:bg-white/10 hover:text-white"
-                    : "text-muted hover:bg-ink/5 hover:text-ink"
-                }`}
-              >
-                <UserIcon className="h-5 w-5" />
-              </Link>
-            )}
+            {clientAreaEnabled &&
+              (isSignedIn ? (
+                <UserButton
+                  appearance={{ elements: { avatarBox: "h-8 w-8" } }}
+                />
+              ) : (
+                <Link
+                  href="/connexion"
+                  aria-label={ta("nav")}
+                  title={ta("nav")}
+                  className={`flex h-9 w-9 items-center justify-center rounded-full transition-colors duration-200 ${
+                    onDark
+                      ? "text-white/70 hover:bg-white/10 hover:text-white"
+                      : "text-muted hover:bg-ink/5 hover:text-ink"
+                  }`}
+                >
+                  <UserIcon className="h-5 w-5" />
+                </Link>
+              ))}
             <LocaleSwitcher tone={onDark ? "light" : "dark"} />
             <Link
               href="/contact"
@@ -168,15 +171,17 @@ export function SiteHeader() {
               İkon burada duruyor ki giriş için menüyü açmak gerekmesin.
               Header z-50, menü katmanı z-40 — menü açıkken de tıklanabilir. */}
           <div className="relative z-50 flex items-center gap-1 lg:hidden">
-            <Link
-              href={isSignedIn ? "/espace-client" : "/connexion"}
-              aria-label={ta("nav")}
-              className={`flex h-10 w-10 items-center justify-center rounded-full transition-colors duration-200 ${
-                onDark ? "text-white/80" : "text-muted"
-              }`}
-            >
-              <UserIcon className="h-5 w-5" />
-            </Link>
+            {clientAreaEnabled && (
+              <Link
+                href={isSignedIn ? "/espace-client" : "/connexion"}
+                aria-label={ta("nav")}
+                className={`flex h-10 w-10 items-center justify-center rounded-full transition-colors duration-200 ${
+                  onDark ? "text-white/80" : "text-muted"
+                }`}
+              >
+                <UserIcon className="h-5 w-5" />
+              </Link>
+            )}
 
             <button
               type="button"
@@ -220,7 +225,9 @@ export function SiteHeader() {
             <div
               key={item.key}
               className={open ? "menu-item-in" : undefined}
-              style={open ? { animationDelay: `${0.05 + i * 0.05}s` } : undefined}
+              style={
+                open ? { animationDelay: `${0.05 + i * 0.05}s` } : undefined
+              }
             >
               <Link
                 href={item.href}
@@ -237,13 +244,15 @@ export function SiteHeader() {
           className={`mt-auto flex flex-col gap-4 pt-10 ${open ? "menu-item-in" : ""}`}
           style={open ? { animationDelay: "0.4s" } : undefined}
         >
-          <Link
-            href={isSignedIn ? "/espace-client" : "/connexion"}
-            tabIndex={open ? 0 : -1}
-            className="text-sm font-medium text-muted"
-          >
-            {ta("nav")}
-          </Link>
+          {clientAreaEnabled && (
+            <Link
+              href={isSignedIn ? "/espace-client" : "/connexion"}
+              tabIndex={open ? 0 : -1}
+              className="text-sm font-medium text-muted"
+            >
+              {ta("nav")}
+            </Link>
+          )}
           <LocaleSwitcher className="self-start" />
           <Link
             href="/contact"
