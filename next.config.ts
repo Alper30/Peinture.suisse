@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { clientAreaEnabled } from "./lib/site-config";
 import createNextIntlPlugin from "next-intl/plugin";
 
 const withNextIntl = createNextIntlPlugin();
@@ -16,7 +17,9 @@ function clerkFrontendApiHost(): string | null {
   const encoded = pk?.split("_")[2];
   if (!encoded) return null;
   try {
-    const host = Buffer.from(encoded, "base64").toString("utf8").replace(/\$$/, "");
+    const host = Buffer.from(encoded, "base64")
+      .toString("utf8")
+      .replace(/\$$/, "");
     return /^[a-z0-9.-]+$/i.test(host) ? host : null;
   } catch {
     return null;
@@ -24,10 +27,29 @@ function clerkFrontendApiHost(): string | null {
 }
 
 const clerkHost = clerkFrontendApiHost();
-// Key okunamazsa kimlik akışı çökmesin diye Clerk'in genel alan adlarına düş
-const clerkOrigins = clerkHost
-  ? [`https://${clerkHost}`]
-  : ["https://*.clerk.accounts.dev", "https://*.clerk.com"];
+/**
+ * Müşteri alanı kapalıyken Clerk'e CSP'de HİÇ izin verilmiyor.
+ *
+ * Kapalı durumda Clerk'in tarayıcı paketi zaten yüklenmiyor
+ * (bkz. app/[locale]/layout.tsx), ama izin listesi kalırsa üçüncü parti bir
+ * origin'e boş yere script çalıştırma hakkı tanımış oluruz. İzin verilen her
+ * host, o host ele geçirildiğinde bizim sayfamızda kod çalıştırabilir demektir.
+ * Kullanılmayan izin, taşınmayacak risktir.
+ *
+ * Key okunamazsa (yalnızca müşteri alanı AÇIKKEN önemli) Clerk'in genel alan
+ * adlarına düşülüyor ki kimlik akışı sessizce çökmesin. Bunlar çok kiracılı
+ * joker alan adları — dar olan tek host'a göre gevşektir, bu yüzden `.env`'de
+ * anahtarın tanımlı olması önemli.
+ */
+const clerkOrigins = !clientAreaEnabled
+  ? []
+  : clerkHost
+    ? [`https://${clerkHost}`]
+    : ["https://*.clerk.accounts.dev", "https://*.clerk.com"];
+
+/** Boş parçaları eleyip birleştirir: kapalı özellikler CSP'de iz bırakmasın */
+const src = (...parts: (string | false | null | undefined)[]) =>
+  parts.filter(Boolean).join(" ");
 
 /**
  * Content-Security-Policy — statik.
@@ -41,13 +63,32 @@ const clerkOrigins = clerkHost
  */
 const csp = [
   `default-src 'self'`,
-  `script-src 'self' 'unsafe-inline' ${clerkOrigins.join(" ")} https://challenges.cloudflare.com${isDev ? " 'unsafe-eval'" : ""}`,
+  src(
+    `script-src 'self' 'unsafe-inline'`,
+    ...clerkOrigins,
+    // Clerk'in bot koruması (Turnstile) — yalnızca kimlik akışıyla birlikte
+    clientAreaEnabled && "https://challenges.cloudflare.com",
+    isDev && "'unsafe-eval'",
+  ),
   `style-src 'self' 'unsafe-inline'`,
-  `img-src 'self' data: blob: https://img.clerk.com`,
+  // img.clerk.com: kullanıcı avatarları
+  src(
+    `img-src 'self' data: blob:`,
+    clientAreaEnabled && "https://img.clerk.com",
+  ),
   `font-src 'self' data:`,
-  `connect-src 'self' ${clerkOrigins.join(" ")} https://clerk-telemetry.com https://*.clerk-telemetry.com${isDev ? " ws: wss:" : ""}`,
-  // Clerk'in bot koruması (Turnstile) ve kimlik akışı iframe'leri
-  `frame-src 'self' ${clerkOrigins.join(" ")} https://challenges.cloudflare.com`,
+  src(
+    `connect-src 'self'`,
+    ...clerkOrigins,
+    clientAreaEnabled && "https://clerk-telemetry.com",
+    clientAreaEnabled && "https://*.clerk-telemetry.com",
+    isDev && "ws: wss:",
+  ),
+  src(
+    `frame-src 'self'`,
+    ...clerkOrigins,
+    clientAreaEnabled && "https://challenges.cloudflare.com",
+  ),
   `worker-src 'self' blob:`,
   // Siteyi iframe'e gömüp tıklama kaçırmayı engeller
   `frame-ancestors 'none'`,

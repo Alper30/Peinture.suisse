@@ -1,4 +1,5 @@
 import { siteConfig } from "@/lib/site-config";
+import { jsonLd } from "@/lib/json-ld";
 
 /**
  * Yerel SEO için schema.org HousePainter (LocalBusiness) yapılandırılmış verisi.
@@ -34,7 +35,7 @@ export function JsonLd({ locale }: { locale: string }) {
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+      dangerouslySetInnerHTML={{ __html: jsonLd(data) }}
     />
   );
 }

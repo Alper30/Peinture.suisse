@@ -68,13 +68,36 @@ const TIMEOUTS = {
 
 export async function submitDevis(
   _prev: DevisFormState,
-  formData: FormData
+  formData: FormData,
 ): Promise<DevisFormState> {
-  const name = String(formData.get("name") ?? "").trim();
-  const phone = String(formData.get("phone") ?? "").trim();
-  const email = String(formData.get("email") ?? "").trim();
-  const city = String(formData.get("city") ?? "").trim();
-  const service = String(formData.get("service") ?? "").trim();
+  /**
+   * Tek satırlık alanlardan satır sonu TEMİZLENİR.
+   *
+   * Aşağıda talep, `Etiket: değer` satırlarından oluşan bir metne dönüşüyor ve
+   * bunu bir insan okuyor. `name` alanına
+   *     Marc Dupont\nTéléphone: +41 79 000 00 00
+   * yazan biri, gelen postada İKİNCİ bir "Téléphone:" satırı oluşturur; usta
+   * formdan gelen numara sanıp saldırganın numarasını arayabilir. Zararı posta
+   * başlığı değil, okuyanın yanıltılmasıdır — ama sonucu gerçek.
+   *
+   * `message` bilinçli olarak dokunulmadan kalıyor: zaten serbest metin ve
+   * "Message:" başlığının ALTINDA duruyor, yani okuyan zaten oranın müşteri
+   * yazısı olduğunu bilir. Satır sonlarını silmek mesajı okunmaz hale getirirdi.
+   *
+   * Not: e-posta BAŞLIĞI'na (Subject) enjeksiyon zaten mümkün değil —
+   * nodemailer başlık değerlerindeki CR/LF'i boşluğa çeviriyor. Bu temizlik
+   * gövdedeki yanıltmaya karşı.
+   */
+  const singleLine = (value: FormDataEntryValue | null) =>
+    String(value ?? "")
+      .replace(/[\r\n]+/g, " ")
+      .trim();
+
+  const name = singleLine(formData.get("name"));
+  const phone = singleLine(formData.get("phone"));
+  const email = singleLine(formData.get("email"));
+  const city = singleLine(formData.get("city"));
+  const service = singleLine(formData.get("service"));
   const message = String(formData.get("message") ?? "").trim();
 
   // Honeypot: gerçek kullanıcılar bu gizli alanı doldurmaz
@@ -133,7 +156,7 @@ export async function submitDevis(
     // iletişim verisini log geçmişinden toplayabilir. nLPD/GDPR kapsamında.
     console.error(
       `[devis] ${missing} tanımlı değil` +
-        ` — talep e-postaya GÖNDERİLEMEDİ (mesaj uzunluğu: ${lines.length})`
+        ` — talep e-postaya GÖNDERİLEMEDİ (mesaj uzunluğu: ${lines.length})`,
     );
     return { status: "error", draft };
   }

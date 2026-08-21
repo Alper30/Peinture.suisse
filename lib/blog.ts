@@ -49,7 +49,26 @@ export function getPosts(locale: string): PostMeta[] {
     .sort((a, b) => (a.date < b.date ? 1 : -1));
 }
 
+/**
+ * Yalnızca gerçekten var olabilecek dosya adları: küçük harf, rakam, tire.
+ *
+ * `slug` URL'den geliyor ve aşağıda doğrudan dosya yoluna giriyor. Bugün
+ * sömürülebilir değil — Next yolu eşleştirmeden önce `..` parçalarını
+ * normalleştiriyor ve uzantı `.mdx`'e sabitli, depoda da `content/blog/`
+ * dışında tek bir `.mdx` yok.
+ *
+ * Buna rağmen kontrol ediliyor, çünkü asıl risk okuma değil ÇALIŞTIRMA:
+ * okunan dosya `MDXRemote`'a veriliyor ve MDX sunucuda JSX olarak derlenip
+ * çalıştırılıyor. `content/blog/` bir gün CMS, yükleme veya webhook ile
+ * yazılabilir hale gelirse, yol denetimindeki en küçük gevşeklik dosya
+ * okumaya değil uzaktan kod çalıştırmaya döner. Tek satırlık beyaz liste bu
+ * kapıyı kalıcı olarak kapatıyor.
+ */
+const SLUG_RE = /^[a-z0-9-]+$/;
+
 export function getPost(locale: string, slug: string) {
+  if (!SLUG_RE.test(slug)) return null;
+
   const file = path.join(CONTENT_DIR, locale, `${slug}.mdx`);
   if (!fs.existsSync(file)) return null;
 
@@ -76,6 +95,9 @@ export function getPostContext(locale: string, slug: string) {
     // Liste yeniden eskiye sıralı: index+1 daha eski yazı
     next: posts[index - 1] ?? null,
     previous: posts[index + 1] ?? null,
-    related: related.length > 0 ? related : posts.filter((p) => p.slug !== slug).slice(0, 2),
+    related:
+      related.length > 0
+        ? related
+        : posts.filter((p) => p.slug !== slug).slice(0, 2),
   };
 }

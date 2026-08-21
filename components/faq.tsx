@@ -2,6 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { Reveal } from "./reveal";
 import { ArrowRightIcon } from "./icons";
+import { jsonLd } from "@/lib/json-ld";
 
 const KEYS = ["q1", "q2", "q3", "q4", "q5", "q6"] as const;
 
@@ -53,7 +54,14 @@ export async function Faq() {
                     aria-hidden
                     className="faq-icon mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-line text-accent transition-colors group-hover:border-accent/40"
                   >
-                    <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
+                    <svg
+                      viewBox="0 0 24 24"
+                      className="h-4 w-4"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.8"
+                      strokeLinecap="round"
+                    >
                       <path d="M12 5v14" className="faq-icon-bar" />
                       <path d="M5 12h14" />
                     </svg>
@@ -95,7 +103,7 @@ export async function FaqJsonLd() {
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+      dangerouslySetInnerHTML={{ __html: jsonLd(data) }}
     />
   );
 }

@@ -12,12 +12,13 @@ import { ArrowRightIcon } from "@/components/icons";
 import { getPost, getPosts, getPostContext } from "@/lib/blog";
 import { siteConfig } from "@/lib/site-config";
 import { localeAlternates } from "@/lib/seo";
+import { jsonLd as jsonLdScript } from "@/lib/json-ld";
 
 type Params = Promise<{ locale: string; slug: string }>;
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
-    getPosts(locale).map((post) => ({ locale, slug: post.slug }))
+    getPosts(locale).map((post) => ({ locale, slug: post.slug })),
   );
 }
 
@@ -115,7 +116,7 @@ export default async function BlogPostPage({ params }: { params: Params }) {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: jsonLdScript(jsonLd) }}
       />
 
       <article className="mx-auto max-w-3xl px-5 pt-32 pb-16 md:px-8 md:pt-44">

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
-import { currentUser } from "@clerk/nextjs/server";
+import { notFound, redirect } from "next/navigation";
+import { auth, currentUser } from "@clerk/nextjs/server";
 import { clientAreaEnabled } from "@/lib/site-config";
 import { UserButton } from "@clerk/nextjs";
 import { getTranslations, setRequestLocale } from "next-intl/server";
@@ -46,7 +46,32 @@ export default async function ClientAreaPage({
   }
 
   const t = await getTranslations("clientArea");
-  // proxy.ts korumalı rotayı zaten doğruluyor; burada yalnızca ismi okuyoruz
+
+  /**
+   * Yetki kontrolü BURADA, kaynağın kendisinde yapılıyor — proxy'ye
+   * güvenilmiyor.
+   *
+   * Eskiden bu satırda "proxy.ts korumalı rotayı zaten doğruluyor" yazıyordu.
+   * Clerk 7 tam olarak bu deseni kendi kodunda deprecate etti: proxy koruması
+   * YOL EŞLEŞTİRMESİNE dayanır ve Next'in isteği gerçekte nasıl yönlendirdiğiyle
+   * ayrışabilir. proxy.ts'teki matcher içinde nokta geçen HER yolu atlıyor
+   * (`.*\..*`) — statik dosya olmayan noktalı yollar (örn. Vercel'in
+   * `.prefetch.rsc` istekleri) ve ileride eklenecek `/api/...` rotaları
+   * korumadan hiç geçmez.
+   *
+   * Matcher'ı kurcalamak yerine kontrolü kaynağa taşımak doğru çözüm: matcher
+   * ne yaparsa yapsın, oturumu olmayan hiç kimse bu sayfanın verisini göremez.
+   * Proxy artık ikinci savunma hattı.
+   *
+   * Bugün kartlar boş, yani sızacak veri yok. Kontrol şimdiden duruyor ki
+   * kartlara gerçek teklif ve belgeler bağlandığında açık kendiliğinden
+   * doğmasın.
+   */
+  const { userId } = await auth();
+  if (!userId) {
+    redirect(`/${locale}/connexion`);
+  }
+
   const user = await currentUser();
   const name = user?.firstName ?? user?.username ?? "";
 
