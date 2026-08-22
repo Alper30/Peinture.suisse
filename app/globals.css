@@ -508,3 +508,16 @@ body:has(.auth-screen) > main {
     transform: scaleX(1);
   }
 }
+
+/* Dokunma hedefini görünümü değiştirmeden büyütür (Apple HIG 44pt / MD 48dp).
+   YALNIZCA dikeyde genişler: yatayda komşu hedeflerle çakışıp yanlış dokunma
+   üretmesin diye. Yan yana duran küçük kontroller için (dil değiştirici gibi). */
+.tap-tall {
+  position: relative;
+}
+
+.tap-tall::after {
+  content: "";
+  position: absolute;
+  inset: -10px 0;
+}

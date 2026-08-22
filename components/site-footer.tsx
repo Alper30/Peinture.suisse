@@ -38,7 +38,7 @@ export async function SiteFooter() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-line text-muted transition-colors hover:border-ink/40 hover:text-ink"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-line text-muted transition-colors hover:border-ink/40 hover:text-ink"
               >
                 <InstagramIcon className="h-5 w-5" />
               </a>
@@ -47,7 +47,7 @@ export async function SiteFooter() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="TikTok"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-line text-muted transition-colors hover:border-ink/40 hover:text-ink"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-line text-muted transition-colors hover:border-ink/40 hover:text-ink"
               >
                 <TikTokIcon className="h-5 w-5" />
               </a>

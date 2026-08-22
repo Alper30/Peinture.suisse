@@ -65,13 +65,6 @@
     "hero": {
       "titleLine1": "Des espaces transformés,",
       "titleLine2": "une finition impeccable.",
-      "subtitle": "Peinture, crépi et plâtrerie à Lausanne. Un travail artisanal soigné, des délais tenus et un devis gratuit sous 24 heures.",
-      "scenes": {
-        "salon": "Blanc chaud",
-        "boheme": "Blanc cassé",
-        "sauge": "Sauge",
-        "facade": "Ocre calcaire"
-      },
       "sceneLabel": "Afficher la vue {n}"
     },
     "services": {

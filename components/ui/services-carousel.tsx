@@ -150,17 +150,26 @@ export function ServicesCarousel({ className }: { className?: string }) {
               onClick={() => setCurrentIndex(i)}
               aria-label={tn("goTo", { n: i + 1 })}
               aria-current={i === currentIndex ? "true" : undefined}
-              data-paused={paused || reduce ? "true" : "false"}
               style={
                 { "--dot-duration": `${AUTOPLAY_MS}ms` } as React.CSSProperties
               }
-              className={cn(
-                "h-2.5 cursor-pointer rounded-full transition-all duration-300",
-                i === currentIndex
-                  ? "dot-progress w-7 bg-line"
-                  : "w-2.5 bg-line hover:bg-muted/50"
-              )}
-            />
+              /* Dokunma hedefi: 10px'lik nokta parmakla isabet ettirilemiyordu.
+                 Buton şeffaf ve dolgulu bir kap oldu (~44px), noktanın kendisi
+                 içerideki span. `data-paused` de span'e taşındı, çünkü CSS
+                 seçicisi `.dot-progress[data-paused="true"]` ve o sınıf artık
+                 span'de; `--dot-duration` özel özellik olduğu için miras kalır. */
+              className="group -my-5 flex cursor-pointer items-center px-2 py-5"
+            >
+              <span
+                data-paused={paused || reduce ? "true" : "false"}
+                className={cn(
+                  "block h-2.5 rounded-full transition-all duration-300",
+                  i === currentIndex
+                    ? "dot-progress w-7 bg-line"
+                    : "w-2.5 bg-line group-hover:bg-muted/50"
+                )}
+              />
+            </button>
           ))}
         </div>
 

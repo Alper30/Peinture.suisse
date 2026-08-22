@@ -24,7 +24,7 @@ const initialState: DevisFormState = { status: "idle" };
  * üst üste binmez ama `:placeholder-shown` seçicisi çalışmaya devam eder.
  */
 const fieldBase =
-  "peer w-full rounded-xl border bg-paper px-4 text-sm text-ink outline-none transition-all duration-200 placeholder:text-transparent focus:border-accent focus:bg-surface focus:ring-4 focus:ring-accent/10 focus:placeholder:text-muted/50";
+  "peer w-full rounded-xl border bg-paper px-4 text-base text-ink outline-none transition-all duration-200 placeholder:text-transparent focus:border-accent focus:bg-surface focus:ring-4 focus:ring-accent/10 focus:placeholder:text-muted/50";
 
 /**
  * Etiketin iki durumu piksel değerleriyle tanımlı — `top-1/2` + `-translate-y-1/2`
@@ -37,7 +37,7 @@ const fieldBase =
 const labelFloated =
   "top-[9px] text-[11px] font-semibold uppercase tracking-wider";
 const labelResting =
-  "peer-placeholder-shown:text-sm peer-placeholder-shown:font-normal peer-placeholder-shown:normal-case peer-placeholder-shown:tracking-normal";
+  "peer-placeholder-shown:text-base peer-placeholder-shown:font-normal peer-placeholder-shown:normal-case peer-placeholder-shown:tracking-normal";
 const labelRefloat =
   "peer-focus:top-[9px] peer-focus:text-[11px] peer-focus:font-semibold peer-focus:uppercase peer-focus:tracking-wider";
 
@@ -145,7 +145,7 @@ function ServiceChips() {
                 value={label}
                 className="peer sr-only"
               />
-              <span className="inline-block rounded-full border border-line bg-paper px-4 py-2 text-sm text-ink/75 transition-all duration-200 hover:border-ink/25 peer-checked:border-accent peer-checked:bg-accent-soft peer-checked:font-medium peer-checked:text-accent peer-focus-visible:ring-2 peer-focus-visible:ring-accent peer-focus-visible:ring-offset-2">
+              <span className="inline-block rounded-full border border-line bg-paper px-4 py-2.5 text-sm text-ink/75 transition-all duration-200 hover:border-ink/25 peer-checked:border-accent peer-checked:bg-accent-soft peer-checked:font-medium peer-checked:text-accent peer-focus-visible:ring-2 peer-focus-visible:ring-accent peer-focus-visible:ring-offset-2">
                 {label}
               </span>
             </label>

@@ -94,7 +94,7 @@ function ScrollyVersion() {
 
   return (
     <section ref={sectionRef} className="relative h-[280vh]">
-      <div className="sticky top-0 flex min-h-screen items-center">
+      <div className="sticky top-0 flex min-h-dvh items-center">
         <div className="mx-auto grid w-full max-w-6xl grid-cols-[5rem_1fr] items-center gap-14 px-5 md:px-8">
           {/* Boyanan şerit */}
           <div className="relative h-[62vh]" aria-hidden>

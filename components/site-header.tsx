@@ -164,7 +164,7 @@ export function SiteHeader() {
               onClick={() => setOpen((v) => !v)}
               aria-label={open ? th("menuClose") : th("menuOpen")}
               aria-expanded={open}
-              className="flex h-10 w-10 items-center justify-center"
+              className="flex h-11 w-11 items-center justify-center"
             >
               <span className="relative block h-4 w-6">
                 <span

@@ -9,9 +9,6 @@ import {
 } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
-import { whatsappLink } from "@/lib/site-config";
-import { WhatsAppIcon } from "@/components/icons";
 import { cn } from "@/lib/utils";
 import {
   PAINT_CYCLE_MS,
@@ -47,7 +44,6 @@ function subscribeToVisibility(onChange: () => void) {
 
 export function PaintHero() {
   const t = useTranslations("home.hero");
-  const tc = useTranslations("common");
 
   const [active, setActive] = useState(0);
   /**
@@ -206,53 +202,19 @@ export function PaintHero() {
         className="absolute inset-0 bg-gradient-to-r from-ink/75 via-ink/25 to-transparent"
       />
 
-      <div className="relative z-10 w-full px-5 pb-10 pt-32 md:px-8 md:pb-14 md:pt-40">
+      <div className="relative z-10 w-full px-5 pb-8 pt-28 md:px-8 md:pb-14 md:pt-40">
         <div className="mx-auto max-w-6xl">
-          <h1 className="max-w-[16ch] font-display text-[clamp(2.6rem,7.4vw,5.5rem)] leading-[1.02] tracking-[-0.025em] text-white">
-            {t("titleLine1")}
-            <span className="block italic text-white/85">{t("titleLine2")}</span>
+          <h1 className="font-display text-[clamp(2rem,6.2vw,5.5rem)] leading-[1.06] tracking-[-0.025em] text-white md:max-w-[16ch] md:leading-[1.02]">
+            {t("titleLine1")}{" "}
+            <span className="italic text-white/85 md:block">
+              {t("titleLine2")}
+            </span>
           </h1>
 
-          <p className="mt-6 max-w-[58ch] text-base leading-relaxed text-white/75 md:text-lg">
-            {t("subtitle")}
-          </p>
-
-          <div className="mt-9 flex flex-wrap items-center gap-3.5">
-            <Link
-              href="/contact"
-              className="btn-sweep inline-flex items-center justify-center rounded-full bg-accent px-7 py-3.5 text-base font-medium text-white shadow-lift transition-transform duration-200 active:scale-[0.98]"
-            >
-              {tc("devisCta")}
-            </Link>
-            <a
-              href={whatsappLink(tc("whatsappPrefill"))}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 px-7 py-3.5 text-base font-medium text-white backdrop-blur-[2px] transition-colors duration-200 hover:border-white/70 hover:bg-white/10 active:scale-[0.98]"
-            >
-              <WhatsAppIcon className="h-5 w-5 text-whatsapp" />
-              {tc("whatsappCta")}
-            </a>
-          </div>
-
-          {/* Nuancier: o an açılan mekânın duvar rengi + sahne seçimi */}
-          <div className="mt-12 flex flex-wrap items-end justify-between gap-6 border-t border-white/15 pt-5">
-            <p className="flex items-center gap-3">
-              <span
-                aria-hidden
-                className="h-9 w-9 shrink-0 rounded-md ring-1 ring-inset ring-white/25 transition-colors duration-500"
-                style={{ backgroundColor: scene.swatch }}
-              />
-              <span className="flex flex-col leading-tight">
-                <span className="text-sm font-medium text-white">
-                  {t(`scenes.${scene.id}`)}
-                </span>
-                <span className="tabular text-xs text-white/55">
-                  {scene.swatch.toUpperCase()}
-                </span>
-              </span>
-            </p>
-
+          {/* Sahne seçimi. Renk çipi ve renk adı KALDIRILDI: hex zaten
+              gidince çip etiketsiz bir renkli kare olarak kalıyordu — bilgi
+              taşımayan dekor. Geriye yalnızca işlevi olan gösterge kaldı. */}
+          <div className="mt-8 flex border-t border-white/15 pt-5 md:mt-12">
             <ul className="flex items-center gap-2">
               {paintScenes.map((s, i) => (
                 /* Anahtara `running` dahil: döngü durup yeniden başladığında
@@ -263,17 +225,25 @@ export function PaintHero() {
                     onClick={() => show(i)}
                     aria-current={i === active}
                     aria-label={t("sceneLabel", { n: i + 1 })}
-                    data-paused={!running}
                     style={
                       { "--dot-duration": `${PAINT_CYCLE_MS}ms` } as React.CSSProperties
                     }
-                    className={cn(
-                      "block h-1.5 rounded-full transition-all duration-300",
-                      i === active
-                        ? "dot-progress w-9 bg-white/25"
-                        : "w-4 bg-white/35 hover:bg-white/70"
-                    )}
-                  />
+                    className="group -my-5 flex items-center px-1.5 py-5"
+                  >
+                    {/* `data-paused` çubuğun KENDİSİNDE olmalı: CSS seçicisi
+                        `.dot-progress[data-paused="true"]`, ve .dot-progress
+                        artık bu span. `--dot-duration` özel özellik olduğu
+                        için butondan miras kalır, taşımaya gerek yok. */}
+                    <span
+                      data-paused={!running}
+                      className={cn(
+                        "block h-1.5 rounded-full transition-all duration-300",
+                        i === active
+                          ? "dot-progress w-9 bg-white/25"
+                          : "w-4 bg-white/35 group-hover:bg-white/70"
+                      )}
+                    />
+                  </button>
                 </li>
               ))}
             </ul>

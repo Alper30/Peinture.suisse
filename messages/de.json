@@ -65,13 +65,6 @@
     "hero": {
       "titleLine1": "Verwandelte Räume,",
       "titleLine2": "makellose Oberflächen.",
-      "subtitle": "Malerarbeiten, Verputz und Gipserarbeiten in Lausanne. Sorgfältiges Handwerk, verlässliche Termine und eine kostenlose Offerte innert 24 Stunden.",
-      "scenes": {
-        "salon": "Warmweiss",
-        "boheme": "Gebrochenes Weiss",
-        "sauge": "Salbei",
-        "facade": "Kalkocker"
-      },
       "sceneLabel": "Ansicht {n} anzeigen"
     },
     "services": {

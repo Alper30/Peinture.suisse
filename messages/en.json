@@ -65,13 +65,6 @@
     "hero": {
       "titleLine1": "Spaces transformed,",
       "titleLine2": "flawlessly finished.",
-      "subtitle": "Painting, rendering and plastering in Lausanne. Careful craftsmanship, reliable deadlines and a free quote within 24 hours.",
-      "scenes": {
-        "salon": "Warm white",
-        "boheme": "Off-white",
-        "sauge": "Sage",
-        "facade": "Limestone ochre"
-      },
       "sceneLabel": "Show view {n}"
     },
     "services": {

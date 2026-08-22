@@ -42,7 +42,7 @@ export function LocaleSwitcher({
           type="button"
           onClick={() => switchTo(l)}
           aria-current={l === locale ? "true" : undefined}
-          className={`rounded-full px-2.5 py-1 transition-colors duration-200 ${
+          className={`tap-tall rounded-full px-2.5 py-1.5 transition-colors duration-200 ${
             l === locale
               ? light
                 ? "bg-white text-ink"
