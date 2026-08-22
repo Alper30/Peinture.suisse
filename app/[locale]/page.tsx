@@ -132,8 +132,11 @@ export default async function HomePage({
       {/* Süreç — scroll'a bağlı anlatım */}
       <ScrollProcess />
 
+      {/* Alıntı bandı: sayfadaki TEK kullanılmayan kare. Diğer 13'ü hero
+          rotasyonunda ya da servis karuselinde zaten görünüyor; burada
+          tekrar etmek "her duvarın kendi hikâyesi" fikrini zayıflatırdı. */}
       <ImageBand
-        src="/images/hero-peintre-v2.jpg"
+        src="/images/platre-texture.jpg"
         alt={t("imageBand.quote")}
         quote={t("imageBand.quote")}
       />
