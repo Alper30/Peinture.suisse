@@ -98,7 +98,7 @@ function ScrollyVersion() {
   return (
     <section ref={sectionRef} className="relative h-[280vh]">
       <div className="sticky top-0 flex min-h-dvh items-center">
-        <div className={`mx-auto grid w-full max-w-6xl items-center gap-14 px-5 md:px-8 ${hasProcessMedia ? "grid-cols-[5rem_1fr] xl:grid-cols-[5rem_1fr_22rem]" : "grid-cols-[5rem_1fr]"}`}>
+        <div className={`mx-auto grid w-full max-w-6xl items-center gap-10 px-5 md:px-8 xl:gap-14 ${hasProcessMedia ? "grid-cols-[5rem_1fr_16rem] xl:grid-cols-[5rem_1fr_22rem]" : "grid-cols-[5rem_1fr]"}`}>
           {/* Boyanan şerit */}
           <div className="relative h-[62vh]" aria-hidden>
             <div className="absolute inset-x-0 top-0 h-full overflow-hidden rounded-full bg-line">
@@ -154,10 +154,13 @@ function ScrollyVersion() {
             </div>
           </div>
 
-          {/* Adım görseli — `active` ile çapraz geçer. Yalnızca xl'de:
-              daha dar ekranda üçüncü sütun metni sıkıştırırdı. */}
+          {/* Adım görseli — `active` ile çapraz geçer.
+              Kırılma noktası 1024px: kaydırmalı sürümün başladığı yerle AYNI.
+              Panel daha önce xl (1280) arkasındaydı ve 1024–1279 aralığı
+              görselsiz kalıyordu — statik sürümün adım görselleri de orada
+              render edilmediği için o genişlikte hiç fotoğraf görünmüyordu. */}
           {hasProcessMedia && (
-            <div className="relative hidden aspect-[4/3] w-full overflow-hidden rounded-3xl xl:block">
+            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl">
               {STEPS.map((n, i) => (
                 <StepImage
                   key={n}
