@@ -62,6 +62,7 @@ export default async function RealisationsPage({
       <section className="mx-auto max-w-6xl px-5 pb-16 md:px-8">
         <Reveal>
           <BeforeAfterSlider
+            beforeSrc="/images/platre-lissage.jpg"
             src="/images/interieur-salon.jpg"
             alt={t("title")}
           />

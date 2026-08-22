@@ -122,6 +122,7 @@ export default async function HomePage({
         />
         <Reveal delay={0.1} className="mt-10">
           <BeforeAfterSlider
+            beforeSrc="/images/hero-chantier-avant.jpg"
             src="/images/int-boheme.jpg"
             alt={t("beforeAfter.title")}
           />
